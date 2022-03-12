@@ -2,7 +2,7 @@ import { Bulb, Navbar } from "../../components";
 import gsap from "gsap";
 import { useEffect } from "react";
 import './index.scss'
-import { randomInt } from "../../utils";
+import { ChevronDown } from "../../assets/images";
 
 
 export function Index() {
@@ -21,16 +21,31 @@ export function Index() {
     }).fromTo('.build-better__underline', {
       opacity: 0
     }, { opacity: 1, duration: 0.5, ease: 'power3.inout' })
+      .from('.explore__text, .explore__arrow', {
+        opacity: 0,
+        y: -20,
+      })
 
     const ease = 'power3.inout'
     const transformOrigin = '21.3% 39.79%'
 
+    const stAnimation1 = gsap.timeline()
+      .from('#st', {
+        opacity: 0,
+        y: 60,
+        ease: 'bounce.out',
+        delay: 1,
+        duration: 1.2,
+      })
+
     const stAnimation = gsap.timeline({
-    }).from('.st__t', {
-      ease,
-      transformOrigin,
-      rotation: 0
     })
+      .from('.st__t', {
+        ease,
+        transformOrigin,
+        rotation: 0,
+        delay: 1.04,
+      })
       .to('.st__t', {
         ease,
         transformOrigin,
@@ -73,15 +88,65 @@ export function Index() {
         transformOrigin,
         rotation: 0
       })
-    const a = function (stAnimation) {
+    const stAnimationReanimate = gsap.timeline({
+      paused: true
+    }).pause()
+      .from('.st__t', {
+        ease,
+        transformOrigin,
+        rotation: 0,
+      })
+      .to('.st__t', {
+        ease,
+        transformOrigin,
+        duration: 0.5,
+        rotation: 10
+      })
+      .to('.st__t', {
+        ease,
+        transformOrigin,
+        duration: 0.5,
+        rotation: -2
+      })
+      .to('.st__t', {
+        ease,
+        transformOrigin,
+        duration: 0.6,
+        rotation: 5
+      })
+      .to('.st__t', {
+        ease,
+        transformOrigin,
+        duration: 0.8,
+        rotation: -1
+      })
+      .to('.st__t', {
+        ease,
+        transformOrigin,
+        duration: 0.8,
+        rotation: 2
+      })
+      .to('.st__t', {
+        ease,
+        transformOrigin,
+        duration: 0.8,
+        rotation: -1
+      })
+      .to('.st__t', {
+        ease,
+        duration: 0.8,
+        transformOrigin,
+        rotation: 0
+      })
+    const a = function (stAnimation, stAnimation2) {
       return () => {
-        if (stAnimation.isActive()) {
+        if (stAnimation.isActive() || stAnimation2.isActive()) {
           return
         }
         stAnimation.restart()
       }
     }
-    const eventListener = a(stAnimation)
+    const eventListener = a(stAnimationReanimate, stAnimation)
     const st = document.getElementById('st')
     st.addEventListener('mouseenter', eventListener)
     // .repeat(-1)
@@ -174,6 +239,10 @@ export function Index() {
                 </linearGradient>
               </defs>
             </svg>
+          </div>
+          <div className="explore">
+            <div className="explore__text"> Explore</div>
+            <div className="explore__arrow"><img src={ChevronDown} alt="more" /></div>
           </div>
         </div>
       </div>
