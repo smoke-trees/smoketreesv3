@@ -1,0 +1,27 @@
+/** Fonts */
+$gothic: "century-gothic";
+$lust: "lust";
+$poppins: "century-gothic";
+$playfair: "Playfair Display";
+
+$font-family-1: $gothic, $poppins, "serif";
+$font-family-2: $lust, $playfair, "serif";
+// Fonts end
+
+a,
+a:hover,
+a :visited {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.typewriter-char {
+  // opacity: 0;
+}
+.body {
+  padding: 0 200px;
+}

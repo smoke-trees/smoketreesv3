@@ -1,0 +1,25 @@
+@import "../../App.scss";
+
+.build-better__underline {
+  font-family: $gothic;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #676767;
+  margin: 40px 0 0 0;
+}
+.st__t {
+  transform-origin: 21.3% 39.79%;
+}
+.index__first-section {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  height: calc(100vh - 100px);
+}
+.index__first-section .st-right {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}

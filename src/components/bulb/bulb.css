@@ -1,0 +1,16 @@
+.bulb__main-stroke {
+  stroke-dasharray: 2000;
+  animation: dash 3s infinite linear;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -2000;
+  }
+}
