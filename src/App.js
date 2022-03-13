@@ -3,11 +3,18 @@ import { Route, Routes } from 'react-router';
 import './App.scss';
 import { Index } from './pages';
 import gsap from 'gsap'
+import ScrolLTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrolLTrigger)
 
 const routes = [{
   element: <Index />,
-  path: '/'
+  path: '/',
+  key: 'index'
 }]
+
+ScrolLTrigger.defaults({
+  markers: false
+})
 
 function App() {
   useEffect(() => {
@@ -19,18 +26,19 @@ function App() {
         top,
         left
       })
-      console.log({ top, left })
     }
-    document.addEventListener('mousemove', moveFunction)
+    window.addEventListener('mousemove', moveFunction)
+    window.addEventListener('scroll', moveFunction)
     return () => {
-      document.removeEventListener('mousemove', moveFunction)
+      window.removeEventListener('mousemove', moveFunction)
+      window.removeEventListener('scroll', moveFunction)
     }
   }, [])
   return (
     <div className="App">
       <div className='cursor' id='cursor' />
       <Routes>
-        {routes.map(route => <Route {...route} />)}
+        {routes.map(route => <Route  {...route} />)}
       </Routes>
     </div>
   );

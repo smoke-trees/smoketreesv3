@@ -1,5 +1,6 @@
 import React from 'react'
 import { Logo } from '../../assets/images'
+import Target from '../targets/target'
 
 import './navbar.scss'
 
@@ -12,18 +13,26 @@ export function Navbar() {
         </a>
       </div>
       <div className="navbar__links">
-        <div className="navbar__links__item">
-          <a href="/">About</a>
-        </div>
-        <div className="navbar__links__item">
-          <a href="/">Services</a>
-        </div>
-        <div className="navbar__links__item">
-          <a href="/">Products</a>
-        </div>
-        <div className="navbar__links__item">
-          <a href="/">Clients</a>
-        </div>
+        <Target>
+          <div className="navbar__links__item">
+            <a href="/">About</a>
+          </div>
+        </Target>
+        <Target>
+          <div className="navbar__links__item">
+            <a href="/">Services</a>
+          </div>
+        </Target>
+        <Target>
+          <div className="navbar__links__item">
+            <a href="/">Products</a>
+          </div>
+        </Target>
+        <Target>
+          <div className="navbar__links__item">
+            <a href="/">Clients</a>
+          </div>
+        </Target>
       </div>
     </div>
   )

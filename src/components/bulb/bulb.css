@@ -1,5 +1,9 @@
 .bulb__main-stroke {
   stroke-dasharray: 2000;
+  stroke-dashoffset: 2000; 
+}
+.bulb__main-stroke-animation {
+  stroke-dasharray: 2000;
   animation: dash 3s infinite linear;
 }
 
