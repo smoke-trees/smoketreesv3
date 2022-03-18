@@ -184,9 +184,8 @@ export function SecondSection() {
           <div className='second-section__text-body'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at risus amet, commodo condimentum integer. Something about consultation!
           </div>
-
         </div>
-        <div className='best typewriter-chars' className='second-section__bulb'>
+        <div className='second-section__bulb'>
           <Bulb className='best typewriter-chars' />
         </div>
       </div>

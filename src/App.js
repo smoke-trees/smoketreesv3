@@ -4,6 +4,8 @@ import './App.scss';
 import { Index } from './pages';
 import gsap from 'gsap'
 import ScrolLTrigger from 'gsap/ScrollTrigger'
+// import Scrollbar from 'smooth-scrollbar'
+// import overscrollEffect from 'smooth-scrollbar/plugins/overscroll'
 gsap.registerPlugin(ScrolLTrigger)
 
 const routes = [{
@@ -12,12 +14,14 @@ const routes = [{
   key: 'index'
 }]
 
-ScrolLTrigger.defaults({
-  markers: false
-})
+
 
 function App() {
   useEffect(() => {
+    ScrolLTrigger.defaults({
+      markers: false,
+    })
+
     const cursor = document.getElementById('cursor')
     const moveFunction = function (mouseMoveEvent) {
       const top = mouseMoveEvent.clientY - cursor.offsetHeight / 2;
