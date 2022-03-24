@@ -13,6 +13,7 @@
     "react-scripts": "5.0.0",
     "sass": "^1.49.9",
     "smooth-scrollbar": "^8.7.4",
+    "snapsvg": "^0.5.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

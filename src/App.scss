@@ -17,19 +17,17 @@ a :visited {
   line-height: 24px;
   text-decoration: none;
   color: #000000;
-  cursor: none;
+  // cursor: none;
 }
 
 .typewriter-char {
-  // opacity: 0;
+  opacity: 0;
 }
-.body {
-  padding: 0 200px;
-}
+
 
 html,
 body {
-  cursor: none;
+  // cursor: none;
   overflow-x: hidden;
   padding-bottom: 100vh;
 }
@@ -41,5 +39,7 @@ body {
   position: fixed;
   border: 1px solid #373737;
   top: 50%;
+  pointer-events: none;
   left: 50%;
 }
+
