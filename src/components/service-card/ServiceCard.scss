@@ -5,18 +5,59 @@
   height: 260px;
   border: 2px dashed #24ffa8;
   position: relative;
-}
+  color: rgba(36, 255, 168);
+  font-family: $gothic;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 
-.service-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(36, 255, 168);
-  opacity: 6%;
-  transform-origin: 50% 50%;
-  transform: matrix(1, -0.04, 0.04, 1, -10, 8);
-}
+  img {
+    display: block;
+    flex: 0;
+    width: fit-content;
+  }
+  span {
+    display: block;
+  }
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 255, 168);
+    opacity: 6%;
+    transform-origin: 50% 50%;
+    transform: matrix(1, -0.04, 0.04, 1, -10, 8);
+  }
+  &--pink {
+    border: 2px dashed #ffa8f1;
+    color: #ffa8f1;
+  }
+  &--pink::before {
+    background-color: #ffa8f1;
+  }
+  &--yellow {
+    border: 2px dashed #ffd089;
+    color: #ffd089;
+  }
+  &--yellow::before {
+    background-color: #ffd089;
+  }
+  &--blue {
+    border: 2px dashed #9289ff;
+    color: #9289ff;
+  }
+  &--blue::before {
+    background-color: #9289ff;
+  }
+}

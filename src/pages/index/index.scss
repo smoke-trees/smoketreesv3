@@ -113,23 +113,37 @@
 
 .fourth-section {
   background: #373737;
-  padding: 0 0;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 150px;
+  padding: 0 150px;
   &__icon {
+    height: 100vh;
+    display: flex;
+    flex-flow: column-reverse;
+    & svg {
+      padding: 100px 0;
+    }
   }
   &__middle {
-    &__middle__title {
-    }
-    &__middle__body {
-    }
-  }
-  &__middle {
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     max-width: 300px;
+    &__title {
+      margin-bottom: 25px;
+    }
+    &__body {
+      color: white;
+    }
+    &__explore {
+      margin-top: 10px;
+      color: white;
+    }
   }
+
   &__right {
     display: flex;
     flex-direction: row;

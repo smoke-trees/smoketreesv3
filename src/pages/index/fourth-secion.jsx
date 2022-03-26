@@ -2,6 +2,7 @@ import React, { useCallback, useEffect } from 'react'
 import gsap from 'gsap'
 import Target from '../../components/targets/target'
 import { ServiceCard } from '../../components/service-card/ServiceCard'
+import { ServiceAutomation, ServiceCloud, ServiceDevelopment, ServiceUiUx } from '../../assets/images'
 export default function FourthSection({ }) {
   const onMouseEnterCallBack = useCallback((e) => {
     gsap.to('#cursor', {
@@ -116,10 +117,18 @@ export default function FourthSection({ }) {
         </div>
 
         <div className={'fourth-section__left'}>
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
+          <Target>
+            <ServiceCard image={ServiceUiUx} text={'UI/UX Design'} />
+          </Target>
+          <Target>
+            <ServiceCard color={'pink'} image={ServiceDevelopment} text={'Development'} />
+          </Target>
+          <Target>
+            <ServiceCard color={'yellow'} image={ServiceCloud} text={'Cloud Applications'} />
+          </Target>
+          <Target>
+            <ServiceCard color={'blue'} image={ServiceAutomation} text={'Automation and AI'} />
+          </Target>
         </div>
       </div>
     </>
