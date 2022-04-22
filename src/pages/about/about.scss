@@ -1,0 +1,108 @@
+@import "../../App.scss";
+
+.about__container__dark {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/images/photo-1530508777238-14544088c3ed.jpg) no-repeat center center;
+}
+
+.about__first-section {
+  height: calc(100vh - 140px);
+  width: 85%;
+  margin: auto;
+  max-width: 1150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &__heading {
+      font-family: $font-family-2;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 100px;
+      line-height: 139%;
+      text-align: center;
+  }
+  &__bulb {
+    width: fit-content;
+    margin: -80px auto;
+    cursor: pointer;
+  }
+  &__explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+  }
+}
+
+.about__second-section {
+  height: 100vh;
+  width: 85%;
+  margin: auto;
+  max-width: 1150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about__third-section {
+  height: 100vh;
+  width: 85%;
+  margin: auto;
+  max-width: 1150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__heading {
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 61px;
+    font-family: $font-family-2;
+    margin: 100px;
+    /* Gradient */
+    width: fit-content;
+    background: linear-gradient(90.13deg, #5EDEAA 1.65%, #4DE0AB 30.08%, #B1DF5D 53.63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+}
+
+.peopleCard-Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 960px) {
+  .about__first-section {
+    &__heading {
+      font-size: 32px;
+    }
+    &__explore {
+      font-size: 12px;
+    }
+  }
+  .peopleCard-Container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about__third-section {
+    justify-content: start;
+  }
+  .about__third-section__heading {
+    font-size: 32px;
+    line-height: 44px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}

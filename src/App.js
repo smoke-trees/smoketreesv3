@@ -4,6 +4,7 @@ import './App.scss';
 import { Index, About } from './pages';
 import gsap from 'gsap'
 import ScrolLTrigger from 'gsap/ScrollTrigger'
+import { DarkModeProvider } from './context/darkModeContext';
 // import Scrollbar from 'smooth-scrollbar'
 // import overscrollEffect from 'smooth-scrollbar/plugins/overscroll'
 gsap.registerPlugin(ScrolLTrigger)
@@ -48,9 +49,11 @@ function App() {
   return (
     <div className="App">
       <div className='cursor' id='cursor' />
-      <Routes>
-        {routes.map(route => <Route exact {...route} />)}
-      </Routes>
+      <DarkModeProvider>
+        <Routes>
+          {routes.map(route => <Route exact {...route} />)}
+        </Routes>
+      </DarkModeProvider>
     </div>
   );
 }
