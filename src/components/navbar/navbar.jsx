@@ -15,7 +15,7 @@ export function Navbar() {
       <div className="navbar__links">
         <Target>
           <div className="navbar__links__item">
-            <a href="/">About</a>
+            <a href="/#/about">About</a>
           </div>
         </Target>
         <Target>
