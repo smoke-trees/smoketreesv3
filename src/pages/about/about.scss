@@ -47,7 +47,71 @@
   max-width: 1150px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+  }
+  &__images {
+    height: 793px;
+    width: 559px;
+    position: relative;
+    &__1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 196px;
+      height: 303px;
+      object-fit: cover;
+    }
+    &__2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 429px;
+      height: 663px;
+      object-fit: cover;
+    }
+    &__3 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      width: 245px;
+      height: 378px;
+      object-fit: cover;
+    }
+  }
+  &__text-container__title {
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 61px;
+    font-family: $font-family-2;
+    margin-top: 65px;
+    /* Gradient */
+    width: fit-content;
+    background: linear-gradient(90.13deg, #5EDEAA 1.65%, #4DE0AB 30.08%, #B1DF5D 53.63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  &__text-container__para {
+    font-family: $font-family-1;
+    margin: 32px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 363px;
+  }
 }
 
 .about__third-section {
@@ -104,5 +168,55 @@
     line-height: 44px;
     margin: 0;
     margin-bottom: 20px;
+  }
+  .about__second-section { 
+    width: 100vw; 
+    &__content {
+      flex-direction: column;
+      position: relative;
+      width: 100vw;
+      gap: 0;
+    }
+    &__text-container {
+      margin-left: 24px;
+      margin-top: -44px;
+    }
+  
+    &__images {
+      width: 159.51px;
+      height: 225.12px;
+      align-self: flex-end;
+      margin-right: 10px;
+  
+      &__1 {
+        width: 54.68px;
+        height: 84.36px;
+        border-radius: 28px;
+      }
+  
+      &__2 {
+        width: 119.51px;
+        height: 185.12px;
+        border-radius: 28px;
+      }
+  
+      &__3 {
+        width: 68.74px;
+        height: 105.45px;
+        border-radius: 28px;
+      }
+    }
+    &__text-container__title {
+      font-size: 32px;
+      line-height: 44px;
+      margin-top: 0px;
+    }
+  
+    &__text-container__para {
+      margin: 24px 0;
+      font-size: 16px;
+      line-height: 19px;
+      max-width: 250px;
+    }
   }
 }
