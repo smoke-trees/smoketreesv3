@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import './product.scss'
 import {DarkModeContext} from '../../context/darkModeContext';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom'
 
 const AboutSectionOne = () => {
   const {darkMode, toggleDarkMode} = useContext(DarkModeContext)

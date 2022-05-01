@@ -1,1 +1,162 @@
 @import "../../App.scss";
+
+.project-section-one {
+  width: 85%;
+  max-width: 1210px;
+  margin: 0 auto;
+  margin-top: 250px;
+  margin-bottom: 225px;
+  &__heading {
+    max-width: 801px;
+    text-align: left;
+  }
+  &__img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    margin: 60px auto;
+  }
+  &__para {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.06em;
+    font-family: $font-family-1;
+  }
+}
+
+.project-section-two {
+  width: 85%;
+  max-width: 1210px;
+  margin: 120px auto;
+  &__heading {
+    margin-bottom: 75px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: $font-family-1;
+    letter-spacing: 0.06em;
+  }
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 150px;
+  }
+  &__card1 {
+    margin-top: 400px;
+  }
+  &__card-img {
+    width: 582px;
+    max-width: 85vw;
+    aspect-ratio: 9/14;
+    margin-bottom: 40px;
+  }
+  &__card-data {
+    margin: 0 !important;
+    max-width: 453px !important;
+  }
+}
+
+.project-section-three {
+  width: 85%;
+  max-width: 1312px;
+  margin: 120px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__cont {
+    display: flex;
+    gap: 23px;
+  }
+  &__card1 {
+    min-width: 582px;
+    height: 822px;
+  }
+  &__card-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+    align-items: center;
+  }
+  &__card2 {
+    width: 340px;
+    height: 419px;
+  }
+  &__card4 {
+    width: 703px;
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .project-section-one {
+    width: 85%;
+    max-width: 1210px;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 95px;  
+    &__img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      margin: 25px auto;
+    }
+  
+    &__para {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .project-section-two {
+  
+    &__heading {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  
+    &__container {
+      flex-direction: column;
+      margin-top: 40px;
+      gap: 50px;
+    }
+  
+    &__card1 {
+      margin-top: 0px;
+    }
+  
+    &__card-img {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  .project-section-three {
+    &__cont {
+      flex-direction: column;
+    }
+  
+    &__card1 {
+      min-width: unset;
+      width: 85vw;
+      height: unset;
+      aspect-ratio: 9/13;
+    }
+  
+    &__card-cont {
+      width: 85vw;
+    }
+  
+    &__card2 {
+      width: 100%;
+      height: unset;
+      aspect-ratio: 8/10;
+    }
+  
+    &__card4 {
+      width: 100%;
+      height: unset;
+      aspect-ratio: 17/9;
+    }
+  }
+}
