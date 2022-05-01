@@ -29,7 +29,7 @@ export function Navbar () {
         </Target>
         <Target>
           <div className="navbar__links__item">
-            <Link to="/" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>Products</Link>
+            <Link to="/project" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>Products</Link>
           </div>
         </Target>
         <Target>

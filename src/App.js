@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-import { Index, About } from './pages';
+import { Index, About, Product, ProjectName } from './pages';
 import gsap from 'gsap'
 import ScrolLTrigger from 'gsap/ScrollTrigger'
 import { DarkModeProvider } from './context/darkModeContext';
@@ -10,6 +10,16 @@ import { DarkModeProvider } from './context/darkModeContext';
 gsap.registerPlugin(ScrolLTrigger)
 
 const routes = [
+  {
+  element: <ProjectName />,
+  path: '/project/:name',
+  key: 'projectName'
+  },
+  {
+  element: <Product />,
+  path: '/project',
+  key: 'project'
+  },
   {
   element: <About />,
   path: '/about',
