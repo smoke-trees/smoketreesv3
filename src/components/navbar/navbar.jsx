@@ -1,36 +1,40 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {DarkModeContext} from '../../context/darkModeContext';
 import { Logo } from '../../assets/images'
+import LogoWhite from '../../assets/images/logoWhite.png'
 import Target from '../targets/target'
+import {Link} from 'react-router-dom'
 
 import './navbar.scss'
 
-export function Navbar() {
+export function Navbar () {
+  const {darkMode} = useContext(DarkModeContext)
   return (
     <div className="navbar">
       <div className="navbar__logo">
-        <a href="/">
-          <img title='SmokeTrees Digital LLP' className='navbar__logo__img' src={Logo} alt="SmokeTrees Logo" />
-        </a>
+        <Link to="/">
+          <img title='SmokeTrees Digital LLP' className='navbar__logo__img' src={darkMode ? LogoWhite : Logo} alt="SmokeTrees Logo" />
+        </Link>
       </div>
       <div className="navbar__links">
         <Target>
           <div className="navbar__links__item">
-            <a href="/">About</a>
+            <Link to="/about" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>About</Link>
           </div>
         </Target>
         <Target>
           <div className="navbar__links__item">
-            <a href="/">Services</a>
+            <Link to="/" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>Services</Link>
           </div>
         </Target>
         <Target>
           <div className="navbar__links__item">
-            <a href="/">Products</a>
+            <Link to="/project" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>Products</Link>
           </div>
         </Target>
         <Target>
           <div className="navbar__links__item">
-            <a href="/">Clients</a>
+            <Link to="/" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>Clients</Link>
           </div>
         </Target>
       </div>

@@ -1,0 +1,95 @@
+@import "../../App.scss";
+
+.project__second-section {
+  height: 100vh;
+  width: 85%;
+  margin: auto;
+  max-width: 1210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 100px;
+  }
+  &__heading {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    font-family: $font-family-1;
+    max-width: 578px;
+    margin-bottom: 1rem;
+  }
+  &__dash {
+    height: 4px;
+    background-color: #000;
+    width: 163px;
+  }
+  &__para {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.06em;
+    font-family: $font-family-1;
+    margin: 72px 0;
+    max-width: 413px;
+  }
+  &__explore {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: $font-family-1;
+    cursor: pointer;
+  }
+    &__img-cont {
+    width: 577px;
+    height: 784px;
+    object-fit: cover;
+    max-width: 85vw;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .project__second-section {  
+    &__container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    &__heading {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  
+    &__dash {
+      height: 4px;
+      background-color: #000;
+      width: 163px;
+    }
+  
+    &__para {
+      font-size: 16px;
+      line-height: 18px;
+      margin: 25px 0;
+    }
+  
+    &__explore {
+      gap: 5px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    &__img-cont {
+      width: 100%;
+      height: unset;
+      aspect-ratio: 9/14;
+    }
+  }
+}
