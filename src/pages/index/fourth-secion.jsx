@@ -1,8 +1,10 @@
 import React, { useCallback, useEffect } from 'react'
-import gsap from 'gsap'
+import gsap, { Scro } from 'gsap'
 import Target from '../../components/targets/target'
 import { ServiceCard } from '../../components/service-card/ServiceCard'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import { ServiceAutomation, ServiceCloud, ServiceDevelopment, ServiceUiUx } from '../../assets/images'
+
 export default function FourthSection({ }) {
   const onMouseEnterCallBack = useCallback((e) => {
     gsap.to('#cursor', {
@@ -12,6 +14,44 @@ export default function FourthSection({ }) {
   const onMouseLeaveCallBack = useCallback((e) => {
     gsap.to('#cursor', {
       borderColor: '#373737',
+    })
+  }, [])
+
+  useEffect(() => {
+    const timeline = gsap.timeline()
+      .set('#services-wrench', {
+        transformOrigin: '27px 14px',
+        delay: 0,
+        rotate: '0deg',
+        duration: 0
+      })
+      .to('#services-wrench', {
+        rotate: '-50deg',
+        ease: 'power0.in',
+        duration:  0.5
+      },0)
+      .to('#services-wrench', {
+        rotate: '30deg',
+        duration: 1.5,
+        ease: 'power2.out',
+      },0.75)
+      .to('#services-wrench',  {
+        rotate: '-50deg',
+        duration: 0.75,
+        ease: 'power2.in',
+      },2.5)
+      .to('#services-wrench',  {
+        rotate: '0deg',
+        duration: 1.5,
+        ease: 'power2.out',
+      },3.50)
+      
+    const scrollTrigger = ScrollTrigger.create({
+      showMarkers: true,
+      id: 'fourth-section-animation',
+      trigger: '.fourth-section',
+      start: 'top top',
+      animation: timeline,
     })
   }, [])
 
@@ -25,8 +65,24 @@ export default function FourthSection({ }) {
       >
         <div className='fourth-section__right'>
           <div className="fourth-section__icon">
-            <svg width="282" height="235" viewbox="0 0 282 235" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path xmlns="http://www.w3.org/2000/svg" d="M279.776 178.435L213.241 140.021C214.931 125.851 207.914 109.899 193.651 102.747C179.046 94.3144 161.722 96.2129 149.359 106.384L180.192 124.186L167.075 146.905L134.619 128.166C131.992 143.96 139.01 159.912 153.958 169.624C168.563 178.056 184.607 176.501 196.034 167.952L262.568 206.365C265.814 208.239 269.653 207.21 270.247 204.308L279.616 188.08C282.427 183.211 281.398 179.372 279.776 178.435ZM18.2132 67.4508C10.6687 39.294 27.5332 10.0839 55.6899 2.5393C83.8466 -5.00527 113.057 11.8592 120.601 40.0159C128.146 68.1727 111.281 97.3828 83.1247 104.927C54.968 112.472 25.7578 95.6075 18.2132 67.4508ZM148.955 197.027L8.17136 234.75L1.31266 209.153C-6.23191 180.997 33.6699 145.614 89.9834 130.524C96.3827 128.81 101.502 127.438 108.244 127.003C106.462 135.711 107.24 143.733 109.641 152.692C115.128 173.17 130.51 189.624 148.955 197.027Z" fill="#B1DF5D" />
+            <svg
+              width="320"
+              height="235"
+              viewbox="0 0 282 300"
+            >
+              <path
+                style={{ fill: "#b1df5d" }}
+                d="m 280.77177,177.43924 -66.535,-38.414 c 1.69,-14.17 -5.327,-30.122 -19.59,-37.274 -14.605,-8.432613 -31.929,-6.534113 -44.292,3.637 l 30.833,17.802 -13.117,22.719 -32.456,-18.739 c -2.627,15.794 4.391,31.746 19.339,41.458 14.605,8.432 30.649,6.877 42.076,-1.672 l 66.534,38.413 c 3.246,1.874 7.085,0.845 7.679,-2.057 l 9.369,-16.228 c 2.811,-4.869 1.782,-8.708 0.16,-9.645 z"
+                id="services-wrench"
+              />
+              <path
+                style={{ fill: "#b1df5d" }}
+                d="m 19.208962,66.455037 c -7.5445,-28.156795 9.32,-57.366895 37.4767,-64.911495 28.1567,-7.54457 57.367108,9.3199 64.911108,37.4766 7.545,28.156795 -9.32,57.366895 -37.476308,64.911108 -28.1567,7.545 -57.3669,-9.319513 -64.9115,-37.476213 z"
+                id="path834" />
+              <path
+                style={{ fill: "#b1df5d" }}
+                d="m 149.95077,196.03125 -140.783648,37.723 -6.8587,-25.597 c -7.54457,-28.156 32.35724,-63.539 88.67074,-78.629 6.3993,-1.714 11.518608,-3.086 18.260608,-3.521 -1.782,8.708 -1.004,16.73 1.397,25.689 5.487,20.478 20.869,36.932 39.314,44.335 z"
+                id="path2-3" />
             </svg>
           </div>
           <div className="fourth-section__middle">

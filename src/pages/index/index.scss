@@ -159,6 +159,10 @@
   }
 }
 
+#services-wrench {
+transform-origin: 162px 126px;
+}
+
 .service-card:nth-child(even) {
   transform: translate(0, 40px);
 }

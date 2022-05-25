@@ -37,7 +37,7 @@ const routes = [
 function App() {
   useEffect(() => {
     ScrolLTrigger.defaults({
-      markers: false,
+      markers: true,
     })
 
     const cursor = document.getElementById('cursor')
