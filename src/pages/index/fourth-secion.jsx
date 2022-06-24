@@ -28,23 +28,23 @@ export default function FourthSection({ }) {
       .to('#services-wrench', {
         rotate: '-50deg',
         ease: 'power0.in',
-        duration:  0.5
+        duration:  0.3
       },0)
       .to('#services-wrench', {
         rotate: '30deg',
-        duration: 1.5,
+        duration: 0.7,
         ease: 'power2.out',
-      },0.75)
+      },0.4)
       .to('#services-wrench',  {
         rotate: '-50deg',
-        duration: 0.75,
+        duration: .5,
         ease: 'power2.in',
-      },2.5)
+      },1.2)
       .to('#services-wrench',  {
         rotate: '0deg',
-        duration: 1.5,
+        duration: .5,
         ease: 'power2.out',
-      },3.50)
+      },1.8)
       
     const scrollTrigger = ScrollTrigger.create({
       showMarkers: true,
