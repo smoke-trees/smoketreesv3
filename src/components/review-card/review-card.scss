@@ -1,7 +1,14 @@
 @import "../../App.scss";
 
-.review-card {
+.light-mode-card {
   background: #f8f8f8;
+}
+
+.dark-mode-card {
+  background: #222;
+}
+
+.review-card {
   max-width: 400px;
   width: 400px;
   padding-top: 2.5rem;

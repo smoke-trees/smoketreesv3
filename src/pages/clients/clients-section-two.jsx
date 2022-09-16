@@ -4,7 +4,6 @@ import ReviewCard from "../../components/review-card/review-card"
 import "./clients.scss"
 
 const ClientsSectionTwo = () => {
-
   return (
     <div className="clients__section-two">
       <div className="clients__section-two__column1">

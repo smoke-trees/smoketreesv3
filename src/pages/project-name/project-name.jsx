@@ -40,13 +40,8 @@ export const ProjectNameSectionOne = () => {
       <div className="project-section-one__img">
         <GradientImg imgUrl="//unsplash.it/1210/735" />
       </div>
-      <div
-        className={`project-section-one__para ${
-          darkMode ? "dark-mode__color1" : "light-mode__color1"
-        }`}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui hendrerit leo dictumst
-        feugiat quis arcu integer morbi.
+      <div className={`project-section-one__para ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui hendrerit leo dictumst feugiat quis arcu integer morbi.
       </div>
     </div>
   )
@@ -57,33 +52,14 @@ export const ProjectNameSectionTwo = () => {
 
   return (
     <div className="project-section-two">
-      <div
-        className={`project-section-two__heading ${
-          darkMode ? "dark-mode__color1" : "light-mode__color1"
-        }`}
-      >
-        THE PRODUCT
-      </div>
+      <div className={`project-section-two__heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>THE PRODUCT</div>
       <div>
-        <div
-          className={`project__second-section__heading ${
-            darkMode ? "dark-mode__color1" : "light-mode__color1"
-          }`}
-        >
+        <div className={`project__second-section__heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>
           Lorem ipsum dolor sit amet
         </div>
-        <div
-          className={`project__second-section__dash ${
-            darkMode ? "dash-dark-mode" : "dash-light-mode"
-          }`}
-        />
-        <div
-          className={`project__second-section__para ${
-            darkMode ? "dark-mode__color1" : "light-mode__color1"
-          }`}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui hendrerit leo dictumst
-          feugiat quis arcu integer morbi.
+        <div className={`project__second-section__dash ${darkMode ? "dash-dark-mode" : "dash-light-mode"}`} />
+        <div className={`project__second-section__para ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui hendrerit leo dictumst feugiat quis arcu integer morbi.
         </div>
       </div>
       <div className="project-section-two__container">
@@ -91,7 +67,11 @@ export const ProjectNameSectionTwo = () => {
           <div className="project-section-two__card-img">
             <GradientImg imgUrl="//unsplash.it/582/822" />
           </div>
-          <div className={`project__second-section__para project-section-two__card-data ${darkMode ? 'dark-mode__color1' : 'light-mode__color1'}`}>
+          <div
+            className={`project__second-section__para project-section-two__card-data ${
+              darkMode ? "dark-mode__color1" : "light-mode__color1"
+            }`}
+          >
             Lorem ipsum dolor sit amet, consectetur
           </div>
         </div>
@@ -99,7 +79,11 @@ export const ProjectNameSectionTwo = () => {
           <div className="project-section-two__card-img">
             <GradientImg imgUrl="//unsplash.it/582/822" />
           </div>
-          <div className={`project__second-section__para project-section-two__card-data ${darkMode ? 'dark-mode__color1' : 'light-mode__color1'}`}>
+          <div
+            className={`project__second-section__para project-section-two__card-data ${
+              darkMode ? "dark-mode__color1" : "light-mode__color1"
+            }`}
+          >
             Lorem ipsum dolor sit amet, consectetur
           </div>
         </div>
