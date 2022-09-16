@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-import { Index, About, Product, ProjectName } from './pages';
+import { Index, About, Product, ProjectName, Clients } from './pages';
 import gsap from 'gsap'
 import ScrolLTrigger from 'gsap/ScrollTrigger'
 import { DarkModeProvider } from './context/darkModeContext';
@@ -19,6 +19,11 @@ const routes = [
   element: <Product />,
   path: '/project',
   key: 'project'
+  },
+  {
+  element: <Clients />,
+  path: '/clients',
+  key: 'clients'
   },
   {
   element: <About />,
