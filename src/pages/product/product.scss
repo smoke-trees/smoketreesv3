@@ -1,5 +1,13 @@
 @import "../../App.scss";
 
+.dash-dark-mode {
+  background-color: #fff;
+}
+
+.light-dark-mode {
+  background-color: #000;
+}
+
 .project__second-section {
   height: 100vh;
   width: 85%;
@@ -24,7 +32,6 @@
   }
   &__dash {
     height: 4px;
-    background-color: #000;
     width: 163px;
   }
   &__para {
@@ -71,7 +78,6 @@
   
     &__dash {
       height: 4px;
-      background-color: #000;
       width: 163px;
     }
   

@@ -11,7 +11,7 @@ const AboutSectionOne = () => {
         <div className={`about__first-section__heading ${darkMode ? 'dark-mode__color1' : 'light-mode__color1'}`} style={{marginTop: '20px'}}>
           Projects
         </div>
-        <div className="about__first-section__bulb" style={{marginTop: '0px'}}>
+        <div className="about__first-section__bulb" style={{marginTop: '0px'}} onClick={toggleDarkMode}>
           <svg style={{maxWidth: '85vw'}} width="430" height="408" viewBox="0 0 430 408" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M146.39 186.651L146.39 273.253L71.3896 229.952L146.39 186.651Z" fill="#B4ADFF"/>
             <path d="M146.204 273.217L146.098 186.615L221.151 229.824L146.204 273.217Z" fill="#B4ADFF"/>
