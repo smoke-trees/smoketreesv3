@@ -1,0 +1,53 @@
+@import "../../App.scss";
+
+.development-card-container > .info-cards__container {
+  width: 210px;
+  display: flex;
+}
+
+.info-cards {
+  &__container {
+    width: 250px;
+    display: flex;
+  }
+  &__data-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__index {
+    font-family: $font-family-1;
+    font-weight: 700;
+    font-size: 82px;
+    line-height: 98px;
+    margin-top: -20px;
+    text-align: center;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background: -webkit-linear-gradient(270deg, #ffffff 0%, #c4c4c4 100%);
+    background-size: 100% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__img {
+    height: 111px;
+  }
+  &__heading {
+    font-family: $font-family-1;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.06em;
+    height: 48px;
+    margin-bottom: 12px;
+  }
+  &__desc {
+    font-family: $font-family-1;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.06em;
+  }
+}

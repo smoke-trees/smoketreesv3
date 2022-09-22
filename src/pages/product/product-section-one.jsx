@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
-import "./product.scss"
 import { DarkModeContext } from "../../context/darkModeContext"
+
+import "./product.scss"
 
 const AboutSectionOne = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext)

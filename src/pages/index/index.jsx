@@ -1,4 +1,5 @@
 import React from "react";
+import { Navbar } from "../../components";
 import { FirstSection } from "./first-section";
 import FourthSection from "./fourth-secion";
 import './index.scss';
@@ -10,6 +11,7 @@ export function Index() {
 
   return (
     <React.Fragment>
+      <Navbar />
       <div className="body">
         <FirstSection />
         <SecondSection />
@@ -17,5 +19,5 @@ export function Index() {
         <FourthSection />
       </div>
     </React.Fragment>
-  )
+  );
 }
