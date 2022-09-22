@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import { DarkModeContext } from "../../context/darkModeContext"
-import { Navbar } from "../../components"
 import ProductSectionOne from "./product-section-one"
 import ProductSectionTwo from "./product-section-two"
 import MoreProjects from "../../components/more-projects/more-projects"
@@ -12,7 +11,6 @@ export const Product = () => {
 
   return (
     <div className={darkMode ? "about__container__dark" : "about__container__light"}>
-      <Navbar />
       <div>
         <ProductSectionOne />
         <ProductSectionTwo />

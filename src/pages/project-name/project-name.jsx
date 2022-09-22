@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import { DarkModeContext } from "../../context/darkModeContext"
-import { Navbar } from "../../components"
 import MoreProjects from "../../components/more-projects/more-projects"
 import GradientImg from "../../components/gradient-img/gradient-img"
 
@@ -11,7 +10,6 @@ export const ProjectName = () => {
 
   return (
     <div className={darkMode ? "about__container__dark" : "about__container__light"}>
-      <Navbar />
       <ProjectNameSectionOne />
       <ProjectNameSectionTwo />
       <ProjectNameSectionThree />

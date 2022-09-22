@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-import { Index, About, Product, ProjectName, Clients } from './pages';
+import { Index, About, Product, ProjectName, Clients, Services } from './pages';
 import gsap from 'gsap'
 import ScrolLTrigger from 'gsap/ScrollTrigger'
 import { DarkModeProvider } from './context/darkModeContext';
+import { Navbar } from './components';
 // import Scrollbar from 'smooth-scrollbar'
 // import overscrollEffect from 'smooth-scrollbar/plugins/overscroll'
 gsap.registerPlugin(ScrolLTrigger)
@@ -29,6 +30,11 @@ const routes = [
   element: <About />,
   path: '/about',
   key: 'about'
+  },
+  {
+  element: <Services />,
+  path: '/services',
+  key: 'services'
   },
   {
   element: <Index />,
@@ -65,6 +71,7 @@ function App() {
     <div className="App">
       <div className='cursor' id='cursor' />
       <DarkModeProvider>
+        <Navbar />
         <Routes>
           {routes.map(route => <Route exact {...route} />)}
         </Routes>
