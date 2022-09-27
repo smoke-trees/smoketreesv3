@@ -1,11 +1,9 @@
 /** Fonts */
-$gothic: "century-gothic";
-$lust: "lust";
-$poppins: "century-gothic";
-$playfair: "Playfair Display";
+$metropolis: "Metropolis";
+$work-sans: "Work Sans";
 
-$font-family-1: $gothic, $poppins, "serif";
-$font-family-2: $lust, $playfair, "serif";
+$font-family-1: $metropolis, $work-sans, sans-serif;
+$font-family-2: $metropolis, $work-sans, serif;
 // Fonts end
 
 a,
@@ -23,7 +21,6 @@ a :visited {
 .typewriter-char {
   opacity: 0;
 }
-
 
 html,
 body {

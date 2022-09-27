@@ -6,6 +6,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 
 
 export function ThirdSection() {
+  const headingDelay = 0
+  const headingDuration = 0.01
+  const headingStagger = 0.1
+
   useEffect(() => {
     const animation = gsap.timeline().fromTo(
       '.third-section__left__splash svg', {
@@ -27,21 +31,24 @@ export function ThirdSection() {
     }, {
       opacity: 1,
       autoAlpha: 1,
-      display: 'block',
-      delay: 1,
-      duration: 0.02,
-      stagger: 0.15,
-      scrollTrigger: {
-        markers: false,
-        trigger: ".third-section",
-        start: "top 75%"
-      }
+      display: 'inline',
+      delay: headingDelay,
+      duration: headingDuration,
+      stagger: headingStagger,
+
     }).fromTo(".third-section__text__body", {
       opacity: 0
     }, {
       opacity: 1,
       duration: 0.5,
-      ease: 'power3.inout'
+      ease: 'power3.inout',
+
+    })
+    ScrollTrigger.create({
+      markers: true,
+      trigger: ".third-section",
+      start: "20% 50%",
+      animation: ThirdSectionTimeline,
     })
     return () => {
       animation.kill()
@@ -304,122 +311,36 @@ export function ThirdSection() {
         </div>
         <div className="third-section__text">
           <div className='third-section__text__title'>
-            <svg width="384" height="46" viewBox="0 0 384 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path className='typewriter-chars digital-platforms' d="M16.412 35C28.16 35 33.704 28.4 33.704 19.6C33.704 9.21599 26.84 4.19999 16.016 4.19999H0.35199V4.41999H4.26799V34.78H0.35199V35H16.412ZM16.412 34.78C13.464 34.78 13.332 33.724 13.332 29.544V4.41999H14.828C22.748 4.41999 23.672 9.43599 23.672 19.6C23.672 30.82 21.12 34.78 16.412 34.78Z" fill="url(#paint0_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M42.4115 10.052C45.1395 10.052 47.3395 7.85199 47.3395 5.12399C47.3395 2.39599 45.1395 0.23999 42.4115 0.23999C39.7275 0.23999 37.5275 2.43999 37.5275 5.12399C37.5275 7.85199 39.7275 10.052 42.4115 10.052ZM46.5035 16.476L46.5915 11.592L34.8435 12.296V12.516L38.3195 12.34V34.78H34.8875V35H49.9355V34.78H46.5035V16.476Z" fill="url(#paint1_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M67.3444 28.224C65.4084 28.224 62.1084 28.4 61.4044 28.4C58.8524 28.4 56.2564 28.268 56.2564 26.772C56.2564 26.156 56.7404 25.32 58.5444 24.88C60.3484 25.496 62.4164 25.76 64.4404 25.76C70.1164 25.76 75.9244 23.472 75.9244 18.544C75.9244 14.804 72.5804 12.604 68.4884 11.768C68.4444 9.87599 69.7204 9.03999 71.0404 9.03999C72.5804 9.03999 73.8564 10.096 74.0324 12.076C76.1444 11.944 77.9044 9.96399 77.9044 7.89599C77.9044 5.73999 76.3204 3.89199 73.4604 3.89199C70.1164 3.89199 68.0924 6.57599 68.0924 10.008C68.0924 10.536 68.1364 11.108 68.2684 11.724C67.0364 11.46 65.7604 11.372 64.4844 11.372C58.8084 11.372 53.0004 13.66 53.0004 18.588C53.0004 21.624 55.2004 23.648 58.2364 24.748C53.6164 25.76 51.0204 28.356 51.0204 31.48C51.0204 36.188 56.3884 36.892 60.9204 36.892C63.1644 36.892 65.6724 36.716 67.1244 36.716C70.9964 36.716 72.8004 38.08 72.8004 40.412C72.8004 43.316 69.8084 45.428 63.6924 45.428C58.1924 45.428 56.7844 44.152 56.7844 42.348C56.7844 41.512 57.2244 40.456 58.1924 40.104C58.1044 38.036 56.6084 37.024 54.9364 37.024C52.9564 37.024 51.3724 38.432 51.3724 40.544C51.3724 44.944 57.0044 45.648 63.6924 45.648C72.8444 45.648 77.9484 41.336 77.9484 35.66C77.9484 29.632 72.1404 28.224 67.3444 28.224ZM64.4844 11.548C66.4204 11.548 67.8284 13.176 67.8284 18.544C67.8284 23.956 66.4204 25.54 64.4844 25.54C62.5484 25.54 61.1404 23.956 61.1404 18.544C61.1404 13.176 62.5484 11.548 64.4844 11.548Z" fill="url(#paint2_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M86.0248 10.052C88.7528 10.052 90.9528 7.85199 90.9528 5.12399C90.9528 2.39599 88.7528 0.23999 86.0248 0.23999C83.3408 0.23999 81.1408 2.43999 81.1408 5.12399C81.1408 7.85199 83.3408 10.052 86.0248 10.052ZM90.1168 16.476L90.2048 11.592L78.4568 12.296V12.516L81.9328 12.34V34.78H78.5008V35H93.5488V34.78H90.1168V16.476Z" fill="url(#paint3_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M103.053 35.352C107.629 35.352 109.433 33.372 109.433 29.324H109.213C109.213 30.776 108.949 33.372 106.969 33.372C105.165 33.372 104.901 31.612 104.901 28.62V12.076H109.433V11.856H104.901V3.09999H104.681C104.505 5.29999 103.801 8.29199 102.657 9.96399C100.809 11.328 97.9492 11.856 94.5611 11.856H93.5491V12.076H96.7611V29.06C96.7611 33.504 99.0931 35.352 103.053 35.352Z" fill="url(#paint4_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M137.15 29.236C137.15 30.556 136.93 33.284 135.258 33.284C133.938 33.284 133.85 31.524 133.85 28.752V18.324C133.85 13.22 128.394 11.504 122.234 11.504C119.11 11.504 112.246 12.648 112.246 17.84C112.246 20.304 114.006 21.8 116.382 21.8C118.362 21.8 120.166 20.612 120.298 18.104C119.374 17.708 118.758 16.52 118.758 15.42C118.758 13.396 119.858 11.724 122.234 11.724C125.226 11.724 125.666 14.804 125.666 17.488V20.392C120.65 23.78 110.794 22.592 110.794 29.544C110.794 33.328 113.434 35.352 117.57 35.352C121.398 35.352 124.918 33.196 125.71 30.116C125.974 33.592 127.602 35.264 131.166 35.264C135.522 35.264 137.326 33.284 137.326 29.236H137.15ZM122.806 32.536C120.43 32.536 119.726 29.896 119.726 27.916C119.726 22.944 122.498 22.68 125.622 20.656V29.236C125.622 30.776 124.566 32.536 122.806 32.536Z" fill="url(#paint5_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M148.425 0.23999L136.765 0.94399V1.16399L140.285 0.987988V34.78H136.853V35H151.857V34.78H148.425V0.23999Z" fill="url(#paint6_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M180.493 11.504C177.105 11.504 173.673 13.396 172.573 18.5L172.705 11.592L160.957 12.296V12.516L164.477 12.34V44.68H161.045V44.9H176.929V44.68H172.617V30.556C173.145 33.68 174.597 35.352 178.161 35.352C183.749 35.352 188.677 30.732 188.677 22.416C188.677 15.508 185.245 11.504 180.493 11.504ZM175.829 34.384C173.805 34.384 172.617 31.832 172.617 28.488V19.292C173.321 15.42 175.213 13.176 176.973 13.176C179.261 13.176 179.701 15.816 179.701 21.976C179.701 29.28 179.041 34.428 175.829 34.428V34.384Z" fill="url(#paint7_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M200.675 0.23999L189.015 0.94399V1.16399L192.535 0.987988V34.78H189.103V35H204.107V34.78H200.675V0.23999Z" fill="url(#paint8_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M231.681 29.236C231.681 30.556 231.461 33.284 229.789 33.284C228.469 33.284 228.381 31.524 228.381 28.752V18.324C228.381 13.22 222.925 11.504 216.765 11.504C213.641 11.504 206.777 12.648 206.777 17.84C206.777 20.304 208.537 21.8 210.913 21.8C212.893 21.8 214.697 20.612 214.829 18.104C213.905 17.708 213.289 16.52 213.289 15.42C213.289 13.396 214.389 11.724 216.765 11.724C219.757 11.724 220.197 14.804 220.197 17.488V20.392C215.181 23.78 205.325 22.592 205.325 29.544C205.325 33.328 207.965 35.352 212.101 35.352C215.929 35.352 219.449 33.196 220.241 30.116C220.505 33.592 222.133 35.264 225.697 35.264C230.053 35.264 231.857 33.284 231.857 29.236H231.681ZM217.337 32.536C214.961 32.536 214.257 29.896 214.257 27.916C214.257 22.944 217.029 22.68 220.153 20.656V29.236C220.153 30.776 219.097 32.536 217.337 32.536Z" fill="url(#paint9_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M240.811 35.352C245.387 35.352 247.191 33.372 247.191 29.324H246.971C246.971 30.776 246.707 33.372 244.727 33.372C242.923 33.372 242.659 31.612 242.659 28.62V12.076H247.191V11.856H242.659V3.09999H242.439C242.263 5.29999 241.559 8.29199 240.415 9.96399C238.567 11.328 235.707 11.856 232.319 11.856H231.307V12.076H234.519V29.06C234.519 33.504 236.851 35.352 240.811 35.352Z" fill="url(#paint10_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M262.521 35V34.78H258.648V12.076H262.521V11.856H258.868C254.512 11.856 252.356 8.55599 252.356 5.29999C252.356 2.87999 253.632 0.85599 255.964 0.85599C257.548 0.85599 258.428 2.08799 258.428 3.40799C258.428 4.90399 257.505 5.82799 256.405 6.22399C256.669 8.95199 258.428 10.184 260.629 10.184C263.137 10.184 265.029 8.37999 265.029 5.69599C265.029 2.17599 261.596 0.23999 258.077 0.23999C252.621 0.23999 250.2 3.36399 250.2 8.07199C250.2 9.34799 250.376 10.712 250.596 11.856H247.076V12.076H250.508V34.78H247.076V35H262.521Z" fill="url(#paint11_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M276.148 11.504C268.932 11.504 263.3 16.388 263.3 23.428C263.3 30.468 268.932 35.352 276.148 35.352C283.364 35.352 288.996 30.468 288.996 23.428C288.996 16.388 283.364 11.504 276.148 11.504ZM276.148 35.132C272.716 35.132 272.276 30.16 272.276 23.428C272.276 17.136 272.716 11.724 276.148 11.724C279.58 11.724 280.02 17.136 280.02 23.428C280.02 30.16 279.58 35.132 276.148 35.132Z" fill="url(#paint12_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M309.217 11.504C306.137 11.504 302.705 13.572 301.737 18.72V18.676L301.869 11.592L290.121 12.296V12.516L293.641 12.34V34.78H290.209V35H305.653V34.78H301.781V19.424C302.529 15.112 304.685 13 306.445 13C307.633 13 308.293 13.924 308.293 15.376C308.293 16.916 307.413 18.016 306.093 18.456C306.225 20.964 308.029 22.152 310.009 22.152C312.869 22.152 314.893 19.908 314.893 16.96C314.893 13.704 312.473 11.548 309.217 11.548V11.504Z" fill="url(#paint13_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M356.3 18.632C356.3 13.792 353.792 11.548 349.788 11.548C346.488 11.548 342.836 13.044 341.78 18.5C341.736 13.748 339.228 11.548 335.268 11.548C331.968 11.548 328.272 13.088 327.26 18.72V18.676L327.392 11.592L315.644 12.296V12.516L319.164 12.34V34.78H315.732V35H329.724V34.78H327.304V19.424C328.052 15.112 329.9 13.088 331.792 13.088C333.728 13.088 333.64 15.112 333.64 16.432V34.78H331.264V35H344.2V34.78H341.824V19.424C342.572 15.112 344.42 13.132 346.268 13.132C348.248 13.132 348.16 15.112 348.16 16.432V34.824H345.74V35.044H359.732V34.824H356.3V18.632Z" fill="url(#paint14_linear_233_7)" />
-              <path className='typewriter-chars digital-platforms' d="M367.425 14.98C367.425 13.176 369.141 11.724 372.265 11.724C375.653 11.724 379.525 13.748 380.713 19.38H380.889L380.449 11.592L377.941 12.604C376.357 12.032 374.201 11.548 372.265 11.548C366.853 11.548 361.001 13.572 361.001 18.984C361.001 27.652 376.973 27.124 376.973 31.92C376.973 34.384 374.113 35.176 371.297 35.176C368.129 35.176 362.365 33.46 361.177 25.892H361.001L361.485 35.308L364.477 34.208C367.293 35.044 369.537 35.396 371.297 35.396C377.545 35.396 383.089 33.02 383.089 27.388C383.089 18.72 367.425 20.04 367.425 15.024V14.98Z" fill="url(#paint15_linear_233_7)" />
-              <defs>
-                <linearGradient id="paint0_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint1_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint2_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint3_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint4_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint5_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint6_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint7_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint8_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint9_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint10_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint11_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint12_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint13_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint14_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-                <linearGradient id="paint15_linear_233_7" x1="6.49468" y1="10.4754" x2="205.83" y2="14.4031" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EDEAA" />
-                  <stop offset="0.546875" stopColor="#4DE0AB" />
-                  <stop offset="1" stopColor="#B1DF5D" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <svg width="278" height="36" viewBox="0 0 278 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path className='typewriter-chars digital-platforms' d="M27.236 29.236C27.236 30.556 27.016 33.284 25.344 33.284C24.024 33.284 23.936 31.524 23.936 28.752V18.324C23.936 13.22 18.48 11.504 12.32 11.504C9.196 11.504 2.33201 12.648 2.33201 17.84C2.33201 20.304 4.092 21.8 6.468 21.8C8.448 21.8 10.252 20.612 10.384 18.104C9.46 17.708 8.844 16.52 8.844 15.42C8.844 13.396 9.94401 11.724 12.32 11.724C15.312 11.724 15.752 14.804 15.752 17.488V20.392C10.736 23.78 0.880005 22.592 0.880005 29.544C0.880005 33.328 3.52001 35.352 7.65601 35.352C11.484 35.352 15.004 33.196 15.796 30.116C16.06 33.592 17.688 35.264 21.252 35.264C25.608 35.264 27.412 33.284 27.412 29.236H27.236ZM12.892 32.536C10.516 32.536 9.81201 29.896 9.81201 27.916C9.81201 22.944 12.584 22.68 15.708 20.656V29.236C15.708 30.776 14.652 32.536 12.892 32.536Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M53.3394 18.632C53.3394 13.792 50.6113 11.548 46.7833 11.548C43.2633 11.548 39.4794 13.088 38.4674 18.72V18.676L38.5993 11.592L26.8513 12.296V12.516L30.3713 12.34V34.78H26.9394V35H41.0633V34.78H38.5113V19.424C39.2593 15.112 41.2393 13.132 43.0873 13.132C45.1553 13.132 45.1553 15.2 45.1553 16.432V34.824H42.6474V35.044H56.7714V34.824H53.3394V18.632Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M81.2934 0.23999L69.5014 0.94399V1.16399L73.0214 0.987988L73.1534 15.86C72.5814 12.692 70.1174 11.548 67.6974 11.548C62.1094 11.548 57.0934 16.124 57.0934 24C57.0934 31.26 61.2734 35.396 66.6854 35.396C70.4254 35.396 72.5374 33.372 73.1534 29.94H73.1974L73.1534 35.044H84.2854V34.824H81.2495L81.2934 0.23999ZM69.2374 34.428C66.9494 34.428 66.0254 31.568 66.0254 23.692C66.0254 14.716 67.1694 12.164 69.3694 12.164C71.2614 12.164 73.1094 14.276 73.1094 17.356V28.884C72.9774 31.92 71.1294 34.428 69.2374 34.428Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M118.333 0.23999L106.541 0.94399V1.16399L110.061 0.987988L110.193 15.86C109.621 12.692 107.157 11.548 104.737 11.548C99.1485 11.548 94.1325 16.124 94.1325 24C94.1325 31.26 98.3125 35.396 103.725 35.396C107.465 35.396 109.577 33.372 110.193 29.94H110.237L110.193 35.044H121.325V34.824H118.289L118.333 0.23999ZM106.277 34.428C103.989 34.428 103.065 31.568 103.065 23.692C103.065 14.716 104.209 12.164 106.409 12.164C108.301 12.164 110.149 14.276 110.149 17.356V28.884C110.017 31.92 108.169 34.428 106.277 34.428Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M145.29 26.684C143.75 29.544 140.714 30.38 138.426 30.38C134.114 30.38 130.77 27.212 130.506 20.964H145.202C146.258 15.376 142.606 11.504 134.95 11.504C127.25 11.504 122.234 16.652 122.234 23.868C122.234 31.084 127.514 35.396 133.542 35.396C139.658 35.396 143.53 31.48 145.466 26.816L145.29 26.684ZM134.95 11.724C138.382 11.724 137.766 17.928 137.37 20.656H130.506C130.506 20.524 130.506 20.348 130.506 20.216C130.506 17.268 131.166 11.724 134.95 11.724Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M166.412 12.076H171.296L164.168 26.508L157.128 12.076H160.824V11.856H144.94V12.076H147.888L159.856 35.88L171.604 12.076H174.816V11.856H166.412V12.076Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M181.845 10.052C184.573 10.052 186.773 7.85199 186.773 5.12399C186.773 2.39599 184.573 0.23999 181.845 0.23999C179.161 0.23999 176.961 2.43999 176.961 5.12399C176.961 7.85199 179.161 10.052 181.845 10.052ZM185.937 16.476L186.025 11.592L174.277 12.296V12.516L177.753 12.34V34.78H174.321V35H189.369V34.78H185.937V16.476Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M203.962 11.724C206.206 11.724 207.394 13.396 207.394 15.376C207.394 16.52 206.778 17.664 205.854 18.104C205.986 20.612 207.746 21.8 209.726 21.8C212.102 21.8 213.906 20.216 213.906 17.752C213.906 12.56 206.998 11.504 203.786 11.504C196.086 11.504 191.07 16.608 191.07 23.824C191.07 31.084 196.35 35.352 202.378 35.352C208.494 35.352 212.366 31.436 214.302 26.772L214.126 26.684C212.586 29.544 209.55 30.38 207.262 30.38C202.818 30.38 199.342 26.948 199.342 20.172C199.342 17.268 200.002 11.724 203.962 11.724Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M239.478 26.684C237.938 29.544 234.902 30.38 232.614 30.38C228.302 30.38 224.958 27.212 224.694 20.964H239.39C240.446 15.376 236.794 11.504 229.138 11.504C221.438 11.504 216.422 16.652 216.422 23.868C216.422 31.084 221.702 35.396 227.73 35.396C233.846 35.396 237.718 31.48 239.654 26.816L239.478 26.684ZM229.138 11.724C232.57 11.724 231.954 17.928 231.558 20.656H224.694C224.694 20.524 224.694 20.348 224.694 20.216C224.694 17.268 225.354 11.724 229.138 11.724Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M248.788 14.98C248.788 13.176 250.504 11.724 253.628 11.724C257.016 11.724 260.888 13.748 262.076 19.38H262.252L261.812 11.592L259.304 12.604C257.72 12.032 255.564 11.548 253.628 11.548C248.216 11.548 242.364 13.572 242.364 18.984C242.364 27.652 258.336 27.124 258.336 31.92C258.336 34.384 255.476 35.176 252.66 35.176C249.492 35.176 243.728 33.46 242.54 25.892H242.364L242.848 35.308L245.84 34.208C248.656 35.044 250.9 35.396 252.66 35.396C258.908 35.396 264.452 33.02 264.452 27.388C264.452 18.72 248.788 20.04 248.788 15.024V14.98Z" fill="#373737" />
-              <path className='typewriter-chars digital-platforms' d="M272.592 24.352C272.68 17.18 277.916 14.98 277.916 10.14C277.916 7.45599 276.112 5.12399 272.504 2.65999C268.896 5.12399 267.092 7.45599 267.092 10.14C267.092 14.98 272.328 17.18 272.416 24.352H272.592ZM272.504 35.352C275.012 35.352 277.124 33.416 277.124 30.952C277.124 28.532 275.056 26.552 272.504 26.552C269.952 26.552 267.884 28.532 267.884 30.952C267.884 33.372 269.952 35.352 272.504 35.352Z" fill="#373737" />
-            </svg>
+            <span className='heading heading-2'>
+              <span className='heading-gradient'>
+                <span className='typewriter-chars digital-platforms'>S</span>
+                <span className='typewriter-chars digital-platforms'>i</span>
+                <span className='typewriter-chars digital-platforms'>m</span>
+                <span className='typewriter-chars digital-platforms'>p</span>
+                <span className='typewriter-chars digital-platforms'>l</span>
+                <span className='typewriter-chars digital-platforms'>i</span>
+                <span className='typewriter-chars digital-platforms'>f</span>
+                <span className='typewriter-chars digital-platforms'>y&nbsp;</span>
+              </span>
+              <span>
+                <span className='typewriter-chars digital-platforms'>y</span>
+                <span className='typewriter-chars digital-platforms'>o</span>
+                <span className='typewriter-chars digital-platforms'>u</span>
+                <span className='typewriter-chars digital-platforms'>r&nbsp;</span>
+                <span className='typewriter-chars digital-platforms'>w</span>
+                <span className='typewriter-chars digital-platforms'>o</span>
+                <span className='typewriter-chars digital-platforms'>r</span>
+                <span className='typewriter-chars digital-platforms'>k</span>
+                <span className='typewriter-chars digital-platforms'>f</span>
+                <span className='typewriter-chars digital-platforms'>l</span>
+                <span className='typewriter-chars digital-platforms'>o</span>
+                <span className='typewriter-chars digital-platforms'>w</span>
+
+              </span>
+            </span>
           </div>
-          <div className='third-section__text__body'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at risus amet, commodo condimentum integer.
+          <div className='third-section__text__body index-text-body'>
+            We follow Agile methodology to create, maintain and improve your products, so you can focus on other aspects and reach you business goals.
           </div>
         </div>
       </div>

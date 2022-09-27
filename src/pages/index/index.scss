@@ -1,7 +1,7 @@
 @import "../../App.scss";
 
 .build-better__underline {
-  font-family: $gothic;
+  font-family: $font-family-1;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -29,6 +29,37 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.heading {
+  font-family: $font-family-1;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 131px;
+}
+.heading-2 {
+  font-size: 44px;
+  line-height: 61px;
+}
+.heading-gradient {
+  background: linear-gradient(90deg, #60dda8 0%, #3be0b9 50%, #b4de5a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  // text-fill-color: transparent;
+}
+.index-text-body {
+  font-family: $font-family-2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  max-width: 380px;
+  color: #676767;
+}
+
+.index-text-body {
+}
+
 .explore {
   margin-bottom: 25px;
   width: 100%;
@@ -70,7 +101,7 @@
       }
     }
     &-body {
-      font-family: $gothic;
+      font-family: $font-family-2;
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
@@ -160,9 +191,17 @@
 }
 
 #services-wrench {
-transform-origin: 162px 126px;
+  transform-origin: 162px 126px;
 }
 
 .service-card:nth-child(even) {
   transform: translate(0, 40px);
+}
+
+@media screen and (max-width: 1024px) {
+  .index__first-section {
+    .st-right {
+      justify-content: center;
+    }
+  }
 }
