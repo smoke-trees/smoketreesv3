@@ -46,15 +46,19 @@ export default function FourthSection({ isMobile }) {
         ease: 'power2.out',
       }, 1.8)
 
-    // const scrollTrigger =
-    ScrollTrigger.create({
+    const scrollTrigger = ScrollTrigger.create({
       markers: false,
       id: 'fourth-section-animation',
       trigger: '.fourth-section',
-      start: '45% 50%',
+      start: isMobile ? '10% 90%' : '45% 50%',
       animation: timeline,
-    }).enable()
-  }, [])
+      once: true
+    })
+    return () => {
+      scrollTrigger.kill()
+    }
+  }, [isMobile])
+
 
   return (
     <>
@@ -95,11 +99,6 @@ export default function FourthSection({ isMobile }) {
             <div className="fourth-section__middle__body index-text-body">
               We specialize in designing, planning, building and maintaining robust, secure, high-quality applications and services. Well documented code and well timed delivery is our priority. With us, you can build Website, Mobile Applications, UI/UX Designs, ML/AI models, Microservices, and everything that resembles anything to do with tech. We have it all.
             </div>
-            <Target>
-              <div className='fourth-section__middle__explore'>
-                Explore
-              </div>
-            </Target>
           </div>
         </div>
 

@@ -24,9 +24,9 @@ export function Index() {
     <React.Fragment>
       <Navbar />
       <div className="body">
-        <FirstSection />
+        <FirstSection isMobile={isMobile} />
         <SecondSection isMobile={isMobile} />
-        <ThirdSection />
+        <ThirdSection isMobile={isMobile} />
         <FourthSection isMobile={isMobile} />
       </div>
     </React.Fragment>

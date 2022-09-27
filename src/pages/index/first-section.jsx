@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
 import gsap from 'gsap'
-import Target from '../../components/targets/target'
+import React, { useEffect } from 'react'
 import { ChevronDown } from '../../assets/images'
+import Target from '../../components/targets/target'
 
-export function FirstSection() {
+export function FirstSection({ isMobile }) {
   const headingDelay = 1
   const headingDuration = 0.01
   const headingStagger = 0.10
@@ -16,7 +16,7 @@ export function FirstSection() {
       opacity: 1,
       autoAlpha: 1,
       display: 'inline',
-      delay: headingDelay ,
+      delay: headingDelay,
       duration: headingDuration,
       stagger: headingStagger
     }).fromTo('.build-better__underline', {
@@ -30,7 +30,7 @@ export function FirstSection() {
     const ease = 'power3.inout'
     const transformOrigin = '21.3% 39.79%'
 
-    // const stAnimation1 = 
+    // const stAnimation1 =
     gsap.timeline()
       .from('#st', {
         opacity: 0,
@@ -40,8 +40,7 @@ export function FirstSection() {
         duration: 1.2,
       })
 
-    const stAnimation = gsap.timeline({
-    })
+    const stAnimation = gsap.timeline()
       .from('.st__t', {
         ease,
         transformOrigin,
@@ -158,6 +157,7 @@ export function FirstSection() {
       stAnimation.kill()
     }
   }, [])
+
   return (
     <div className="index-section index__first-section">
       <div className="build-better-container" style={{ position: 'relative', display: 'flex', flexFlow: 'column wrap', gap: '10px' }} >
@@ -181,7 +181,7 @@ export function FirstSection() {
         </div>
       </div>
       <div className="st-right" >
-        <svg id='st' width="443" height="622" viewBox="0 0 443 622" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id='st' width="443" height={isMobile ? "450" : "622"} viewBox="0 0 443 622" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M170.018 19.797C134.182 14.9311 111.974 30.8405 108.839 53.9276L108.763 54.4907C100.047 118.684 282.025 126.189 266.963 237.119C258.754 297.576 209.782 322.641 151.909 323.408L149.933 318.864C169.941 316.141 186.076 306.608 188.93 285.592C197.264 224.215 13.1283 206.094 28.1906 95.1636C37.595 25.9025 108.242 9.11496 170.324 17.5446C192.532 20.5601 216.423 30.1123 233.599 39.8998L264.128 30.8549L255.642 131.209L253.623 130.935C249.782 57.0075 208.882 25.0741 170.018 19.797Z" fill="url(#paint0_linear_206_6)" />
           <path className="st__t" d="M371.152 540.2C422.276 510.633 429.614 476.816 403.411 431.509L400.953 432.931C410.352 449.182 424.206 479.943 402.086 492.737C381.931 504.393 367.589 486.4 348.222 452.913L241.131 267.746L291.763 238.463L290.339 236.001L239.707 265.284L183.029 167.283L180.571 168.705C192.845 194.465 204.348 232.501 202.39 258.607C190.573 285.814 162.038 310.203 124.187 332.094L78.7786 357.038L80.2027 359.5L150.19 320.341L260.128 510.433C288.895 560.172 326.91 565.788 371.152 540.2Z" fill="black" />
           <path d="M19.2057 185.274C19.6826 283.977 82.8208 314.916 119.162 319.851C129.842 321.301 140.729 321.651 150.672 320.329L152.514 324.843C141.515 324.967 130.197 324.216 118.779 322.666C98.59 319.925 73.4603 311.925 42.6101 296.84L6.37672 306.257L17.1868 185L19.2057 185.274Z" fill="url(#paint1_linear_206_6)" />

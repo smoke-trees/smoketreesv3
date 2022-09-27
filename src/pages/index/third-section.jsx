@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
 
-export function ThirdSection() {
+export function ThirdSection({ isMobile }) {
   const headingDelay = 0
   const headingDuration = 0.01
   const headingStagger = 0.1
@@ -48,14 +48,14 @@ export function ThirdSection() {
       markers: false,
       id: 'third-section',
       trigger: ".third-section",
-      start: "20% 50%",
+      start: isMobile ? "top bottom" : "20% 50%",
       animation: ThirdSectionTimeline,
     })
     return () => {
       animation.kill()
       ThirdSectionTimeline.kill()
     }
-  })
+  }, [isMobile])
 
   return (
 

@@ -9,6 +9,9 @@ export function SecondSection({ isMobile }) {
   const headingDuration = 0.01
   const headingStagger = 0.02
   useEffect(() => {
+
+     
+
     const SecondSectionTimeline = gsap.timeline({
     }).fromTo(".best.typewriter-chars", {
       autoAlpha: 0,
@@ -27,6 +30,7 @@ export function SecondSection({ isMobile }) {
       duration: 0.5,
       ease: 'power3.inout'
     })
+
     const exclamationMarkAnimation = gsap.from(".second-section__mark", {
       scale: 0,
       rotation: 360 * 100
@@ -58,6 +62,7 @@ export function SecondSection({ isMobile }) {
       duration: 1.5,
       strokeDasharray: 2000,
     })
+
     // const mainStroke = gsap.set('.second-section__bulb .bulb__main-stroke', { strokeDashoffset: 2000 })
     SecondSectionTimeline.add(exclamationMarkAnimation, 0)
     SecondSectionTimeline.add(bulbRevealAnimation, 0)
@@ -69,10 +74,11 @@ export function SecondSection({ isMobile }) {
       markers: false,
       id: 'second-section-animation',
       trigger: '.index__second-section',
-      start: 'top center',
+      start: isMobile ? 'top 80%' : 'top 80%',
       animation: SecondSectionTimeline,
       end: 'bottom center',
     })
+
 
     const bulbAnimation = gsap.timeline({
 
@@ -88,11 +94,11 @@ export function SecondSection({ isMobile }) {
         scrollTrigger: {
           markers: false,
           id: 'bulb-grow-animation',
-          trigger: '.second-section__bulb',
-          endTrigger: '.second-section__bulb',
+          trigger: '.second-section',
+          endTrigger: '.second-section',
           scrub: 2,
           start: 'top center',
-          end: 'center center'
+          end: 'bottom center'
         }
       }).fromTo(".second-section__bulb .bulb__main-stroke", {
         strokeDashoffset: 0,
@@ -107,15 +113,16 @@ export function SecondSection({ isMobile }) {
           trigger: '.second-section__bulb',
           endTrigger: '.second-section__bulb',
           scrub: 2,
-          start: 'center center',
+          start: 'top center',
           end: 'bottom center'
         }
       })
+
     return () => {
       scrollTrigger.kill()
       bulbAnimation.kill()
     }
-  })
+  }, [isMobile])
 
 
   return (
