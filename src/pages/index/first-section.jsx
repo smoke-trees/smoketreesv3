@@ -30,7 +30,8 @@ export function FirstSection() {
     const ease = 'power3.inout'
     const transformOrigin = '21.3% 39.79%'
 
-    const stAnimation1 = gsap.timeline()
+    // const stAnimation1 = 
+    gsap.timeline()
       .from('#st', {
         opacity: 0,
         y: 60,

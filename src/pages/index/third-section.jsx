@@ -1,6 +1,6 @@
 import React from 'react'
 import gsap from 'gsap'
-import { Laptop, Splash } from '../../assets/images'
+import { Laptop } from '../../assets/images'
 import { useEffect } from 'react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
@@ -321,7 +321,7 @@ export function ThirdSection() {
                 <span className='typewriter-chars digital-platforms'>l</span>
                 <span className='typewriter-chars digital-platforms'>i</span>
                 <span className='typewriter-chars digital-platforms'>f</span>
-                <span className='typewriter-chars digital-platforms'>y&nbsp;</span>
+                <span className='typewriter-chars digital-platforms'>y </span>
               </span>
               <span>
                 <span className='typewriter-chars digital-platforms'>y</span>
@@ -336,7 +336,6 @@ export function ThirdSection() {
                 <span className='typewriter-chars digital-platforms'>l</span>
                 <span className='typewriter-chars digital-platforms'>o</span>
                 <span className='typewriter-chars digital-platforms'>w</span>
-
               </span>
             </span>
           </div>

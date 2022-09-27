@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect } from 'react'
-import gsap, { Scro } from 'gsap'
-import Target from '../../components/targets/target'
-import { ServiceCard } from '../../components/service-card/ServiceCard'
+import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import React, { useCallback, useEffect } from 'react'
 import { ServiceAutomation, ServiceCloud, ServiceDevelopment, ServiceUiUx } from '../../assets/images'
+import { ServiceCard } from '../../components/service-card/ServiceCard'
+import Target from '../../components/targets/target'
 
-export default function FourthSection({ }) {
+export default function FourthSection({ isMobile }) {
   const onMouseEnterCallBack = useCallback((e) => {
     gsap.to('#cursor', {
       borderColor: '#fff',
@@ -46,7 +46,8 @@ export default function FourthSection({ }) {
         ease: 'power2.out',
       }, 1.8)
 
-    const scrollTrigger = ScrollTrigger.create({
+    // const scrollTrigger =
+    ScrollTrigger.create({
       markers: false,
       id: 'fourth-section-animation',
       trigger: '.fourth-section',
@@ -66,9 +67,9 @@ export default function FourthSection({ }) {
         <div className='fourth-section__right'>
           <div className="fourth-section__icon">
             <svg
-              width="320"
-              height="235"
-              viewbox="0 0 282 300"
+              width={isMobile ? "70" : "320"}
+              height={isMobile ? "70" : "235"}
+              viewBox="0 0 282 300"
             >
               <path
                 style={{ fill: "#b1df5d" }}
@@ -87,9 +88,9 @@ export default function FourthSection({ }) {
           </div>
           <div className="fourth-section__middle">
             <div className="fourth-section__middle__title">
-                <span className='heading heading-2 heading-gradient'>
-    Our Services
-                </span>
+              <span className='heading heading-2 heading-gradient'>
+                Our Services
+              </span>
             </div>
             <div className="fourth-section__middle__body index-text-body">
               We specialize in designing, planning, building and maintaining robust, secure, high-quality applications and services. Well documented code and well timed delivery is our priority. With us, you can build Website, Mobile Applications, UI/UX Designs, ML/AI models, Microservices, and everything that resembles anything to do with tech. We have it all.

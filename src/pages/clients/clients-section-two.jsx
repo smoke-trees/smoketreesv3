@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import ReviewCard from "../../components/review-card/review-card"
 
 import "./clients.scss"

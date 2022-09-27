@@ -132,6 +132,7 @@
   }
   &__text {
     left: -350px;
+    position: relative;
     &__title {
       display: flex;
       flex-flow: column wrap;
@@ -197,8 +198,7 @@
 .service-card:nth-child(even) {
   transform: translate(0, 40px);
 }
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1300px) {
   .explore {
     display: none;
   }
@@ -212,6 +212,8 @@
     flex-direction: column-reverse;
     justify-content: center;
     height: auto;
+    flex-flow: column-reverse nowrap;
+    margin-bottom: 100px;
 
     .st-right {
       justify-content: center;
@@ -231,6 +233,7 @@
     &__left {
       display: none;
     }
+
     justify-content: center;
     margin-bottom: 30px;
     &__text {
@@ -239,6 +242,197 @@
       justify-content: center;
       align-items: center;
       flex-flow: column;
+      position: unset;
     }
+  }
+  .fourth-section {
+    flex-direction: column;
+    padding: 0 0;
+
+    &__middle {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+    &__right {
+      // display: none;
+      width: auto;
+      padding: 10px;
+    }
+    &__left {
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      gap: 40px;
+      box-sizing: border-box;
+      padding: 0 calc((100vw - 600px) / 2);
+      justify-content: center;
+    }
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .fourth-section {
+    &__icon {
+      svg {
+        padding: 50px 0;
+      }
+      height: fit-content;
+    }
+    &__right {
+      flex-direction: column;
+    }
+  }
+  .service-card {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cursor {
+    display: none;
+  }
+  #st {
+    transform: scale(0.9);
+  }
+  .heading {
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+  }
+  .heading-2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .build-better__underline {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .index__first-section {
+    align-items: unset;
+    .build-better-container {
+      padding: 0 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    .st-right {
+      padding-left: 10px;
+    }
+  }
+  .second-section {
+    flex-direction: column;
+    margin: 75px 0;
+    &__text {
+      padding: 0 20px;
+    }
+  }
+  .third-section {
+    &__text {
+      text-align: left;
+      padding: 0 20px;
+      justify-content: unset;
+      align-items: unset;
+    }
+  }
+
+  .fourth-section {
+    &__icon {
+      // display: none;
+      height: auto;
+    }
+    &__right {
+      display: flex;
+      flex-flow: column;
+      width: auto;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    &__left {
+      padding: 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cursor {
+    display: none;
+  }
+  #st {
+    transform: scale(0.9);
+  }
+  .heading {
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+  }
+  .heading-2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .build-better__underline {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .index__first-section {
+    align-items: unset;
+    .build-better-container {
+      padding: 0 20px;
+      justify-content: unset;
+      align-items: unset;
+    }
+    .st-right {
+      padding-left: 10px;
+    }
+  }
+  .second-section {
+    flex-direction: column;
+    margin: 75px 0;
+    &__text {
+      padding: 0 20px;
+    }
+  }
+  .third-section {
+    &__text {
+      text-align: left;
+      padding: 0 20px;
+    }
+  }
+
+  .fourth-section {
+    position: relative;
+    &__icon {
+      // display: none;
+      height: auto;
+      position: absolute;
+      right: 20px;
+      top: 13px;
+      svg {
+        padding: 0;
+      }
+    }
+    &__middle {
+      max-width: unset;
+    }
+    &__right {
+      display: flex;
+      flex-flow: column;
+      width: auto;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    &__left {
+      padding: 0 0;
+    }
+  }
+  .service-card {
+    width: 140px;
+    height: 140px;
   }
 }

@@ -1,12 +1,11 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { ExclamationMark } from '../../assets/images'
-import { Bulb } from '../../components'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import React, { useEffect } from 'react'
+import { ExclamationMark } from '../../assets/images'
+import { Bulb } from '../../components'
 
-export function SecondSection() {
-  const headingDelay = 0 
+export function SecondSection({ isMobile }) {
+  const headingDelay = 0
   const headingDuration = 0.01
   const headingStagger = 0.02
   useEffect(() => {
@@ -67,7 +66,7 @@ export function SecondSection() {
 
 
     const scrollTrigger = ScrollTrigger.create({
-      markers: true,
+      markers: false,
       id: 'second-section-animation',
       trigger: '.index__second-section',
       start: 'top center',
@@ -117,6 +116,8 @@ export function SecondSection() {
       bulbAnimation.kill()
     }
   })
+
+
   return (
     <>
       <div className="index-section index__second-section second-section">
@@ -181,7 +182,7 @@ export function SecondSection() {
           </div>
         </div>
         <div className='second-section__bulb'>
-          <Bulb className='best typewriter-chars' />
+          <Bulb isMobile={isMobile} className='best typewriter-chars' />
         </div>
       </div>
     </>
