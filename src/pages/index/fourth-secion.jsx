@@ -47,7 +47,7 @@ export default function FourthSection({ }) {
       }, 1.8)
 
     const scrollTrigger = ScrollTrigger.create({
-      showMarkers: false,
+      markers: false,
       id: 'fourth-section-animation',
       trigger: '.fourth-section',
       start: '45% 50%',

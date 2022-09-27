@@ -45,7 +45,8 @@ export function ThirdSection() {
 
     })
     ScrollTrigger.create({
-      markers: true,
+      markers: false,
+      id: 'third-section',
       trigger: ".third-section",
       start: "20% 50%",
       animation: ThirdSectionTimeline,

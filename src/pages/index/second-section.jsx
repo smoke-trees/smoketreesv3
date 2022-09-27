@@ -6,7 +6,7 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
 export function SecondSection() {
-  const headingDelay = 1
+  const headingDelay = 0 
   const headingDuration = 0.01
   const headingStagger = 0.02
   useEffect(() => {
@@ -38,7 +38,7 @@ export function SecondSection() {
       position: 'relative',
     }, {
       opacity: 1,
-      duration: 2,
+      duration: 1,
       autoAlpha: 1,
       top: 0,
       position: 'relative',
@@ -48,7 +48,7 @@ export function SecondSection() {
       strokeDasharray: 2000,
     }, {
       strokeDashoffset: 0,
-      duration: 1,
+      duration: 1.5,
       strokeDasharray: 2000,
     })
     const bulbAnimationInitial2 = gsap.fromTo('.second-section__bulb .bulb__main-stroke', {
@@ -56,7 +56,7 @@ export function SecondSection() {
       strokeDasharray: 2000,
     }, {
       strokeDashoffset: -2000,
-      duration: 1,
+      duration: 1.5,
       strokeDasharray: 2000,
     })
     // const mainStroke = gsap.set('.second-section__bulb .bulb__main-stroke', { strokeDashoffset: 2000 })
@@ -67,11 +67,12 @@ export function SecondSection() {
 
 
     const scrollTrigger = ScrollTrigger.create({
-      showMarker: false,
+      showMarker: true,
       id: 'second-section-animation',
       trigger: '.index__second-section',
       start: 'top center',
-      animation: SecondSectionTimeline
+      animation: SecondSectionTimeline,
+      end: 'bottom center',
     })
 
     const bulbAnimation = gsap.timeline({

@@ -199,9 +199,31 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .explore {
+    display: none;
+  }
+  .index-section {
+    padding: 0 0;
+    height: 100vh ;
+    margin: auto;
+  }
   .index__first-section {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: auto;
+
     .st-right {
       justify-content: center;
+    }
+  }
+  .index__second-section {
+    .second-section__mark {
+      display: none;
+    }
+  }
+  .third-section {
+    &__left {
+      display: none;
     }
   }
 }
