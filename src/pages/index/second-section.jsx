@@ -67,7 +67,7 @@ export function SecondSection() {
 
 
     const scrollTrigger = ScrollTrigger.create({
-      showMarker: true,
+      markers: true,
       id: 'second-section-animation',
       trigger: '.index__second-section',
       start: 'top center',

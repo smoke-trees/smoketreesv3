@@ -204,7 +204,8 @@
   }
   .index-section {
     padding: 0 0;
-    height: 100vh ;
+    // height: 100vh ;
+    height: auto;
     margin: auto;
   }
   .index__first-section {
@@ -221,9 +222,23 @@
       display: none;
     }
   }
+  .second-section {
+    &__text {
+      padding-left: 50px;
+    }
+  }
   .third-section {
     &__left {
       display: none;
+    }
+    justify-content: center;
+    margin-bottom: 30px;
+    &__text {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
     }
   }
 }
