@@ -33,6 +33,8 @@
   }
   &__img {
     height: 111px;
+    max-width: 100%;
+    object-fit: contain;
   }
   &__heading {
     font-family: $font-family-1;
