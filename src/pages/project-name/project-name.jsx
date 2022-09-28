@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { DarkModeContext } from "../../context/darkModeContext"
 import { Navbar } from "../../components"
 import MoreProjects from "../../components/more-projects/more-projects"
@@ -8,6 +8,10 @@ import "./project-name.scss"
 
 export const ProjectName = () => {
   const { darkMode } = useContext(DarkModeContext)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className={darkMode ? "about__container__dark" : "about__container__light"}>
