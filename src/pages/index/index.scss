@@ -358,7 +358,7 @@
     .build-better-container {
       padding: 0 20px;
       justify-content: center;
-      align-items: center;
+      // align-items: center; // fixed strange padding on vw: 450px +
     }
     .st-right {
       padding-left: 10px;
@@ -500,4 +500,10 @@
       display: none;
     }
   }
+}
+
+// fix small double scroll on mobile
+
+.body {
+  overflow: hidden;
 }
