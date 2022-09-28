@@ -13,17 +13,17 @@ const ServicesDevelopmentSection = () => {
     {
       img: Development1,
       heading: "Website Developement",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui hendrerit leo dictumst feugiat quis arcu integer morbi.",
+      desc: "The age old necessity of every platform, but with our own twist to it. We have our arsenal filled with the latest technologies and ultra-focused solutions, so we work faster and better than any other team.",
     },
     {
       img: Development2,
       heading: "Mobile App Developement",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui hendrerit leo dictumst feugiat quis arcu integer morbi.",
+      desc: "Build applications for iOS, Android and other platforms with unprecedented interactivity and animated content with us. Our industry-focused app solutions have proven to accelerate businesses beyond imagination.",
     },
     {
       img: Development3,
       heading: "Backend Developement",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui hendrerit leo dictumst feugiat quis arcu integer morbi.",
+      desc: "Build a house with a solid foundation. Our backend solutions are built to tackle unparalleled resilience and speed, so you can be assured on the scalability and accountability of our implementations and microservices.",
     },
   ]
 

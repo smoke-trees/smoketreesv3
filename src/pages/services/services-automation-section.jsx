@@ -12,13 +12,13 @@ const ServicesAutomationSection = () => {
   const cloudCard = [
     {
       img: Automation1,
-      heading: "Cloud Architecture Design",
-      desc: "Cloud governance, compliance, and visibility across your IT environment with a digital self-service model. Reduce risk of failure with proven processes and methodologies",
+      heading: "Data Science and Analytics",
+      desc: "Data moves the world, learn how to move with it. We provide analytics and insights on your platform that help you upgrade to superiority. Put our knowledge in Big Data to your use, and condense tons of data to useful information.",
     },
     {
       img: Automation2,
-      heading: "Secure",
-      desc: "Cloud governance, compliance, and visibility across your IT environment with a digital self-service model. Reduce risk of failure with proven processes and methodologies",
+      heading: "Machine Learning",
+      desc: "Be smarter than your competition. Our Machine Learning algorithms and AI capabilities give you the edge you need to succeed. We build Smart Recommendation Systems and perform various forms of Predictive Analysis so you can give your business a massive upgrade.",
     },
     {
       img: Automation3,

@@ -21,17 +21,17 @@ const ServicesDesignSection = () => {
     {
       img: Design2,
       heading: "User Journeys",
-      desc: "Identifying the different ways to enable the user to achieve their goal as quickly and easily as possible",
+      desc: "Mapping a holistic view of the user’s experience, starting from the point of discovery, and incorporating the different phases of a user’s flow through the platform. Let us analyze various options and research for hours on how your product will work well with your target audience.",
     },
     {
       img: Design3,
       heading: "Wireframing",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      desc: "Creating a blueprint of a platform, helping you and others working with you to visualize the basic structure of what is being built. So that everyone is on the same page, and every page is vital.",
     },
     {
       img: Design4,
       heading: "UI design",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      desc: "A visually appealing platform is what separates a user’s choice from a user’s desire. This is where we come in. Collaborate with us to make a beautiful and interactive experiences for your audience.",
     },
     {
       img: Design5,

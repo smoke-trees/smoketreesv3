@@ -13,17 +13,17 @@ const ServicesCloudSection = () => {
     {
       img: Cloud1,
       heading: "Cloud Architecture Design",
-      desc: "Cloud governance, compliance, and visibility across your IT environment with a digital self-service model. Reduce risk of failure with proven processes and methodologies",
+      desc: "System design and architecture is our foremost priority. We help you achieve cloud governance, compliance, and visibility across your IT environment with a digital self-service model.",
     },
     {
       img: Cloud2,
       heading: "Secure",
-      desc: "Cloud governance, compliance, and visibility across your IT environment with a digital self-service model. Reduce risk of failure with proven processes and methodologies",
+      desc: "Always stay a step ahead. Let us reduce the risk of failure and vulnerabilities with proven processes and methodologies. With our smart alerts in place, we help you handle mishaps and incidents on the go, and identify the source meticulously.",
     },
     {
       img: Cloud3,
       heading: "Manage",
-      desc: "Intelligent monitoring and preemptive management of hybrid multi-cloud environment",
+      desc: "We engineer applications with Intelligent Monitoring and manage hybrid multi-cloud environments. Our capacity to stay up-to-date with the latest trends in cloud technologies gives us the upper hand to help you build the most efficient cloud solution at the least possible running cost.",
     },
   ]
 
