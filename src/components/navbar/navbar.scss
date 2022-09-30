@@ -3,17 +3,40 @@
 .navbar {
   display: flex;
   padding: 50px 200px;
+  position: relative;
+
+  &__hamburger {
+    display: none;
+
+    &__line1 {
+      width: 20px;
+      height: 3px;
+      margin: 2.5px;
+      transition: all 0.3s ease;
+    }
+
+    &__line2 {
+      width: 14px;
+      height: 3px;
+      float: right;
+      margin: 2.5px;
+      transition: all 0.3s ease;
+    }
+  }
 
   &__logo {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: absolute;
+    z-index: 100;
     // width: 100%;
     // height: 100%;
 
     &__img {
-      width: 100%;
-      height: 100%;
+      // width: 100%;
+      height: 25px;
       object-fit: contain;
     }
   }
@@ -44,10 +67,18 @@
       height: 15px;
       border-radius: 25px;
       z-index: -1;
-      animation: grow 0.25s 0.10s ease-in-out forwards;
+      animation: grow 0.25s 0.1s ease-in-out forwards;
       content: "";
     }
   }
+}
+
+.hamburger__open .navbar__hamburger__line1 {
+  transform: rotate(-45deg) translate(-2.5px, 3px);
+}
+.hamburger__open .navbar__hamburger__line2 {
+  width: 20px;
+  transform: rotate(45deg) translate(-2.5px, -3px);
 }
 
 @keyframes grow {
@@ -58,5 +89,84 @@
   100% {
     width: 40px;
     background: #65ffbe;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .navbar {
+    padding: 50px 90px;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .navbar {
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+      position: relative;
+    }
+
+    &__hamburger {
+      display: block;
+    }
+
+    &__links {
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: -100%;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      z-index: -1;
+      padding-bottom: 50px;
+      padding-top: 50px;
+      transition: all 0.3s ease;
+
+      &__open {
+        top: 120px !important;
+        z-index: 1000 !important;
+      }
+
+      &__item {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        &__animate1 {
+          animation: navLinkFade 0.3s ease forwards;
+          animation-delay: 0.2s;
+        }
+        &__animate2 {
+          animation: navLinkFade 0.3s ease forwards;
+          animation-delay: 0.4s;
+        }
+        &__animate3 {
+          animation: navLinkFade 0.3s ease forwards;
+          animation-delay: 0.6s;
+        }
+        &__animate4 {
+          animation: navLinkFade 0.3s ease forwards;
+          animation-delay: 0.8s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    padding: 50px 50px;
   }
 }

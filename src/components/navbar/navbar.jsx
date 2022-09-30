@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import {DarkModeContext} from '../../context/darkModeContext';
 import { Logo } from '../../assets/images'
 import LogoWhite from '../../assets/images/logoWhite.png'
@@ -9,32 +9,54 @@ import './navbar.scss'
 
 export function Navbar () {
   const {darkMode} = useContext(DarkModeContext)
+  const [burgerOpen, setBurgerOpen] = useState(false)
+
   return (
-    <div className="navbar">
+    <div className="navbar" style={{ backgroundColor: `${!darkMode ? "#fff" : "#090a09"}` }}>
       <div className="navbar__logo">
         <Link to="/">
-          <img title='SmokeTrees Digital LLP' className='navbar__logo__img' src={darkMode ? LogoWhite : Logo} alt="SmokeTrees Logo" />
+          <img
+            title="SmokeTrees Digital LLP"
+            className="navbar__logo__img"
+            src={darkMode ? LogoWhite : Logo}
+            alt="SmokeTrees Logo"
+          />
         </Link>
       </div>
-      <div className="navbar__links">
+      <div className={`navbar__hamburger ${burgerOpen ? "hamburger__open" : null}`} onClick={() => setBurgerOpen(!burgerOpen)}>
+        <div className="navbar__hamburger__line1" style={{ backgroundColor: `${darkMode ? "#fff" : "#000"}` }} />
+        <div className="navbar__hamburger__line2" style={{ backgroundColor: `${darkMode ? "#fff" : "#000"}` }} />
+      </div>
+      <div
+        className={`navbar__links ${burgerOpen ? "navbar__links__open" : null}`}
+        style={{ backgroundColor: `${!darkMode ? "#fff" : "#090a09"}` }}
+      >
         <Target>
-          <div className="navbar__links__item">
-            <Link to="/about" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>About</Link>
+          <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate1" : null}`}>
+            <Link to="/about" className={darkMode ? "dark-mode__color1" : "light-mode__color0"}>
+              About
+            </Link>
           </div>
         </Target>
         <Target>
-          <div className="navbar__links__item">
-            <Link to="/services" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>Services</Link>
+          <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate2" : null}`}>
+            <Link to="/services" className={darkMode ? "dark-mode__color1" : "light-mode__color0"}>
+              Services
+            </Link>
           </div>
         </Target>
         <Target>
-          <div className="navbar__links__item">
-            <Link to="/project" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>Products</Link>
+          <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate3" : null}`}>
+            <Link to="/project" className={darkMode ? "dark-mode__color1" : "light-mode__color0"}>
+              Products
+            </Link>
           </div>
         </Target>
         <Target>
-          <div className="navbar__links__item">
-            <Link to="/clients" className={darkMode ? 'dark-mode__color1' : 'light-mode__color0'}>Clients</Link>
+          <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate4" : null}`}>
+            <Link to="/clients" className={darkMode ? "dark-mode__color1" : "light-mode__color0"}>
+              Clients
+            </Link>
           </div>
         </Target>
       </div>
