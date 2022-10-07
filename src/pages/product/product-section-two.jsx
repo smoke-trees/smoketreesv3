@@ -18,7 +18,7 @@ const AboutSectionTwo = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui hendrerit leo dictumst feugiat quis arcu integer
             morbi.
           </div>
-          <Link to="/project/projectname">
+          <Link to="/project/meri-bachat">
             <div className={`project__second-section__explore ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
               Explore{" "}
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
