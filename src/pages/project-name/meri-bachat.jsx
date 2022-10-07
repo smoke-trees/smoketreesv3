@@ -7,8 +7,8 @@ import MbDiv2 from "../../assets/images/mb-div2-phone.png"
 const MeriBachat = () => {
   return (
     <div className="meri-bachat-body">
-      <Navbar />
-      <MbHero />
+      <Navbar diffColor="#FFF8C8" />
+      <ProdInfoHero />
       <div className="meri-bachat-bgc project-details__data">
         <div className="project-details__data__product light-mode__color1">THE PRODUCT</div>
         <div className="mb-data-div1">
@@ -88,7 +88,7 @@ const MeriBachat = () => {
 
 export default MeriBachat
 
-const MbHero = () => {
+const ProdInfoHero = () => {
   return (
     <div className="project-details__container">
       <div className="project-details__title light-mode__color1">MeriBachat</div>

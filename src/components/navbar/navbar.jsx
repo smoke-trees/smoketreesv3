@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 
 import './navbar.scss'
 
-export function Navbar ({mobDark}) {
+export function Navbar ({mobDark, diffColor}) {
   const {darkMode} = useContext(DarkModeContext)
   const [burgerOpen, setBurgerOpen] = useState(false)
 
@@ -29,7 +29,7 @@ export function Navbar ({mobDark}) {
       </div>
       <div
         className={`navbar__links ${burgerOpen ? "navbar__links__open" : null}`}
-        style={{ backgroundColor: `${darkMode || mobDark ? "#090a09" : `${burgerOpen ? "#fff" : "transparent"}`}` }}
+        style={{ backgroundColor: `${darkMode || mobDark ? "#090a09" : `${burgerOpen ? `${diffColor ?? '#fff'}` : "transparent"}`}` }}
       >
         <Target>
           <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate1" : null}`}>

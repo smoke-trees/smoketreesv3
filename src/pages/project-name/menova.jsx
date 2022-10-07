@@ -10,7 +10,7 @@ const Menova = () => {
   return (
     <div className="menova-body">
       {window.innerWidth > 960 ? <Navbar /> : <Navbar mobDark />}
-      <MbHero />
+      <ProdInfoHero />
       <div className="menova-bgc project-details__data">
         <div className="project-details__data__product menova-text">THE PRODUCT</div>
         <div className="menova-data-div1">
@@ -90,7 +90,7 @@ const Menova = () => {
 
 export default Menova
 
-const MbHero = () => {
+const ProdInfoHero = () => {
   return (
     <div className="project-details__container">
       <div className="project-details__title light-mode__color1 menova__mob-color">Menova</div>
