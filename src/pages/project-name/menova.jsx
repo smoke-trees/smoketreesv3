@@ -1,5 +1,6 @@
 import React from "react"
 import { Navbar } from "../../components"
+import { useParams } from "react-router-dom"
 import MenovaHero1 from "../../assets/images/menova-hero1.png"
 import MenovaLogo from "../../assets/images/menova-logo.png"
 import MenovaHero2 from "../../assets/images/menova-hero2.png"
@@ -10,7 +11,7 @@ const Menova = () => {
   return (
     <div className="menova-body">
       {window.innerWidth > 960 ? <Navbar /> : <Navbar mobDark />}
-      <ProdInfoHero />
+      <ProjInfoHero hero1={MenovaHero1} logo={MenovaLogo} hero2={MenovaHero2} name="Menova" desc="Feed your curiosity!" />
       <div className="menova-bgc project-details__data">
         <div className="project-details__data__product menova-text">THE PRODUCT</div>
         <div className="menova-data-div1">
@@ -90,20 +91,26 @@ const Menova = () => {
 
 export default Menova
 
-const ProdInfoHero = () => {
+export const ProjInfoHero = (props) => {
+    const { name } = useParams()
+
   return (
     <div className="project-details__container">
-      <div className="project-details__title light-mode__color1 menova__mob-color">Menova</div>
-      <div className="project-details__desc light-mode__color1 menova__mob-color">Feed your curiosity!</div>
-      <div className="project-details__logo-cont menova-bgc">
+      <div className={`project-details__title light-mode__color1 ${name === 'menova' ? "menova__mob-color" : null}`}>
+        {props.name}
+      </div>
+      <div className={`project-details__desc light-mode__color1 ${name === 'menova' ? "menova__mob-color" : null}`}>
+        {props.desc}
+      </div>
+      <div className={`project-details__logo-cont ${name}-bgc`}>
         <div className="menova__top-left">
-          <img src={MenovaHero1} alt="" />
+          <img src={props.hero1} alt="" />
         </div>
         <div className="project-details__logo-cont__logo">
-          <img src={MenovaLogo} alt="" />
+          <img src={props.logo} alt="" />
         </div>
         <div className="menova__bot-right">
-          <img src={MenovaHero2} alt="" />
+          <img src={props.hero2} alt="" />
         </div>
       </div>
     </div>

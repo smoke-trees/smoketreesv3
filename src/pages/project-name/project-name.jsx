@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { useParams } from "react-router-dom"
+import KidsCur from "./kidscur"
 import Menova from "./menova"
 import MeriBachat from "./meri-bachat"
 
@@ -19,6 +20,9 @@ export const ProjectName = () => {
 
     case 'menova':
       return <Menova />
+
+    case 'kidscur':
+      return <KidsCur />
     
     default:
       return <h1>404 Not Found</h1>
