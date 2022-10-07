@@ -38,7 +38,7 @@ const MeriBachat = () => {
             </div>
           </div>
           <div className="mb-data-div1__text-cont">
-            <div className="mb-data-div1__text-cont__heading">One stopshop for all your additional savings!</div>
+            <div className="mb-data-div1__text-cont__heading meri-bachat-text">One stopshop for all your additional savings!</div>
             <div className="mb-data-div1__line" />
             <div className="mb-data-div1__text-cont__desc light-mode__color1">
               MeriBachat is the leading platform for buying gift cards and coupons. With over 350 brands to choose from, avail

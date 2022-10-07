@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { useParams } from "react-router-dom"
+import Menova from "./menova"
 import MeriBachat from "./meri-bachat"
 
 import "./project-name.scss"
@@ -15,6 +16,9 @@ export const ProjectName = () => {
   switch (name) {
     case 'meri-bachat':
       return <MeriBachat />
+
+    case 'menova':
+      return <Menova />
     
     default:
       return <h1>404 Not Found</h1>

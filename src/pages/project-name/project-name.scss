@@ -16,6 +16,22 @@
   background-color: $ombhu-bgc;
 }
 
+.meri-bachat-text {
+  color: $meri-bachat-text;
+}
+.menova-text {
+  color: $menova-text;
+}
+.kidscur-text {
+  color: $kidscur-text;
+}
+.altilium-text {
+  color: $altilium-text;
+}
+.ombhu-text {
+  color: $ombhu-text;
+}
+
 .project-details {
   &__container {
     width: 100%;
@@ -72,82 +88,201 @@
   }
 }
 
-.mb-data-div1 {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+.menova {
+  &__top-left {
+    position: absolute;
+    top: -25px;
+    left: -55px;
+  }
+  &__bot-right {
+    position: absolute;
+    top: 490px;
+    right: -105px;
+  }
   &__line {
     height: 4px;
     width: 163px;
     margin-top: 16px;
-    background-color: $meri-bachat-text;
+    background-color: $menova-text;
   }
-  &__img-cont {
+  &-data-div1 {
     position: relative;
-    img {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    &__img-cont {
       position: relative;
-      z-index: 10;
-      max-width: 100%;
-    }
-    &__ball {
-      position: absolute;
-      z-index: 0;
       right: -12vw;
-      top: 34%;
+      img {
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+      }
+      &__ball {
+        position: absolute;
+        z-index: 0;
+        right: -260px;
+        bottom: -100px;
+      }
+      &__ball > svg {
+        width: 45vw;
+        height: 45vw;
+      }
     }
-    &__ball > svg {
-      width: 35vw;
-      height: 35vw;
+    &__text-cont {
+      max-width: 639px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &__heading {
+        font-family: $font-family-1;
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 120%;
+      }
+      &__desc {
+        margin-top: 72px;
+        font-family: $font-family-2;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+      }
     }
   }
-  &__text-cont {
-    max-width: 578px;
-    &__heading {
-      color: $meri-bachat-text;
-      font-family: $font-family-1;
-      font-weight: 600;
-      font-size: 80px;
-      line-height: 120%;
+  &-data-div2 {
+    display: flex;
+    align-items: center;
+    &__img-cont {
+      position: relative;
+      img {
+        position: relative;
+        z-index: 10;
+        max-width: 100%;
+      }
+      &__ball {
+        position: absolute;
+        z-index: 0;
+        left: calc(-12vw - 150px);
+        top: 30%;
+      }
+      &__ball > svg {
+        width: 30vw;
+        height: 30vw;
+      }
     }
-    &__desc {
-      margin-top: 72px;
-      font-family: $font-family-2;
-      font-size: 24px;
-      line-height: 120%;
-      letter-spacing: 0.05em;
+    &__text-cont {
+      &__desc {
+        max-width: 400px;
+        font-family: $font-family-2;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        margin-left: -80%;
+      }
     }
   }
 }
 
-.mb-data-div2 {
-  display: flex;
-  align-items: center;
-  margin-top: -35%;
-  &__img-cont {
-    position: relative;
-    img {
+.mb-data {
+  &-div1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    &__line {
+      height: 4px;
+      width: 163px;
+      margin-top: 16px;
+      background-color: $meri-bachat-text;
+    }
+    &__img-cont {
       position: relative;
-      z-index: 10;
-      max-width: 100%;
+      img {
+        position: relative;
+        z-index: 10;
+        max-width: 100%;
+      }
+      &__ball {
+        position: absolute;
+        z-index: 0;
+        right: -12vw;
+        top: 34%;
+      }
+      &__ball > svg {
+        width: 35vw;
+        height: 35vw;
+      }
     }
-    &__ball {
-      position: absolute;
-      z-index: 0;
-      left: -12vw;
-      bottom: 10px;
-    }
-    &__ball > svg {
-      width: 30vw;
-      height: 30vw;
+    &__text-cont {
+      max-width: 578px;
+      &__heading {
+        font-family: $font-family-1;
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 120%;
+      }
+      &__desc {
+        margin-top: 72px;
+        font-family: $font-family-2;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+      }
     }
   }
-  &__text-cont {
-    &__desc {
-      max-width: 400px;
-      font-family: $font-family-2;
-      font-size: 24px;
-      line-height: 120%;
-      letter-spacing: 0.05em;
+
+  &-div2 {
+    display: flex;
+    align-items: center;
+    margin-top: -35%;
+    &__img-cont {
+      position: relative;
+      img {
+        position: relative;
+        z-index: 10;
+        max-width: 100%;
+      }
+      &__ball {
+        position: absolute;
+        z-index: 0;
+        left: -12vw;
+        bottom: 10px;
+      }
+      &__ball > svg {
+        width: 30vw;
+        height: 30vw;
+      }
+    }
+    &__text-cont {
+      &__desc {
+        max-width: 400px;
+        font-family: $font-family-2;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .menova {
+    &-data-div1 {
+      &__text-cont {
+        max-width: 555px;
+        &__heading {
+          font-size: 70px;
+        }
+        &__desc {
+          font-size: 22px;
+        }
+      }
+    }
+    &-data-div2 {
+      &__text-cont {
+        &__desc {
+          font-size: 22px;
+        }
+      }
     }
   }
 }
@@ -159,22 +294,59 @@
 }
 
 @media screen and (max-width: 1400px) {
-  .mb-data-div1 {
-    &__text-cont {
-      width: 100%;
-      &__heading {
-        font-size: 50px;
+  .mb-data {
+    &-div1 {
+      &__text-cont {
+        width: 100%;
+        &__heading {
+          font-size: 50px;
+        }
+        &__desc {
+          margin-top: 52px;
+          font-size: 18px;
+        }
       }
-      &__desc {
-        margin-top: 52px;
-        font-size: 18px;
+    }
+    &-div2 {
+      &__text-cont {
+        &__desc {
+          font-size: 18px;
+        }
       }
     }
   }
-  .mb-data-div2 {
-    &__text-cont {
-      &__desc {
-        font-size: 18px;
+  .menova {
+    &-data-div1 {
+      &__img-cont {
+        img {
+          max-width: 90%;
+          right: -8vw;
+        }
+        &__ball {
+          right: -260px;
+          bottom: 0px;
+        }
+        &__ball > svg {
+          width: 40vw;
+          height: 40vw;
+        }
+      }
+      &__text-cont {
+        max-width: 450px;
+        &__heading {
+          font-size: 55px;
+        }
+        &__desc {
+          margin-top: 32px;
+          font-size: 18px;
+        }
+      }
+    }
+    &-data-div2 {
+      &__text-cont {
+        &__desc {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -222,54 +394,121 @@
       }
     }
   }
-  .mb-data-div1 {
-    display: block;
-    &__img-cont {
-      margin-right: -4vw;
-      &__ball {
-        position: absolute;
-        z-index: 0;
-        right: -15vw;
-        top: unset;
-        bottom: 40px;
+  .mb-data {
+    &-div1 {
+      display: block;
+      &__img-cont {
+        margin-right: -4vw;
+        &__ball {
+          position: absolute;
+          z-index: 0;
+          right: -15vw;
+          top: unset;
+          bottom: 40px;
+        }
+        &__ball > svg {
+          width: 65vw;
+          height: 65vw;
+        }
       }
-      &__ball > svg {
-        width: 65vw;
-        height: 65vw;
+      &__text-cont {
+        width: 100%;
+        max-width: unset;
+        &__heading {
+          font-size: 28px;
+        }
+        &__desc {
+          margin-top: 32px;
+          font-size: 16px;
+        }
       }
     }
-    &__text-cont {
-      width: 100%;
-      max-width: unset;
-      &__heading {
-        font-size: 28px;
+    &-div2 {
+      display: block;
+      margin-top: 60px;
+      &__img-cont {
+        margin-left: -4vw;
+        &__ball {
+          position: absolute;
+          z-index: 0;
+          left: -15vw;
+          bottom: 60px;
+        }
+        &__ball > svg {
+          width: 65vw;
+          height: 65vw;
+        }
       }
-      &__desc {
-        margin-top: 32px;
-        font-size: 16px;
+      &__text-cont {
+        &__desc {
+          font-size: 16px;
+          margin-top: 12px;
+        }
       }
     }
   }
-  .mb-data-div2 {
-    display: block;
-    margin-top: 60px;
-    &__img-cont {
-      margin-left: -4vw;
-      &__ball {
-        position: absolute;
-        z-index: 0;
-        left: -15vw;
-        bottom: 60px;
+  .menova {
+    &__mob-color {
+      color: #fff !important;
+    }
+    &-data-div1 {
+      position: relative;
+      display: block;
+      &__img-cont {
+        position: relative;
+        right: 0;
+        img {
+          max-width: 110%;
+          margin-left: -40px;
+        }
+        &__ball {
+          position: absolute;
+          z-index: 0;
+          right: -90px;
+          bottom: -20px;
+        }
+        &__ball > svg {
+          width: 55vw;
+          height: 55vw;
+        }
       }
-      &__ball > svg {
-        width: 65vw;
-        height: 65vw;
+      &__text-cont {
+        max-width: unset;
+        width: 100%;
+        position: relative;
+        &__heading {
+          font-size: 28px;
+        }
+        &__desc {
+          font-size: 16px;
+        }
       }
     }
-    &__text-cont {
-      &__desc {
-        font-size: 16px;
-        margin-top: 12px;
+    &-data-div2 {
+      display: block;
+      &__img-cont {
+        position: relative;
+        img {
+          position: relative;
+          z-index: 10;
+          max-width: 100%;
+        }
+        &__ball {
+          position: absolute;
+          z-index: 0;
+          left: calc(-5vw - 50px);
+          top: 20%;
+        }
+        &__ball > svg {
+          width: 45vw;
+          height: 45vw;
+        }
+      }
+      &__text-cont {
+        &__desc {
+          font-size: 16px;
+          margin-left: 0;
+        }
       }
     }
   }
