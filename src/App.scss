@@ -6,6 +6,30 @@ $font-family-1: $metropolis, $work-sans, sans-serif;
 $font-family-2: $metropolis, $work-sans, serif;
 // Fonts end
 
+// products color schemes 
+
+$meri-bachat-bgc: #FFF8C8;
+$meri-bachat-text: #525FBF;
+
+$menova-bgc: #000000;
+$menova-text: #FF914C;
+
+$kidscur-bgc: #957AFF;
+$kidscur-text: #fff;
+
+$altilium-bgc: #FF9AA2;
+$altilium-text: #fff;
+
+$ombhu-bgc: #A3B770;
+$ombhu-text: #000;
+
+
+// products color schemes end 
+
+* {
+  box-sizing: border-box;
+}
+
 a,
 a:hover,
 a :visited {

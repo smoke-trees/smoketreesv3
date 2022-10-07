@@ -1,162 +1,276 @@
 @import "../../App.scss";
 
-.project-section-one {
-  width: 85%;
-  max-width: 1210px;
-  margin: 0 auto;
-  margin-top: 250px;
-  margin-bottom: 225px;
-  &__heading {
-    max-width: 801px;
-    text-align: left;
-  }
-  &__img {
+.meri-bachat-bgc {
+  background-color: $meri-bachat-bgc;
+}
+.menova-bgc {
+  background-color: $menova-bgc;
+}
+.kidscur-bgc {
+  background-color: $kidscur-bgc;
+}
+.altilium-bgc {
+  background-color: $altilium-bgc;
+}
+.ombhu-bgc {
+  background-color: $ombhu-bgc;
+}
+
+.project-details {
+  &__container {
     width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: contain;
-    margin: 60px auto;
+    padding: 0 12vw;
+    padding-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  &__para {
+  &__title {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100px;
+    font-family: $font-family-1;
+  }
+  &__desc {
+    font-family: $font-family-1;
     font-weight: 400;
     font-size: 24px;
-    line-height: 29px;
-    letter-spacing: 0.06em;
-    font-family: $font-family-1;
-  }
-}
-
-.project-section-two {
-  width: 85%;
-  max-width: 1210px;
-  margin: 120px auto;
-  &__heading {
-    margin-bottom: 75px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    font-family: $font-family-1;
+    line-height: 24px;
     letter-spacing: 0.06em;
   }
-  &__container {
+  &__logo-cont {
+    width: 100%;
+    margin-top: 55px;
+    height: 735px;
+    border-radius: 50px;
+    position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    margin-top: 40px;
-    gap: 150px;
+    &__top-left {
+      position: absolute;
+      top: -55px;
+      left: -145px;
+    }
+    &__bot-right {
+      position: absolute;
+      top: 571px;
+      right: -65px;
+    }
   }
-  &__card1 {
-    margin-top: 400px;
-  }
-  &__card-img {
-    width: 582px;
-    max-width: 85vw;
-    aspect-ratio: 9/14;
-    margin-bottom: 40px;
-  }
-  &__card-data {
-    margin: 0 !important;
-    max-width: 453px !important;
+  &__data {
+    margin-top: 200px;
+    padding: 7vw 12vw;
+    &__product {
+      font-family: $font-family-1;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      margin-bottom: 75px;
+    }
   }
 }
 
-.project-section-three {
-  width: 85%;
-  max-width: 1312px;
-  margin: 120px auto;
+.mb-data-div1 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  &__line {
+    height: 4px;
+    width: 163px;
+    margin-top: 16px;
+    background-color: $meri-bachat-text;
+  }
+  &__img-cont {
+    position: relative;
+    img {
+      position: relative;
+      z-index: 10;
+      max-width: 100%;
+    }
+    &__ball {
+      position: absolute;
+      z-index: 0;
+      right: -12vw;
+      top: 34%;
+    }
+    &__ball > svg {
+      width: 35vw;
+      height: 35vw;
+    }
+  }
+  &__text-cont {
+    max-width: 578px;
+    &__heading {
+      color: $meri-bachat-text;
+      font-family: $font-family-1;
+      font-weight: 600;
+      font-size: 80px;
+      line-height: 120%;
+    }
+    &__desc {
+      margin-top: 72px;
+      font-family: $font-family-2;
+      font-size: 24px;
+      line-height: 120%;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+.mb-data-div2 {
   display: flex;
   align-items: center;
-  justify-content: center;
-  &__cont {
-    display: flex;
-    gap: 23px;
+  margin-top: -35%;
+  &__img-cont {
+    position: relative;
+    img {
+      position: relative;
+      z-index: 10;
+      max-width: 100%;
+    }
+    &__ball {
+      position: absolute;
+      z-index: 0;
+      left: -12vw;
+      bottom: 10px;
+    }
+    &__ball > svg {
+      width: 30vw;
+      height: 30vw;
+    }
   }
-  &__card1 {
-    min-width: 582px;
-    height: 822px;
+  &__text-cont {
+    &__desc {
+      max-width: 400px;
+      font-family: $font-family-2;
+      font-size: 24px;
+      line-height: 120%;
+      letter-spacing: 0.05em;
+    }
   }
-  &__card-cont {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 23px;
-    align-items: center;
+}
+
+@media screen and (max-width: 1570px) {
+  .mb-data-div2 {
+    margin-top: -22%;
   }
-  &__card2 {
-    width: 340px;
-    height: 419px;
+}
+
+@media screen and (max-width: 1400px) {
+  .mb-data-div1 {
+    &__text-cont {
+      width: 100%;
+      &__heading {
+        font-size: 50px;
+      }
+      &__desc {
+        margin-top: 52px;
+        font-size: 18px;
+      }
+    }
   }
-  &__card4 {
-    width: 703px;
-    height: 380px;
+  .mb-data-div2 {
+    &__text-cont {
+      &__desc {
+        font-size: 18px;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 960px) {
-  .project-section-one {
-    width: 85%;
-    max-width: 1210px;
-    margin: 0 auto;
-    margin-top: 90px;
-    margin-bottom: 95px;  
-    &__img {
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      margin: 25px auto;
-    }
-  
-    &__para {
-      font-size: 16px;
-      line-height: 20px;
-    }
+  .meri-bachat-body {
+    background-color: $meri-bachat-bgc;
   }
-  .project-section-two {
-  
-    &__heading {
-      font-size: 16px;
-      line-height: 20px;
-    }
-  
+  .menova-body {
+    background-color: $menova-bgc;
+  }
+  .kidscur-body {
+    background-color: $kidscur-bgc;
+  }
+  .altilium-body {
+    background-color: $altilium-bgc;
+  }
+  .ombhu-body {
+    background-color: $ombhu-bgc;
+  }
+  .project-details {
     &__container {
-      flex-direction: column;
-      margin-top: 40px;
-      gap: 50px;
-    }
-  
-    &__card1 {
-      margin-top: 0px;
-    }
-  
-    &__card-img {
       width: 100%;
-      margin-bottom: 40px;
+      height: fit-content;
+      padding: 0px 5vw;
+    }
+    &__title {
+      font-size: 40px;
+      line-height: 40px;
+    }
+    &__desc {
+      font-size: 16px;
+      line-height: 16px;
+    }
+    &__logo-cont {
+      display: none;
+    }
+    &__data {
+      margin-top: 60px;
+      padding: 1vw 5vw;
+      padding-bottom: 100px;
+      &__product {
+        display: none;
+      }
     }
   }
-  .project-section-three {
-    &__cont {
-      flex-direction: column;
+  .mb-data-div1 {
+    display: block;
+    &__img-cont {
+      margin-right: -4vw;
+      &__ball {
+        position: absolute;
+        z-index: 0;
+        right: -15vw;
+        top: unset;
+        bottom: 40px;
+      }
+      &__ball > svg {
+        width: 65vw;
+        height: 65vw;
+      }
     }
-  
-    &__card1 {
-      min-width: unset;
-      width: 85vw;
-      height: unset;
-      aspect-ratio: 9/13;
-    }
-  
-    &__card-cont {
-      width: 85vw;
-    }
-  
-    &__card2 {
+    &__text-cont {
       width: 100%;
-      height: unset;
-      aspect-ratio: 8/10;
+      max-width: unset;
+      &__heading {
+        font-size: 28px;
+      }
+      &__desc {
+        margin-top: 32px;
+        font-size: 16px;
+      }
     }
-  
-    &__card4 {
-      width: 100%;
-      height: unset;
-      aspect-ratio: 17/9;
+  }
+  .mb-data-div2 {
+    display: block;
+    margin-top: 60px;
+    &__img-cont {
+      margin-left: -4vw;
+      &__ball {
+        position: absolute;
+        z-index: 0;
+        left: -15vw;
+        bottom: 60px;
+      }
+      &__ball > svg {
+        width: 65vw;
+        height: 65vw;
+      }
+    }
+    &__text-cont {
+      &__desc {
+        font-size: 16px;
+        margin-top: 12px;
+      }
     }
   }
 }

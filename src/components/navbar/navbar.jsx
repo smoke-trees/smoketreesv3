@@ -12,7 +12,7 @@ export function Navbar () {
   const [burgerOpen, setBurgerOpen] = useState(false)
 
   return (
-    <div className="navbar" style={{ backgroundColor: `${!darkMode ? "#fff" : "#090a09"}` }}>
+    <div className="navbar" style={{ backgroundColor: `${!darkMode ? 'transparent' : "#090a09"}` }}>
       <div className="navbar__logo">
         <Link to="/">
           <img
@@ -29,7 +29,7 @@ export function Navbar () {
       </div>
       <div
         className={`navbar__links ${burgerOpen ? "navbar__links__open" : null}`}
-        style={{ backgroundColor: `${!darkMode ? "#fff" : "#090a09"}` }}
+        style={{ backgroundColor: `${!darkMode ? `${burgerOpen ? "#fff" : 'transparent'}` : "#090a09"}` }}
       >
         <Target>
           <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate1" : null}`}>
