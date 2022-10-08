@@ -6,6 +6,7 @@ import Menova from "./menova"
 import MeriBachat from "./meri-bachat"
 
 import "./project-name.scss"
+import Ombhu from "./ombhu"
 
 export const ProjectName = () => {
   const { prodDetsOff, prodDetsUnMnt } = useContext(DarkModeContext)
@@ -31,6 +32,9 @@ export const ProjectName = () => {
 
     case "kidscur":
       return <KidsCur />
+
+    case "ombhu":
+      return <Ombhu />
 
     default:
       return <h1>404 Not Found</h1>

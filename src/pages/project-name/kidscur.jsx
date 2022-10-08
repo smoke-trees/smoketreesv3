@@ -49,7 +49,7 @@ const KidsCur = () => {
           </div>
           <div className="mb-data-div1__text-cont">
             <div className="mb-data-div1__text-cont__heading kidscur-text">We care as much as you!</div>
-            <div className="mb-data-div1__line" />
+            <div className="kidscur__line" />
             <div className="mb-data-div1__text-cont__desc dark-mode__color1">
               KidsCur is the one-stop spot to store, handle and retrieve all the medical documents your kids need to have easy and
               secure health appointments every time. Discover pediatricians and medicines around you, read various health blogs to

@@ -304,6 +304,21 @@
       }
     }
   }
+  &__line {
+    height: 4px;
+    width: 163px;
+    margin-top: 16px;
+    background-color: $kidscur-text;
+  }
+}
+
+.ombhu {
+  &__line {
+    height: 4px;
+    width: 163px;
+    margin-top: 16px;
+    background-color: $ombhu-text;
+  }
 }
 
 @media screen and (max-width: 1600px) {
