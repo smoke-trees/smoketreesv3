@@ -321,6 +321,58 @@
   }
 }
 
+.altilium {
+  &__line {
+    height: 4px;
+    width: 163px;
+    margin-top: 16px;
+    background-color: $altilium-text;
+  }
+  &-data-div3 {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    &__img-cont {
+      position: relative;
+      right: -12vw;
+      img {
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+      }
+      &__ball {
+        position: absolute;
+        z-index: 0;
+        right: -60px;
+        top: -50px;
+      }
+      &__ball > svg {
+        width: 38vw;
+        height: 38vw;
+      }
+    }
+    &__text-cont {
+      max-width: 394px;
+      position: absolute;
+      left: 0;
+      &__heading {
+        font-family: $font-family-1;
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 120%;
+      }
+      &__desc {
+        font-family: $font-family-2;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .menova {
     &-data-div1 {
@@ -551,6 +603,7 @@
     }
     &-data-div2 {
       display: block;
+      margin-top: 30px;
       &__img-cont {
         position: relative;
         img {
@@ -586,6 +639,35 @@
     }
     &-final {
       display: none;
+    }
+  }
+  .altilium-data {
+    &-div3 {
+      display: block;
+      margin-top: 30px;
+      &__img-cont {
+        position: relative;
+        right: unset;
+        &__ball {
+          position: absolute;
+          z-index: 0;
+          right: -15vw;
+          top: unset;
+          bottom: 0px;
+        }
+        &__ball > svg {
+          width: 45vw;
+          height: 45vw;
+        }
+      }
+      &__text-cont {
+        width: 100%;
+        position: relative;
+        &__desc {
+          margin-top: 32px;
+          font-size: 16px;
+        }
+      }
     }
   }
 }

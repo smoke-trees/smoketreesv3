@@ -7,6 +7,7 @@ import MeriBachat from "./meri-bachat"
 
 import "./project-name.scss"
 import Ombhu from "./ombhu"
+import AltiliumErp from "./altilium-erp"
 
 export const ProjectName = () => {
   const { prodDetsOff, prodDetsUnMnt } = useContext(DarkModeContext)
@@ -35,6 +36,9 @@ export const ProjectName = () => {
 
     case "ombhu":
       return <Ombhu />
+
+    case "altilium":
+      return <AltiliumErp />
 
     default:
       return <h1>404 Not Found</h1>
