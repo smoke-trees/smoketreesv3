@@ -373,6 +373,48 @@
   }
 }
 
+// coming soon styles
+
+.coming-soon {
+  &__container {
+    width: 95%;
+    margin: auto;
+    max-width: 1440px;
+    height: calc(100vh - 260px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text {
+    font-family: $font-family-1;
+    font-weight: 900;
+    font-size: 12vh;
+    line-height: 120%;
+    letter-spacing: 0.06em;
+    color: rgba(0, 0, 0, 0.08);
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -10vw;
+  }
+  &__data {
+    max-width: 930px;
+  }
+  &__name {
+    font-family: $font-family-1;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100px;
+    margin-bottom: 16px;
+  }
+  &__desc {
+    font-family: $font-family-1;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.06em;
+    max-width: 668px;
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .menova {
     &-data-div1 {
@@ -467,6 +509,13 @@
     margin-top: -440px;
     left: 4vw;
   }
+  // coming soon styles
+
+.coming-soon {
+  &__text {
+    right: -20vw;
+  }
+}
 }
 
 @media screen and (max-width: 960px) {
@@ -668,6 +717,31 @@
           font-size: 16px;
         }
       }
+    }
+  }
+  .coming-soon {
+    &__container {
+      flex-direction: column-reverse;
+    }
+    &__text {
+      transform: rotate(0deg);
+      position: relative;
+      right: unset;
+      left: 0;
+      font-size: 20vw;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    &__data {
+      width: 100%;
+      max-width: unset;
+    }
+    &__name {
+      font-size: 50px;
+      line-height: 50px;
+    }
+    &__desc {
+      font-size: 16px;
     }
   }
 }
