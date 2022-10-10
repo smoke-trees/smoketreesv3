@@ -53,8 +53,8 @@ const ServicesDesignSection = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(25 76) rotate(90) scale(25)"
               >
-                <stop stop-color="#EEEDFF" stop-opacity="0.13" />
-                <stop offset="1" stop-color="#D2CEFF" stop-opacity="0.19" />
+                <stop stopColor="#EEEDFF" stopOpacity="0.13" />
+                <stop offset="1" stopColor="#D2CEFF" stopOpacity="0.19" />
               </radialGradient>
             </defs>
           </svg>
@@ -81,8 +81,8 @@ const ServicesDesignSection = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(75 75) rotate(90) scale(25)"
               >
-                <stop stop-color="#EEEDFF" stop-opacity="0.13" />
-                <stop offset="1" stop-color="#D2CEFF" stop-opacity="0.19" />
+                <stop stopColor="#EEEDFF" stopOpacity="0.13" />
+                <stop offset="1" stopColor="#D2CEFF" stopOpacity="0.19" />
               </radialGradient>
             </defs>
           </svg>
@@ -108,8 +108,8 @@ const ServicesDesignSection = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(25 116) rotate(90) scale(25)"
               >
-                <stop stop-color="#EEEDFF" stop-opacity="0.13" />
-                <stop offset="1" stop-color="#D2CEFF" stop-opacity="0.19" />
+                <stop stopColor="#EEEDFF" stopOpacity="0.13" />
+                <stop offset="1" stopColor="#D2CEFF" stopOpacity="0.19" />
               </radialGradient>
             </defs>
           </svg>
@@ -134,8 +134,8 @@ const ServicesDesignSection = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(25 25) rotate(90) scale(25)"
               >
-                <stop stop-color="#EEEDFF" stop-opacity="0.13" />
-                <stop offset="1" stop-color="#D2CEFF" stop-opacity="0.19" />
+                <stop stopColor="#EEEDFF" stopOpacity="0.13" />
+                <stop offset="1" stopColor="#D2CEFF" stopOpacity="0.19" />
               </radialGradient>
             </defs>
           </svg>
@@ -159,13 +159,13 @@ const ServicesDesignSection = () => {
               d="M40.0417 24.8125C39.3542 25.5 38.9792 26.3542 38.875 27.25L50.3542 32.1667L68.0417 14.5C69.6667 12.8542 69.6667 10.2292 68.0417 8.60417L65.0833 5.64583C63.4583 4.02083 60.8333 4.02083 59.1875 5.64583L40.0417 24.8125ZM35.4167 33.3333V45.3125L47.5208 34.4375L37.1042 30.2708L35.4167 33.3333ZM60.6667 10.0625C61.4583 9.25 62.8125 9.25 63.625 10.0625C64.4375 10.8958 64.4375 12.2083 63.625 13.0208C62.8125 13.8333 61.4583 13.8333 60.6667 13.0208C59.8542 12.2083 59.8542 10.8958 60.6667 10.0625Z"
               fill="#FFA8F1"
             />
-            <line x1="1.07556" y1="124.619" x2="34.0756" y2="44.6187" stroke="white" stroke-width="2" />
+            <line x1="1.07556" y1="124.619" x2="34.0756" y2="44.6187" stroke="white" strokeWidth="2" />
           </svg>
         </div>
       </div>
       <div className="design-card-container">
         {designCard.map((e, i) => (
-          <InfoCards heading={e.heading} img={e.img} desc={e.desc} desc2={e.desc2} index={`0${i + 1}`} />
+          <InfoCards heading={e.heading} img={e.img} desc={e.desc} desc2={e.desc2} key={i} />
         ))}
       </div>
     </div>

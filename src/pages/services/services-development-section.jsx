@@ -83,7 +83,7 @@ const ServicesDevelopmentSection = () => {
               d="M110.917 45.375V35.2917H100.833V25.2083C100.833 22.5341 99.771 19.9693 97.88 18.0783C95.989 16.1873 93.4243 15.125 90.75 15.125H20.1666C17.4924 15.125 14.9276 16.1873 13.0367 18.0783C11.1457 19.9693 10.0833 22.5341 10.0833 25.2083V95.7917C10.0833 98.4659 11.1457 101.031 13.0367 102.922C14.9276 104.813 17.4924 105.875 20.1666 105.875H90.75C93.4243 105.875 95.989 104.813 97.88 102.922C99.771 101.031 100.833 98.4659 100.833 95.7917V85.7083H110.917V75.625H100.833V65.5417H110.917V55.4583H100.833V45.375H110.917ZM90.75 95.7917H20.1666V25.2083H90.75V95.7917ZM30.25 65.5417H55.4583V85.7083H30.25V65.5417ZM60.5 35.2917H80.6667V50.4167H60.5V35.2917ZM30.25 35.2917H55.4583V60.5H30.25V35.2917ZM60.5 55.4583H80.6667V85.7083H60.5V55.4583Z"
               fill="#9289FF"
             />
-            <g clip-path="url(#clip0_309_475)">
+            <g clipPath="url(#clip0_309_475)">
               <path
                 d="M110.917 45.375V35.2917H100.833V25.2083C100.833 22.5341 99.771 19.9693 97.88 18.0783C95.989 16.1873 93.4243 15.125 90.75 15.125H20.1666C17.4924 15.125 14.9276 16.1873 13.0367 18.0783C11.1457 19.9693 10.0833 22.5341 10.0833 25.2083V95.7917C10.0833 98.4659 11.1457 101.031 13.0367 102.922C14.9276 104.813 17.4924 105.875 20.1666 105.875H90.75C93.4243 105.875 95.989 104.813 97.88 102.922C99.771 101.031 100.833 98.4659 100.833 95.7917V85.7083H110.917V75.625H100.833V65.5417H110.917V55.4583H100.833V45.375H110.917ZM90.75 95.7917H20.1666V25.2083H90.75V95.7917ZM30.25 65.5417H55.4583V85.7083H30.25V65.5417ZM60.5 35.2917H80.6666V50.4167H60.5V35.2917ZM30.25 35.2917H55.4583V60.5H30.25V35.2917ZM60.5 55.4583H80.6666V85.7083H60.5V55.4583Z"
                 fill="#FFE108"
@@ -239,8 +239,8 @@ const ServicesDevelopmentSection = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(25 116) rotate(90) scale(25)"
               >
-                <stop stop-color="#EEEDFF" stop-opacity="0.13" />
-                <stop offset="1" stop-color="#D2CEFF" stop-opacity="0.19" />
+                <stop stopColor="#EEEDFF" stopOpacity="0.13" />
+                <stop offset="1" stopColor="#D2CEFF" stopOpacity="0.19" />
               </radialGradient>
               <radialGradient
                 id="paint1_radial_403_6"
@@ -250,8 +250,8 @@ const ServicesDevelopmentSection = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(125 166) rotate(90) scale(25)"
               >
-                <stop stop-color="#EEEDFF" stop-opacity="0.13" />
-                <stop offset="1" stop-color="#D2CEFF" stop-opacity="0.19" />
+                <stop stopColor="#EEEDFF" stopOpacity="0.13" />
+                <stop offset="1" stopColor="#D2CEFF" stopOpacity="0.19" />
               </radialGradient>
             </defs>
           </svg>
@@ -259,7 +259,7 @@ const ServicesDevelopmentSection = () => {
       </div>
       <div className="design-card-container">
         {develpomentCard.map((e, i) => (
-          <InfoCards heading={e.heading} img={e.img} desc={e.desc} />
+          <InfoCards heading={e.heading} img={e.img} desc={e.desc} key={i} />
         ))}
       </div>
     </div>

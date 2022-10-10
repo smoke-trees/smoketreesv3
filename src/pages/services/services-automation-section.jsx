@@ -58,7 +58,7 @@ const ServicesAutomationSection = () => {
       </div>
       <div className="design-card-container automation-section">
         {cloudCard.map((e, i) => (
-          <InfoCards heading={e.heading} img={e.img} desc={e.desc} />
+          <InfoCards heading={e.heading} img={e.img} desc={e.desc} key={i} />
         ))}
       </div>
     </div>
