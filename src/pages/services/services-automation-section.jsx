@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { DarkModeContext } from "../../context/darkModeContext"
-import Automation1 from '../../assets/images/automation-icons/automation1.svg'
+// import Automation1 from '../../assets/images/automation-icons/automation1.svg'
 import Automation2 from '../../assets/images/automation-icons/automation2.svg'
 import Automation3 from '../../assets/images/automation-icons/automation3.svg'
 
@@ -11,19 +11,14 @@ const ServicesAutomationSection = () => {
   const { darkMode } = useContext(DarkModeContext)
   const cloudCard = [
     {
-      img: Automation1,
-      heading: "Data Science and Analytics",
-      desc: "Data moves the world, learn how to move with it. We provide analytics and insights on your platform that help you upgrade to superiority. Put our knowledge in Big Data to your use, and condense tons of data to useful information.",
-    },
-    {
       img: Automation2,
       heading: "Machine Learning",
       desc: "Be smarter than your competition. Our Machine Learning algorithms and AI capabilities give you the edge you need to succeed. We build Smart Recommendation Systems and perform various forms of Predictive Analysis so you can give your business a massive upgrade.",
     },
     {
       img: Automation3,
-      heading: "Manage",
-      desc: "Intelligent monitoring and preemptive management of hybrid multi-cloud environment",
+      heading: "Data Science and Analytics",
+      desc: "Data moves the world, learn how to move with it. We provide analytics and insights on your platform that help you upgrade to superiority. Put our knowledge in Big Data to your use, and condense tons of data to useful information.",
     },
   ]
 
@@ -61,7 +56,7 @@ const ServicesAutomationSection = () => {
           </svg>
         </div>
       </div>
-      <div className="development-card-container automation-section">
+      <div className="design-card-container automation-section">
         {cloudCard.map((e, i) => (
           <InfoCards heading={e.heading} img={e.img} desc={e.desc} />
         ))}

@@ -96,8 +96,168 @@ const ServicesDevelopmentSection = () => {
             </defs>
           </svg>
         </div>
+        <div className="development-section__heading__img4">
+          <svg viewBox="0 0 165 264" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_716_3" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="264" height="264">
+              <circle cx="132" cy="132" r="132" fill="#C4C4C4" />
+            </mask>
+            <g mask="url(#mask0_716_3)">
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 -66 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 73.9199 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 13.2002 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 -145.2 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 153.12 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 -26.3999 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 113.52 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 52.7998 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 -105.6 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 -44.8799 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 95.04 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 34.3198 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 -124.08 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 -5.27979 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 134.64 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 73.9199 277.2)"
+                stroke="#FFE108"
+              />
+              <line
+                y1="-0.5"
+                x2="363.381"
+                y2="-0.5"
+                transform="matrix(0.646593 -0.762835 0.646593 0.762835 -84.48 277.2)"
+                stroke="#FFE108"
+              />
+            </g>
+          </svg>
+        </div>
+        <div className="development-section__heading__img5">
+          <svg viewBox="0 0 150 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="91" width="50" height="50" fill="url(#paint0_radial_403_6)" />
+            <rect x="50" width="91" height="91" fill="#FFE108" />
+            <rect x="100" y="141" width="50" height="50" fill="url(#paint1_radial_403_6)" />
+            <rect x="50" y="91" width="50" height="50" fill="#9289FF" />
+            <defs>
+              <radialGradient
+                id="paint0_radial_403_6"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(25 116) rotate(90) scale(25)"
+              >
+                <stop stop-color="#EEEDFF" stop-opacity="0.13" />
+                <stop offset="1" stop-color="#D2CEFF" stop-opacity="0.19" />
+              </radialGradient>
+              <radialGradient
+                id="paint1_radial_403_6"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(125 166) rotate(90) scale(25)"
+              >
+                <stop stop-color="#EEEDFF" stop-opacity="0.13" />
+                <stop offset="1" stop-color="#D2CEFF" stop-opacity="0.19" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
       </div>
-      <div className="development-card-container">
+      <div className="design-card-container">
         {develpomentCard.map((e, i) => (
           <InfoCards heading={e.heading} img={e.img} desc={e.desc} />
         ))}

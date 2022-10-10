@@ -1,11 +1,11 @@
 import React, { useContext } from "react"
 import { DarkModeContext } from "../../context/darkModeContext"
-import Design1 from '../../assets/images/design-icons/Design1.svg'
-import Design2 from '../../assets/images/design-icons/Design2.svg'
-import Design3 from '../../assets/images/design-icons/Design3.svg'
-import Design4 from '../../assets/images/design-icons/Design4.svg'
-import Design5 from '../../assets/images/design-icons/Design5.svg'
-import Design6 from '../../assets/images/design-icons/Design6.svg'
+// import Design1 from "../../assets/images/design-icons/Design1.svg"
+import Design2 from "../../assets/images/design-icons/Design2.svg"
+import Design3 from "../../assets/images/design-icons/Design3.svg"
+import Design4 from "../../assets/images/design-icons/Design4.svg"
+// import Design5 from "../../assets/images/design-icons/Design5.svg"
+// import Design6 from "../../assets/images/design-icons/Design6.svg"
 
 import "./services.scss"
 import InfoCards from "../../components/info-cards/info-cards"
@@ -14,34 +14,22 @@ const ServicesDesignSection = () => {
   const { darkMode } = useContext(DarkModeContext)
   const designCard = [
     {
-      img: Design1,
-      heading: "Problem Identification",
-      desc: "Identify the problems and come up with multiple solutions for the client.",
+      img: Design4,
+      heading: "UI design",
+      desc: "A visually appealing platform is what separates a user’s choice from a user’s desire. This is where we come in.",
+      desc2: "Collaborate with us to make a beautiful and interactive experiences for your audience.",
     },
     {
       img: Design2,
       heading: "User Journeys",
-      desc: "Mapping a holistic view of the user’s experience, starting from the point of discovery, and incorporating the different phases of a user’s flow through the platform. Let us analyze various options and research for hours on how your product will work well with your target audience.",
+      desc: "Mapping a holistic view of the user’s experience, starting from the point of discovery, and incorporating the different phases of a user’s flow through the platform.",
+      desc2:
+        "Let us analyze various options and research for hours on how your product will work well with your target audience.",
     },
     {
       img: Design3,
       heading: "Wireframing",
       desc: "Creating a blueprint of a platform, helping you and others working with you to visualize the basic structure of what is being built. So that everyone is on the same page, and every page is vital.",
-    },
-    {
-      img: Design4,
-      heading: "UI design",
-      desc: "A visually appealing platform is what separates a user’s choice from a user’s desire. This is where we come in. Collaborate with us to make a beautiful and interactive experiences for your audience.",
-    },
-    {
-      img: Design5,
-      heading: "Testing",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      img: Design6,
-      heading: "Delivery",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   ]
 
@@ -175,9 +163,10 @@ const ServicesDesignSection = () => {
           </svg>
         </div>
       </div>
-      <div className={`design-section__process ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Process</div>
       <div className="design-card-container">
-        {designCard.map((e,i) => <InfoCards heading={e.heading} img={e.img} desc={e.desc} index={`0${i+1}`} />)}
+        {designCard.map((e, i) => (
+          <InfoCards heading={e.heading} img={e.img} desc={e.desc} desc2={e.desc2} index={`0${i + 1}`} />
+        ))}
       </div>
     </div>
   )

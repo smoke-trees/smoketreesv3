@@ -17,13 +17,13 @@ const ServicesCloudSection = () => {
     },
     {
       img: Cloud2,
-      heading: "Secure",
-      desc: "Always stay a step ahead. Let us reduce the risk of failure and vulnerabilities with proven processes and methodologies. With our smart alerts in place, we help you handle mishaps and incidents on the go, and identify the source meticulously.",
+      heading: "Security",
+      desc: "Cloud governance, compliance, and visibility across your IT environment with a digital self-service model. Reduce risk of failure with proven processes and methodologies",
     },
     {
       img: Cloud3,
       heading: "Manage",
-      desc: "We engineer applications with Intelligent Monitoring and manage hybrid multi-cloud environments. Our capacity to stay up-to-date with the latest trends in cloud technologies gives us the upper hand to help you build the most efficient cloud solution at the least possible running cost.",
+      desc: "Intelligent monitoring and preemptive management of hybrid multi-cloud environment",
     },
   ]
 
@@ -60,8 +60,47 @@ const ServicesCloudSection = () => {
             />
           </svg>
         </div>
+        <div className="cloud-section__heading__img4">
+          <svg viewBox="0 0 267 413" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.1">
+              <path
+                d="M232.583 154.875V120.458H198.167V86.0417C198.167 76.9138 194.54 68.1598 188.086 61.7054C181.632 55.251 172.878 51.625 163.75 51.625H-77.1668C-86.2947 51.625 -95.0487 55.251 -101.503 61.7054C-107.957 68.1598 -111.583 76.9138 -111.583 86.0417V326.958C-111.583 336.086 -107.957 344.84 -101.503 351.295C-95.0487 357.749 -86.2947 361.375 -77.1668 361.375H163.75C172.878 361.375 181.632 357.749 188.086 351.295C194.54 344.84 198.167 336.086 198.167 326.958V292.542H232.583V258.125H198.167V223.708H232.583V189.292H198.167V154.875H232.583ZM163.75 326.958H-77.1668V86.0417H163.75V326.958ZM-42.7502 223.708H43.2915V292.542H-42.7502V223.708ZM60.4998 120.458H129.333V172.083H60.4998V120.458ZM-42.7502 120.458H43.2915V206.5H-42.7502V120.458ZM60.4998 189.292H129.333V292.542H60.4998V189.292Z"
+                fill="#9289FF"
+              />
+              <g clip-path="url(#clip0_718_138)">
+                <path
+                  d="M232.583 154.875V120.458H198.167V86.0417C198.167 76.9138 194.54 68.1598 188.086 61.7054C181.632 55.251 172.878 51.625 163.75 51.625H-77.1668C-86.2947 51.625 -95.0487 55.251 -101.503 61.7054C-107.957 68.1598 -111.583 76.9138 -111.583 86.0417V326.958C-111.583 336.086 -107.957 344.84 -101.503 351.295C-95.0487 357.749 -86.2947 361.375 -77.1668 361.375H163.75C172.878 361.375 181.632 357.749 188.086 351.295C194.54 344.84 198.167 336.086 198.167 326.958V292.542H232.583V258.125H198.167V223.708H232.583V189.292H198.167V154.875H232.583ZM163.75 326.958H-77.1668V86.0417H163.75V326.958ZM-42.7502 223.708H43.2915V292.542H-42.7502V223.708ZM60.4998 120.458H129.333V172.083H60.4998V120.458ZM-42.7502 120.458H43.2915V206.5H-42.7502V120.458ZM60.4998 189.292H129.333V292.542H60.4998V189.292Z"
+                  fill="#FFE108"
+                />
+              </g>
+            </g>
+            <defs>
+              <clipPath id="clip0_718_138">
+                <rect width="218.446" height="204.793" fill="white" transform="translate(-60.6694 102.397)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div className="cloud-section__heading__img5">
+          <svg viewBox="0 0 236 222" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.1">
+              <path
+                d="M27.74 18.2517C22.8993 18.2517 18.2569 20.1746 14.8341 23.5975C11.4112 27.0204 9.48828 31.6627 9.48828 36.5034V146.013C9.48828 156.143 17.7015 164.265 27.74 164.265H91.6208V182.517H73.3692V200.769H146.376V182.517H128.124V164.265H192.005C196.846 164.265 201.488 162.342 204.911 158.919C208.334 155.497 210.257 150.854 210.257 146.013V36.5034C210.257 31.6627 208.334 27.0204 204.911 23.5975C201.488 20.1746 196.846 18.2517 192.005 18.2517H27.74ZM27.74 36.5034H192.005V146.013H27.74V36.5034ZM137.25 45.6292L105.31 77.5697L137.25 109.51L150.026 96.7339L130.862 77.5697L150.026 58.4054L137.25 45.6292ZM82.495 73.0068L69.7188 85.7829L88.8831 104.947L69.7188 124.111L82.495 136.888L114.435 104.947"
+                fill="#9289FF"
+              />
+              <path
+                d="M105.31 77.5696L137.25 45.6292L150.026 58.4053L130.862 77.5696L150.026 96.7339L137.25 109.51L105.31 77.5696Z"
+                fill="#9289FF"
+              />
+              <path
+                d="M260.169 169.852H165.186V117.705H260.169V169.852ZM260.169 107.275H165.186C159.329 107.275 154.632 111.916 154.632 117.705V180.282C154.632 183.048 155.744 185.701 157.723 187.657C159.703 189.613 162.387 190.711 165.186 190.711H202.124L191.57 206.356V211.57H233.785V206.356L223.231 190.711H260.169C262.968 190.711 265.653 189.613 267.632 187.657C269.611 185.701 270.723 183.048 270.723 180.282V117.705C270.723 111.916 265.974 107.275 260.169 107.275Z"
+                fill="#FFE108"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
-      <div className="development-card-container">
+      <div className="design-card-container">
         {cloudCard.map((e, i) => (
           <InfoCards heading={e.heading} img={e.img} desc={e.desc} />
         ))}

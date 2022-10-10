@@ -38,7 +38,7 @@
 .design-section {
   &__heading {
     font-family: $font-family-2;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 131px;
     line-height: 182px;
     text-align: center;
@@ -132,18 +132,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 90px;
-}
-
-.development-card-container {
-  max-width: 980px;
-  width: 95%;
-  margin: auto;
-  margin-bottom: 210px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 150px;
+  gap: 120px;
 }
 
 .automation-section {
@@ -173,6 +162,20 @@
     top: 90%;
     left: 85%;
   }
+  &__img4 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    top: -30vh;
+  }
+  &__img5 {
+    position: absolute;
+    width: 150px;
+    height: 190px;
+    left: 0;
+    top: -25vh;
+  }
 }
 
 .cloud-section__heading {
@@ -196,6 +199,20 @@
     height: 222px;
     top: 60%;
     right: 44px;
+  }
+  &__img4 {
+    position: absolute;
+    left: 0;
+    width: 267px;
+    height: 413px;
+    top: -450px;
+  }
+  &__img5 {
+    position: absolute;
+    right: 0;
+    width: 236px;
+    height: 222px;
+    top: -350px;
   }
 }
 
@@ -317,6 +334,16 @@
       left: unset;
       right: 20px;
     }
+    &__img4 {
+      width: 100px;
+      height: 100px;
+      top: -150px;
+    }
+    &__img5 {
+      width: 75px;
+      height: 95px;
+      top: -120px;
+    }
   }
   .cloud-section__heading {
     &__img1 {
@@ -336,6 +363,16 @@
       height: 42px;
       top: 100%;
       right: 27px;
+    }
+    &__img4 {
+      width: 100px;
+      height: 150px;
+      top: -150px;
+    }
+    &__img5 {
+      width: 118px;
+      height: 111px;
+      top: -120px;
     }
   }
   .automation-section__heading {

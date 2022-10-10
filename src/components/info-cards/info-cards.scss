@@ -1,13 +1,8 @@
 @import "../../App.scss";
 
-.development-card-container > .info-cards__container {
-  width: 210px;
-  display: flex;
-}
-
 .info-cards {
   &__container {
-    width: 250px;
+    width: 230px;
     display: flex;
   }
   &__data-container {
