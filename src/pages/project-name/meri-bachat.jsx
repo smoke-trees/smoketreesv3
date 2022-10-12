@@ -29,9 +29,9 @@ const MeriBachat = () => {
                     gradientUnits="userSpaceOnUse"
                     gradientTransform="translate(246.528 214.898) rotate(48.4975) scale(506.806 500.329)"
                   >
-                    <stop stop-color="#525FBF" />
-                    <stop offset="0.550106" stop-color="#454F9A" />
-                    <stop offset="1" stop-color="#212752" />
+                    <stop stopColor="#525FBF" />
+                    <stop offset="0.550106" stopColor="#454F9A" />
+                    <stop offset="1" stopColor="#212752" />
                   </radialGradient>
                 </defs>
               </svg>
@@ -65,9 +65,9 @@ const MeriBachat = () => {
                     gradientUnits="userSpaceOnUse"
                     gradientTransform="translate(380.402 206.032) rotate(138.497) scale(423.555 418.143)"
                   >
-                    <stop stop-color="#525FBF" />
-                    <stop offset="0.550106" stop-color="#454F9A" />
-                    <stop offset="1" stop-color="#212752" />
+                    <stop stopColor="#525FBF" />
+                    <stop offset="0.550106" stopColor="#454F9A" />
+                    <stop offset="1" stopColor="#212752" />
                   </radialGradient>
                 </defs>
               </svg>
@@ -96,7 +96,7 @@ const ProdInfoHero = () => {
       <div className="project-details__logo-cont meri-bachat-bgc">
         <div className="project-details__logo-cont__top-left">
           <svg width="447" height="364" viewBox="0 0 447 364" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_721_1345)">
+            <g clipPath="url(#clip0_721_1345)">
               <path
                 d="M331.787 171.365C392.864 206.628 392.865 263.797 331.786 299.058C270.704 334.321 171.676 334.32 110.596 299.058C49.516 263.797 49.5145 206.627 110.595 171.365C171.674 136.104 270.707 136.104 331.787 171.365Z"
                 fill="#FFE108"
@@ -110,7 +110,7 @@ const ProdInfoHero = () => {
                 fill="#FFF8DF"
               />
             </g>
-            <g clip-path="url(#clip1_721_1345)">
+            <g clipPath="url(#clip1_721_1345)">
               <path
                 d="M333.125 117.887C394.202 153.149 394.203 210.319 333.123 245.58C272.042 280.843 173.013 280.841 111.934 245.58C50.8539 210.319 50.8523 153.148 111.933 117.887C173.012 82.6254 272.045 82.6252 333.125 117.887Z"
                 fill="#FFE108"
@@ -124,7 +124,7 @@ const ProdInfoHero = () => {
                 fill="#FFF8DF"
               />
             </g>
-            <g clip-path="url(#clip2_721_1345)">
+            <g clipPath="url(#clip2_721_1345)">
               <path
                 d="M334.459 64.4082C395.537 99.6707 395.538 156.84 334.458 192.102C273.377 227.364 174.348 227.363 113.269 192.102C52.1888 156.84 52.1873 99.6699 113.268 64.4082C174.347 29.1469 273.38 29.1468 334.459 64.4082Z"
                 fill="#FFE108"
