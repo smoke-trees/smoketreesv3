@@ -2,6 +2,7 @@
 
 .dash-dark-mode {
   background-color: #fff;
+  fill: #fff;
 }
 
 .light-dark-mode {
@@ -12,7 +13,7 @@
   height: 100vh;
   width: 85%;
   margin: auto;
-  max-width: 1210px;
+  max-width: 1260px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,6 +30,7 @@
     font-family: $font-family-1;
     max-width: 578px;
     margin-bottom: 1rem;
+    margin-top: 3rem;
   }
   &__dash {
     height: 4px;
@@ -46,6 +48,7 @@
   &__explore {
     display: inline-flex;
     align-items: center;
+    margin-top: 4rem;
     gap: 11px;
     font-weight: 400;
     font-size: 20px;
@@ -53,16 +56,79 @@
     font-family: $font-family-1;
     cursor: pointer;
   }
-    &__img-cont {
-    width: 577px;
-    height: 784px;
-    object-fit: cover;
+  &__img-cont {
     max-width: 85vw;
   }
 }
 
+.bottom-mb {
+  &__container {
+    width: 95%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    max-width: 1300px;
+  }
+}
+
+.more-projects {
+  &__container {
+    width: 95%;
+    margin: auto;
+    margin-top: 10rem;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 12rem;
+  }
+  &__div2 {
+    margin-top: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 12rem;
+  }
+  &__title {
+    margin-top: 2rem;
+    font-family: $font-family-1;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .more-projects {
+    &__container {
+      margin-top: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &__div1 {
+      gap: 5rem;
+    }
+    &__div2 {
+      margin-top: 5rem;
+      gap: 5rem;
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
-  .project__second-section {  
+  .project__second-section {
     &__container {
       display: flex;
       align-items: flex-start;
@@ -70,32 +136,31 @@
       flex-direction: column;
       gap: 30px;
     }
-  
+
     &__heading {
-      font-size: 20px;
+      font-size: 24px;
       line-height: 26px;
     }
-  
+
     &__dash {
       height: 4px;
       width: 163px;
     }
-  
+
     &__para {
       font-size: 16px;
       line-height: 18px;
       margin: 25px 0;
     }
-  
+
     &__explore {
       gap: 5px;
       font-size: 12px;
       line-height: 14px;
+      margin-top: 2rem;
     }
     &__img-cont {
       width: 100%;
-      height: unset;
-      aspect-ratio: 9/14;
     }
   }
 }

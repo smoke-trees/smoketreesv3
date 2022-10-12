@@ -1,9 +1,14 @@
 import React, { useContext } from "react"
+import { Link } from "react-router-dom"
 import { DarkModeContext } from "../../context/darkModeContext"
 import { Navbar } from "../../components"
 import ProductSectionOne from "./product-section-one"
 import ProductSectionTwo from "./product-section-two"
-import MoreProjects from "../../components/more-projects/more-projects"
+import Kidscur from "../../assets/images/kidscur.png"
+import Altilium from "../../assets/images/altilium.png"
+import Ombhu from "../../assets/images/ombhu.png"
+import Menova from "../../assets/images/menova.png"
+import MBLarge from "../../assets/images/meri-bachat-big.png"
 
 import "./product.scss"
 
@@ -16,13 +21,34 @@ export const Product = () => {
       <div>
         <ProductSectionOne />
         <ProductSectionTwo />
-        <MoreProjects
-          noHead
-          img1="//unsplash.it/577/801"
-          img2="//unsplash.it/577/1040"
-          img3="//unsplash.it/577/580"
-          img4="//unsplash.it/577/379"
-        />
+        <div className="more-projects__container">
+          <div className="more-projects__div1">
+            <Link to="/project/kidscur">
+              <img src={Kidscur} alt="" style={{ width: "100%" }} />
+              <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Kidscur</div>
+            </Link>
+            <Link to="/project/altilium">
+              <img src={Altilium} alt="" style={{ width: "100%" }} />
+              <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Altilium ERP</div>
+            </Link>
+          </div>
+          <div className="more-projects__div2">
+            <Link to="/project/ombhu">
+              <img src={Ombhu} alt="" style={{ width: "100%" }} />
+              <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Ombhu</div>
+            </Link>
+            <Link to="/project/menova">
+              <img src={Menova} alt="" style={{ width: "100%" }} />
+              <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Menova</div>
+            </Link>
+          </div>
+        </div>
+        <div className="bottom-mb__container">
+          <Link to="/project/meri-bachat">
+            <img src={MBLarge} alt="" style={{ width: "100%" }} />
+            <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>MeriBachat</div>
+          </Link>
+        </div>
       </div>
     </div>
   )
