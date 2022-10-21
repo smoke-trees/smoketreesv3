@@ -78,10 +78,9 @@ const Ombhu = () => {
           </div>
           <div>
             <div className="mb-data-div2__text-cont__desc">
-              {/* // TODO: content fix here  */}
-              Tracking medical history is an important part of maintaining proper health and having your records in order and
-              ready to go when your healthcare provider requests for it alleviates a lot of the frustration and hassle associated
-              with getting treated.
+              The platform manages the selling platform, and the corresponding ERP for the organization. The entire ecosystem of
+              Warehousing, Inventory Management, Cataloguing, Support Pipeline and Shipping Management, is controlled by our
+              blazing fast and scalable mechanisms.
             </div>
           </div>
         </div>
