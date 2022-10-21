@@ -16,13 +16,14 @@ const AboutSectionTwo = () => {
         <div className="about__second-section__text-container">
           <div className="about__second-section__text-container__title">Our Values</div>
           <div className={`about__second-section__text-container__para ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
+            The driving force behind SmokeTrees is the hard work and talent of its founding members dedicated to bringing the
+            developers' community together. Each of them is extremely skilled in their own fortes and ensure top notch results.
+          </div>
+          {/* // TODO: Second Para here */}
+          {/* <div className={`about__second-section__text-container__para ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at risus amet, commodo condimentum integer. Something
             about consultation!
-          </div>
-          <div className={`about__second-section__text-container__para ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at risus amet, commodo condimentum integer. Something
-            about consultation!
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -10,7 +10,8 @@ const AboutSectionOne = () => {
     <div className="about__first-section">
       <div style={{ maxWidth: "100%" }}>
         <div className={`about__first-section__heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <br />
+          We deliver what you ideate.
         </div>
         <div className="about__first-section__bulb">
           {darkMode ? <BulbDark onClick={toggleDarkMode} /> : <Bulb onClick={toggleDarkMode} />}
