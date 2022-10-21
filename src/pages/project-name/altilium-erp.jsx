@@ -1,6 +1,7 @@
 import React from "react"
 import { Navbar } from "../../components"
 import { ProjInfoHero } from "./menova"
+import AltiliumLogo from "../../assets/images/altilium-logo.png"
 import AltiliumDiv1 from "../../assets/images/altilium-div1-laptop.png"
 import AltiliumDiv2 from "../../assets/images/altilium-div2-laptop.png"
 import AltiliumDiv3 from "../../assets/images/altilium-div3-laptop.png"
@@ -9,8 +10,7 @@ const AltiliumErp = () => {
   return (
     <div className="altilium-body">
       <Navbar diffColor="#FF9AA2" />
-      {/* // TODO: Logo and desc here */}
-      <ProjInfoHero name="Altilium ERP" desc="Feed your curiosity!" />
+      <ProjInfoHero name="Altilium ERP" desc="Feed your curiosity!" logo={AltiliumLogo} />
       <div className="altilium-bgc project-details__data">
         <div className="project-details__data__product altilium-text">THE PRODUCT</div>
         <div className="menova-data-div1">
@@ -77,9 +77,9 @@ const AltiliumErp = () => {
           </div>
           <div>
             <div className="menova-data-div2__text-cont__desc dark-mode__color2">
-              Tracking medical history is an important part of maintaining proper health and having your records in order and
-              ready to go when your healthcare provider requests for it alleviates a lot of the frustration and hassle associated
-              with getting treated.
+              We have successfully built custom functionalities and streamlined multiple internal processes to boost the
+              productivity and efficiency of the organization. The platform also helps the organization in dealing with energy
+              bids from government based exchanges.
             </div>
           </div>
         </div>
@@ -111,10 +111,8 @@ const AltiliumErp = () => {
           </div>
           <div className="altilium-data-div3__text-cont">
             <div className="altilium-data-div3__text-cont__desc dark-mode__color2">
-              {/* // TODO: Unique info here  */}
-              Tracking medical history is an important part of maintaining proper health and having your records in order and
-              ready to go when your healthcare provider requests for it alleviates a lot of the frustration and hassle associated
-              with getting treated.
+              Our platform provides intelligent insights on vast amount of data, and helps the organization in analyzing various
+              options and choosing the best suited methods that can be adopted to maximize profitability.
             </div>
           </div>
         </div>
