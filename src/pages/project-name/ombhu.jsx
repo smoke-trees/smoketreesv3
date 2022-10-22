@@ -10,8 +10,7 @@ const Ombhu = () => {
   return (
     <div className="ombhu-body">
       <Navbar diffColor="#A3B770" />
-      {/* // TODO: Desc fix here */}
-      <ProjInfoHero logo={OmbhuLogo} name="Ombhu" desc="Digital Health Repository" />
+      <ProjInfoHero logo={OmbhuLogo} name="Ombhu" desc="The good we build builds us" />
       <div className="ombhu-bgc project-details__data kidscur-content">
         <div className="project-details__data__product ombhu-text">THE PRODUCT</div>
         <div className="mb-data-div1">
