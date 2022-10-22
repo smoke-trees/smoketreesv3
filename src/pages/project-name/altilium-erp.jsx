@@ -10,7 +10,7 @@ const AltiliumErp = () => {
   return (
     <div className="altilium-body">
       <Navbar diffColor="#FF9AA2" />
-      <ProjInfoHero name="Altilium ERP" desc="Feed your curiosity!" logo={AltiliumLogo} />
+      <ProjInfoHero name="Altilium ERP" desc="One stop energy platform for C&I" logo={AltiliumLogo} />
       <div className="altilium-bgc project-details__data">
         <div className="project-details__data__product altilium-text">THE PRODUCT</div>
         <div className="menova-data-div1">
