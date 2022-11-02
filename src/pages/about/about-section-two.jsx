@@ -1,6 +1,9 @@
 import React, { useContext } from "react"
 import { DarkModeContext } from "../../context/darkModeContext"
 import "./about.scss"
+import AboutSection2img1 from "../../assets/images/about-section2-1.png"
+import AboutSection2img2 from "../../assets/images/about-section2-2.png"
+import AboutSection2img3 from "../../assets/images/about-section2-3.png"
 
 const AboutSectionTwo = () => {
   const { darkMode } = useContext(DarkModeContext)
@@ -9,9 +12,9 @@ const AboutSectionTwo = () => {
     <div className="about__second-section">
       <div className="about__second-section__content">
         <div className="about__second-section__images">
-          <img src="//unsplash.it/196/303" alt="" className="about__second-section__images__1" />
-          <img src="//unsplash.it/429/663" alt="" className="about__second-section__images__2" />
-          <img src="//unsplash.it/245/378" alt="" className="about__second-section__images__3" />
+          <img src={AboutSection2img1} alt="" className="about__second-section__images__1" />
+          <img src={AboutSection2img2} alt="" className="about__second-section__images__2" />
+          <img src={AboutSection2img3} alt="" className="about__second-section__images__3" />
         </div>
         <div className="about__second-section__text-container">
           <div className="about__second-section__text-container__title">Our Values</div>
