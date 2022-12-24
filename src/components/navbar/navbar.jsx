@@ -52,13 +52,13 @@ export function Navbar ({mobDark, diffColor}) {
             </Link>
           </div>
         </Target>
-        <Target>
+        {/* <Target>
           <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate4" : null}`}>
             <Link to="/clients" className={darkMode || mobDark ? "dark-mode__color1" : "light-mode__color0"}>
               Clients
             </Link>
           </div>
-        </Target>
+        </Target> */}
       </div>
     </div>
   )
