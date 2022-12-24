@@ -23,7 +23,7 @@ export const ProjectName = () => {
     return () => {
       prodDetsUnMnt()
     }
-  }, [])
+  }, [prodDetsOff, prodDetsUnMnt])
 
   switch (name) {
     case "meri-bachat":
