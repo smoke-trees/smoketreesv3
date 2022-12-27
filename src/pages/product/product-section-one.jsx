@@ -12,7 +12,7 @@ const AboutSectionOne = () => {
           className={`about__first-section__heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}
           style={{ marginTop: "20px" }}
         >
-          Projects
+          Products
         </div>
         <div className="about__first-section__bulb" style={{ marginTop: "0px" }} onClick={toggleDarkMode}>
           <svg

@@ -69,7 +69,7 @@ export default function FourthSection({ isMobile }) {
         onMouseLeave={onMouseLeaveCallBack}
       >
         <div className='fourth-section__right'>
-          <div className="fourth-section__icon">
+          {/* <div className="fourth-section__icon">
             <svg
               width={isMobile ? "70" : "320"}
               height={isMobile ? "70" : "235"}
@@ -89,7 +89,7 @@ export default function FourthSection({ isMobile }) {
                 d="m 149.95077,196.03125 -140.783648,37.723 -6.8587,-25.597 c -7.54457,-28.156 32.35724,-63.539 88.67074,-78.629 6.3993,-1.714 11.518608,-3.086 18.260608,-3.521 -1.782,8.708 -1.004,16.73 1.397,25.689 5.487,20.478 20.869,36.932 39.314,44.335 z"
                 id="path2-3" />
             </svg>
-          </div>
+          </div> */}
           <div className="fourth-section__middle">
             <div className="fourth-section__middle__title">
               <span className='heading heading-2 heading-gradient'>

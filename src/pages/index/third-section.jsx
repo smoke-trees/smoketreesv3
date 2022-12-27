@@ -930,7 +930,7 @@ export function ThirdSection({ isMobile }) {
         <div className="third-section__text">
           <div className="third-section__text__title">
             <span className="heading heading-2">
-              <span className="heading-gradient">
+              <span className={`heading-gradient ${isMobile ? "heading-2 heading" : "heading"}`}>
                 <span className="typewriter-chars digital-platforms">S</span>
                 <span className="typewriter-chars digital-platforms">i</span>
                 <span className="typewriter-chars digital-platforms">m</span>
@@ -940,6 +940,7 @@ export function ThirdSection({ isMobile }) {
                 <span className="typewriter-chars digital-platforms">f</span>
                 <span className="typewriter-chars digital-platforms">y </span>
               </span>
+              <br />
               <span className={darkMode ? "dark-mode__color1" : "light-mode__color1"}>
                 <span className="typewriter-chars digital-platforms">y</span>
                 <span className="typewriter-chars digital-platforms">o</span>

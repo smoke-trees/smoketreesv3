@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   &__heading {
-    font-family: $font-family-2;
+    font-family: $font-family-1;
     font-style: normal;
     font-weight: 700;
     font-size: 100px;
@@ -90,10 +90,10 @@
     }
   }
   &__text-container__title {
-    font-weight: 400;
+    font-weight: 800;
     font-size: 44px;
     line-height: 61px;
-    font-family: $font-family-2;
+    font-family: $font-family-1;
     margin-top: 65px;
     /* Gradient */
     width: fit-content;
@@ -106,12 +106,12 @@
   }
   &__text-container__para {
     font-family: $font-family-1;
-    margin: 32px 0;
+    margin: 24px 0;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    max-width: 363px;
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 400px;
   }
 }
 
@@ -123,8 +123,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 60px;
   &__heading {
-    font-weight: 400;
+    font-weight: 800;
     font-size: 44px;
     line-height: 61px;
     font-family: $font-family-2;
