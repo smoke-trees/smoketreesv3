@@ -6,7 +6,6 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 38px;
-  margin: 40px 0 0 0;
 }
 .st__t {
   transform-origin: 21.3% 39.79%;
@@ -37,7 +36,6 @@
 }
 .heading-2 {
   font-size: 44px;
-  line-height: 61px;
 }
 .heading-gradient {
   background: linear-gradient(90deg, #60dda8 0%, #3be0b9 50%, #b4de5a 100%);
@@ -50,12 +48,9 @@
   font-family: $font-family-2;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 24px;
   max-width: 380px;
-}
-
-.index-text-body {
 }
 
 .explore {
@@ -90,7 +85,7 @@
     display: flex;
     flex-flow: column wrap;
     &-title {
-      margin-bottom: 32px;
+      margin-bottom: 12px;
       &__first-line {
         margin-bottom: 25px;
         svg {
@@ -102,9 +97,9 @@
       font-family: $font-family-2;
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
-      line-height: 24px;
-      max-width: 380px;
+      font-size: 24px;
+      line-height: 32px;
+      max-width: 400px;
       color: #676767;
     }
   }
@@ -136,7 +131,14 @@
       flex-flow: column wrap;
     }
     &__body {
-      margin-top: 30px;
+      font-family: $font-family-2;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+      max-width: 400px;
+      color: #676767;
+      margin-top: 32px;
     }
   }
 }
@@ -148,24 +150,30 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 150px;
-  &__icon {
-    height: 100vh;
-    display: flex;
-    flex-flow: column-reverse;
-    & svg {
-      padding: 0px 0;
-    }
-  }
+  // &__icon {
+  //   width: 50%;
+  //   display: flex;
+  //   flex-flow: column-reverse;
+  //   & svg {
+  //     padding: 0px 0;
+  //   }
+  // }
   &__middle {
     flex: 1 0 auto;
     display: flex;
     flex-flow: column;
     justify-content: center;
+    width: 50%;
     &__title {
       margin-bottom: 25px;
     }
     &__body {
-      color: white;
+      color: #c9c9c9;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 500px;
     }
     &__explore {
       margin-top: 10px;
@@ -183,7 +191,7 @@
   &__left {
     display: flex;
     flex-flow: row wrap;
-    width: 50%;
+    width: 45%;
     gap: 60px;
   }
 }
@@ -196,57 +204,24 @@
   transform: translate(0, 40px);
 }
 
-@media screen and (max-width: 1700px) {
-  .fourth-section {
-    &__icon {
-      svg {
-        padding: 50px 0 0 0;
-      }
-      height: fit-content;
-    }
-    &__right {
-      flex-direction: column;
-    }
-  }
-  .fourth-section {
-    flex-direction: column;
-    padding: 0 0;
-    height: auto;
-    &__icon {
-      justify-content: center;
-      align-items: center;
-      svg {
-        padding: 0;
-      }
-    }
-    &__middle__title {
-      text-align: center;
-    }
-
-    .fourth-section__middle__body.index-text-body {
-      max-width: 440px;
-      text-align: justify;
-    }
-    &__middle {
-      margin: 0 auto;
-    }
-    &__right {
-      // display: none;
-      width: 100%;
-      padding: 10px;
-    }
-    &__left {
-      display: flex;
-      flex-flow: row wrap;
-      width: 100%;
-      gap: 40px;
-      box-sizing: border-box;
-      padding: 0 calc((100vw - 600px) / 2);
-      justify-content: center;
-    }
-    padding-bottom: 24px;
-  }
-}
+// @media screen and (max-width: 1700px) {
+//   .fourth-section {
+//     &__icon {
+//       svg {
+//         padding: 50px 0 0 0;
+//       }
+//       height: fit-content;
+//     }
+//     &__right {
+//       flex-direction: column;
+//     }
+//   }
+//   .fourth-section {
+//     &__middle__body {
+//       max-width: 350px;
+//     }
+//   }
+// }
 
 @media screen and (max-width: 1500px) {
 }
@@ -401,8 +376,11 @@
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
 
+  .index-section {
+    margin-top: 60px;
+  }
   .cursor {
     display: none;
   }
@@ -446,6 +424,11 @@
     &__text {
       padding: 0 20px;
     }
+    &__text-body {
+      font-size: 20px;
+      line-height: 24px;
+      max-width: 400px;
+    }
   }
 
   .third-section {
@@ -453,13 +436,18 @@
       text-align: left;
       padding: 0 20px;
     }
+    &__text__body {
+      font-size: 20px;
+      line-height: 24px;
+      max-width: 400px;
+    }
   }
 
   .fourth-section {
     padding: 56px 0;
     position: relative;
     &__icon {
-      // display: none;
+      display: none;
       height: auto;
       position: absolute;
       right: 20px;
@@ -470,6 +458,11 @@
     }
     &__middle {
       max-width: unset;
+      &__body {
+        font-size: 20px;
+        line-height: 24px;
+        max-width: 400px;
+      }
     }
     &__right {
       display: flex;

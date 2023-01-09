@@ -11,9 +11,14 @@ import Menova from "../../assets/images/menova.png"
 import MBLarge from "../../assets/images/meri-bachat-big.png"
 
 import "./product.scss"
+import Footer from "../../components/footer/footer"
 
 export const Product = () => {
   const { darkMode } = useContext(DarkModeContext)
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   return (
     <div className={darkMode ? "about__container__dark" : "about__container__light"}>
@@ -50,6 +55,7 @@ export const Product = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

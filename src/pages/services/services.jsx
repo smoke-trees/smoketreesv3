@@ -9,9 +9,14 @@ import ServicesDevelopmentSection from "./services-development-section"
 import "./services.scss"
 import ServicesCloudSection from "./services-cloud-section"
 import ServicesAutomationSection from "./services-automation-section"
+import Footer from "../../components/footer/footer"
 
 export const Services = () => {
   const { darkMode } = useContext(DarkModeContext)
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   return (
     <div className={darkMode ? "about__container__dark" : "about__container__light"}>
@@ -30,6 +35,7 @@ export const Services = () => {
       <div id="automation-ai">
         <ServicesAutomationSection />
       </div>
+      <Footer />
     </div>
   )
 }

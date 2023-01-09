@@ -8,6 +8,9 @@ import "./clients.scss"
 
 export const Clients = () => {
   const { darkMode } = useContext(DarkModeContext)
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   return (
     <div className={darkMode ? "about__container__dark" : "about__container__light"}>
