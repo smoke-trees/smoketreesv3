@@ -20,7 +20,7 @@ class Footer extends React.Component {
                 <li><Link to="/about">About</Link></li>
                 {/* <li><Link to='/clients'>Clients</Link></li> */}
                 <li><Link to='/services'>Services</Link></li>
-                <li><Link to='/projects'>Products</Link></li>
+                <li><Link to='/project'>Products</Link></li>
               </ul>
             </div>
             <div className='footer__details__list__one'>
