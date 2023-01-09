@@ -1,15 +1,11 @@
 import React from 'react'
-import './footer.css'
+import { Link } from "react-router-dom"
+import icon3 from '../../assets/github1.svg'
 import icon1 from '../../assets/instagram.svg'
 import icon2 from '../../assets/linkedin.svg'
-import icon3 from '../../assets/github1.svg'
-import iconright from '../../assets/right-arrow.svg'
-import { Link } from "react-router-dom"
+import './footer.css'
 
 class Footer extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <div className='footer'>

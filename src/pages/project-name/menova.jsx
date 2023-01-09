@@ -78,9 +78,8 @@ const Menova = () => {
           </div>
           <div>
             <div className="menova-data-div2__text-cont__desc dark-mode__color2">
-              MeriBachat is the leading platform for buying gift cards and coupons. With over 350 brands to choose from, avail
-              discounts all year round with 0% convenience fees and compare prices and features of various products at a single
-              platform.
+              With courses from famous celebrities, teaching their artform in a well designed course format, learn what truly
+              excites you.
             </div>
           </div>
         </div>
