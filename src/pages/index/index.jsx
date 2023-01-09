@@ -6,6 +6,7 @@ import FourthSection from "./fourth-secion"
 import "./index.scss"
 import { SecondSection } from "./second-section"
 import { ThirdSection } from "./third-section"
+import Footer from "../../components/footer/footer"
 
 export function Index() {
     const { darkMode } = useContext(DarkModeContext)
@@ -30,6 +31,7 @@ export function Index() {
         <ThirdSection isMobile={isMobile} />
         <FourthSection isMobile={isMobile} />
       </div>
+      <Footer />
     </React.Fragment>
   )
 }

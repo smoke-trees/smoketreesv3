@@ -185,20 +185,25 @@ export function FirstSection({ isMobile }) {
           <span className="typewriter-char build-better">i</span>
           <span className="typewriter-char build-better">l</span>
           <span className="typewriter-char build-better">d</span>
+          <span className="typewriter-char build-better">i</span>
+          <span className="typewriter-char build-better">n</span>
+          <span className="typewriter-char build-better">g</span>
         </div>
         <div className="heading-gradient heading">
-          <span className="typewriter-char build-better">B</span>
-          <span className="typewriter-char build-better">e</span>
-          <span className="typewriter-char build-better">t</span>
-          <span className="typewriter-char build-better">t</span>
-          <span className="typewriter-char build-better">e</span>
+          <span className="typewriter-char build-better">P</span>
           <span className="typewriter-char build-better">r</span>
+          <span className="typewriter-char build-better">o</span>
+          <span className="typewriter-char build-better">d</span>
+          <span className="typewriter-char build-better">u</span>
+          <span className="typewriter-char build-better">c</span>
+          <span className="typewriter-char build-better">t</span>
+          <span className="typewriter-char build-better">s</span>
         </div>
         <div className={`build-better__underline ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
           Building what you ideate
         </div>
       </div>
-      <div className="st-right" onClick={toggleDarkMode}>
+      <div className="st-right">
         <svg
           id="st"
           width="443"
@@ -206,6 +211,7 @@ export function FirstSection({ isMobile }) {
           viewBox="0 0 443 622"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={toggleDarkMode}
         >
           <path
             d="M170.018 19.797C134.182 14.9311 111.974 30.8405 108.839 53.9276L108.763 54.4907C100.047 118.684 282.025 126.189 266.963 237.119C258.754 297.576 209.782 322.641 151.909 323.408L149.933 318.864C169.941 316.141 186.076 306.608 188.93 285.592C197.264 224.215 13.1283 206.094 28.1906 95.1636C37.595 25.9025 108.242 9.11496 170.324 17.5446C192.532 20.5601 216.423 30.1123 233.599 39.8998L264.128 30.8549L255.642 131.209L253.623 130.935C249.782 57.0075 208.882 25.0741 170.018 19.797Z"
@@ -247,14 +253,6 @@ export function FirstSection({ isMobile }) {
             </linearGradient>
           </defs>
         </svg>
-      </div>
-      <div className="explore">
-        <Target>
-          <div className="explore__text"> Explore</div>
-          <div className="explore__arrow">
-            <img src={ChevronDown} alt="more" />
-          </div>
-        </Target>
       </div>
     </div>
   )

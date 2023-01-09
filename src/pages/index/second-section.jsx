@@ -43,7 +43,8 @@ export function SecondSection({ isMobile }) {
 
     const exclamationMarkAnimation = gsap.from(".second-section__mark", {
       scale: 0,
-      rotation: 360 * 100,
+      rotation: 40,
+      delay: headingDelay
     })
     const bulbRevealAnimation = gsap.fromTo(
       ".second-section__bulb",
@@ -155,7 +156,7 @@ export function SecondSection({ isMobile }) {
   return (
     <>
       <div className="index-section index__second-section second-section">
-        <div className="second-section__mark">
+        <div className="second-section__mark" style={{overflow: 'clip'}}>
           <img src={ExclamationMark} alt="Exclamation mark" />
         </div>
         <div className="second-section__text">
@@ -178,8 +179,8 @@ export function SecondSection({ isMobile }) {
                 <span className="typewriter-chars best">g</span>
               </span>
               <br />
-              <span className="heading-2 heading-gradient heading">
-                <span className="typewriter-chars best">E</span>
+              <span className={`heading-gradient ${isMobile ? "heading-2 heading" : "heading"}`}>
+                <span className="typewriter-chars best">e</span>
                 <span className="typewriter-chars best">x</span>
                 <span className="typewriter-chars best">c</span>
                 <span className="typewriter-chars best">e</span>
@@ -191,7 +192,7 @@ export function SecondSection({ isMobile }) {
                 <span className="typewriter-chars best">a</span>
                 <span className="typewriter-chars best">l</span>
               </span>
-              &nbsp; &nbsp;
+              <br />
               <span className={`heading-2 heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>
                 <span className="typewriter-chars best">p</span>
                 <span className="typewriter-chars best">r</span>
@@ -201,7 +202,7 @@ export function SecondSection({ isMobile }) {
                 <span className="typewriter-chars best">c</span>
                 <span className="typewriter-chars best">t</span>
                 <span className="typewriter-chars best">s</span>
-                <br />
+                &nbsp;
                 <span className="typewriter-chars best">t</span>
                 <span className="typewriter-chars best">o</span>
                 &nbsp;

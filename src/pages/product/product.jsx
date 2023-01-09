@@ -11,6 +11,7 @@ import Menova from "../../assets/images/menova.png"
 import MBLarge from "../../assets/images/meri-bachat-big.png"
 
 import "./product.scss"
+import Footer from "../../components/footer/footer"
 
 export const Product = () => {
   const { darkMode } = useContext(DarkModeContext)
@@ -50,6 +51,7 @@ export const Product = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

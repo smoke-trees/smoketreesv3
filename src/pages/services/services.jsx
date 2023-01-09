@@ -9,6 +9,7 @@ import ServicesDevelopmentSection from "./services-development-section"
 import "./services.scss"
 import ServicesCloudSection from "./services-cloud-section"
 import ServicesAutomationSection from "./services-automation-section"
+import Footer from "../../components/footer/footer"
 
 export const Services = () => {
   const { darkMode } = useContext(DarkModeContext)
@@ -30,6 +31,7 @@ export const Services = () => {
       <div id="automation-ai">
         <ServicesAutomationSection />
       </div>
+      <Footer />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import AboutSectionOne from "./about-section-one"
 import AboutSectionTwo from "./about-section-two"
 import AboutSectionThree from "./about-section-three"
 import "./about.scss"
+import Footer from '../../components/footer/footer'
 
 export function About() {
   const { darkMode } = useContext(DarkModeContext)
@@ -17,6 +18,7 @@ export function About() {
         <AboutSectionTwo />
         <AboutSectionThree />
       </div>
+      <Footer />
     </div>
   )
 }
