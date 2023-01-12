@@ -46,9 +46,9 @@ const ServicesDevelopmentSection = () => {
           </svg>
           pment
         </div>
-        {/* <div className={`design-section__heading__description ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus pharetra netus mi eget elit eget quam leo.
-        </div> */}
+        <div className={`design-section__heading__description ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
+          We provide world class development meeting industry standards in terms of quality, performance and usability.
+        </div>
         <div className="development-section__heading__img1">
           <svg viewBox="0 0 185 149" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

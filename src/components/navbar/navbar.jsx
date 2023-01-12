@@ -12,7 +12,7 @@ export function Navbar ({mobDark, diffColor}) {
   const [burgerOpen, setBurgerOpen] = useState(false)
 
   return (
-    <div className="navbar" style={{ backgroundColor: `${!darkMode ? "transparent" : "#090a09"}` }}>
+    <div className="navbar" style={{ backgroundColor: `${!darkMode ? "whitesmoke" : "#090a09"}` }}>
       <div className="navbar__logo">
         <Link to="/">
           <img
@@ -24,12 +24,12 @@ export function Navbar ({mobDark, diffColor}) {
         </Link>
       </div>
       <div className={`navbar__hamburger ${burgerOpen ? "hamburger__open" : null}`} onClick={() => setBurgerOpen(!burgerOpen)}>
-        <div className="navbar__hamburger__line1" style={{ backgroundColor: `${darkMode || mobDark ? "#fff" : "#000"}` }} />
-        <div className="navbar__hamburger__line2" style={{ backgroundColor: `${darkMode || mobDark ? "#fff" : "#000"}` }} />
+        <div className="navbar__hamburger__line1" style={{ backgroundColor: `${darkMode || mobDark ? "whitesmoke" : "#000"}` }} />
+        <div className="navbar__hamburger__line2" style={{ backgroundColor: `${darkMode || mobDark ? "whitesmoke" : "#000"}` }} />
       </div>
       <div
         className={`navbar__links ${burgerOpen ? "navbar__links__open" : null}`}
-        style={{ backgroundColor: `${darkMode || mobDark ? "#090a09" : `${burgerOpen ? `${diffColor ?? '#fff'}` : "transparent"}`}` }}
+        style={{ backgroundColor: `${darkMode || mobDark ? "#090a09" : "whitesmoke"}` }}
       >
         <Target>
           <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate1" : null}`}>
@@ -52,6 +52,13 @@ export function Navbar ({mobDark, diffColor}) {
             </Link>
           </div>
         </Target>
+        {/* <Target>
+          <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate3" : null}`}>
+            <Link to="#contact" className={darkMode || mobDark ? "dark-mode__color1" : "light-mode__color0"}>
+              Contact Us
+            </Link>
+          </div>
+        </Target> */}
         {/* <Target>
           <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate4" : null}`}>
             <Link to="/clients" className={darkMode || mobDark ? "dark-mode__color1" : "light-mode__color0"}>

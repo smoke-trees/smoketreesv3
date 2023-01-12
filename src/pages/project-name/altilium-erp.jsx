@@ -1,12 +1,25 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Navbar } from "../../components"
 import { ProjInfoHero } from "./menova"
 import AltiliumLogo from "../../assets/images/altilium-logo.png"
 import AltiliumDiv1 from "../../assets/images/altilium-div1-laptop.png"
 import AltiliumDiv2 from "../../assets/images/altilium-div2-laptop.png"
 import AltiliumDiv3 from "../../assets/images/altilium-div3-laptop.png"
+import Footer from "../../components/footer/footer"
+import { Link } from "react-router-dom"
+import Kidscur from "../../assets/images/kidscur.png"
+import Altilium from "../../assets/images/altilium.png"
+import Ombhu from "../../assets/images/ombhu.png"
+import Menova from "../../assets/images/menova.png"
+import MBLarge from "../../assets/images/meri-bachat-big.png"
+import { DarkModeContext } from "../../context/darkModeContext"
+import { useContext } from "react"
 
 const AltiliumErp = () => {
+  const { darkMode } = useContext(DarkModeContext)
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className="altilium-body">
       <Navbar diffColor="#FF9AA2" />
@@ -117,6 +130,31 @@ const AltiliumErp = () => {
           </div>
         </div>
       </div>
+      <div className="more-projects__container">
+          <div className="more-projects__div1">
+            <Link to="/project/ombhu">
+            <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Ombhu</div>
+              <img src={Ombhu} alt="" style={{ width: "100%" }} />
+            </Link>
+            <Link to="/project/menova">
+            <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Menova</div>
+              <img src={Menova} alt="" style={{ width: "100%" }} />
+            </Link>
+          </div>
+          <div className="more-projects__div2">
+            <Link to="/project/kidscur">
+            <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Kidscur</div>
+              <img src={Kidscur} alt="" style={{ width: "100%" }} />
+            </Link>
+          </div>
+        </div>
+        <div className="bottom-mb__container">
+          <Link to="/project/meri-bachat">
+          <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>MeriBachat</div>
+            <img src={MBLarge} alt="" style={{ width: "100%" }} />
+          </Link>
+        </div>
+      <Footer />
     </div>
   )
 }

@@ -2,8 +2,12 @@
 
 .navbar {
   display: flex;
-  padding: 50px 200px;
-  position: relative;
+  padding: 30px 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 
   &__hamburger {
     display: none;
@@ -48,7 +52,7 @@
     display: flex;
     gap: 44px;
     font-family: $font-family-1;
-    padding: 7px 5px;
+    padding: 10px 5px;
     font-style: normal;
     z-index: 1;
     font-weight: 400;
@@ -94,7 +98,7 @@
 
 @media screen and (max-width: 1350px) {
   .navbar {
-    padding: 50px 90px;
+    padding: 30px 90px;
   }
 }
 
@@ -131,13 +135,12 @@
       align-items: center;
       width: 100vw;
       z-index: -1;
-      padding-bottom: 50px;
-      padding-top: 50px;
       transition: all 0.3s ease;
 
       &__open {
-        top: 120px !important;
+        top: 100px !important;
         z-index: 1000 !important;
+        height: 100vh;
       }
 
       &__item {

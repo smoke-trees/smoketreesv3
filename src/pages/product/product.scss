@@ -16,7 +16,7 @@
   max-width: 1260px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   &__container {
     display: flex;
     align-items: flex-start;
@@ -26,7 +26,6 @@
   &__heading {
     font-weight: 700;
     font-size: 80px;
-    line-height: 96px;
     font-family: $font-family-1;
     max-width: 578px;
     margin-bottom: 1rem;
@@ -95,12 +94,11 @@
     gap: 12rem;
   }
   &__title {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     font-family: $font-family-1;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 24px;
-    letter-spacing: 0.06em;
   }
 }
 
@@ -122,13 +120,22 @@
     }
     &__title {
       font-size: 20px;
-      line-height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .project__second-section {
+    &__heading {
+      font-size: 50px;
     }
   }
 }
 
 @media screen and (max-width: 960px) {
   .project__second-section {
+    height: fit-content;
+    padding: 40px;
     &__container {
       display: flex;
       align-items: flex-start;
@@ -138,8 +145,7 @@
     }
 
     &__heading {
-      font-size: 24px;
-      line-height: 26px;
+      font-size: 32px;
     }
 
     &__dash {
@@ -155,7 +161,7 @@
 
     &__explore {
       gap: 5px;
-      font-size: 12px;
+      font-size: 16px;
       line-height: 14px;
       margin-top: 2rem;
     }

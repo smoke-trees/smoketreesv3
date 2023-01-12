@@ -1,21 +1,87 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { DarkModeContext } from "../../context/darkModeContext"
+import gsap from "gsap"
 
 import "./services.scss"
 
 const ServicesSectionOne = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
 
+  const headingDelay = 0.3
+  const headingDuration = 0.01
+  const headingStagger = 0.05
+  useEffect(() => {
+    const buildBetterAnimation = gsap
+      .timeline({})
+      .fromTo(
+        ".build-better.typewriter-char",
+        {
+          autoAlpha: 0,
+          display: "",
+        },
+        {
+          opacity: 1,
+          autoAlpha: 1,
+          display: "inline",
+          delay: headingDelay,
+          duration: headingDuration,
+          stagger: headingStagger,
+        }
+      )
+      .fromTo(
+        ".build-better__underline",
+        {
+          opacity: 0,
+        },
+        { opacity: 1, duration: 0.5, ease: "power3.inout" }
+      )
+      .from(".explore__text, .explore__arrow", {
+        opacity: 0,
+        y: -20,
+      })
+
+      gsap.timeline().from("#st", {
+        opacity: 0,
+        y: 60,
+        ease: "bounce.out",
+        delay: 1,
+        duration: 1.2,
+      })
+    
+    }, [])
   return (
     <div className="about__first-section">
       <div style={{ maxWidth: "100%" }}>
+        <div className="about__first-section__heading heading-gradient heading" style={{ marginTop: "50px" }}>
+          <span className="typewriter-char build-better">B</span>
+          <span className="typewriter-char build-better">u</span>
+          <span className="typewriter-char build-better">i</span>
+          <span className="typewriter-char build-better">l</span>
+          <span className="typewriter-char build-better">d</span>
+          <span className="typewriter-char build-better">i</span>
+          <span className="typewriter-char build-better">n</span>
+          <span className="typewriter-char build-better">g</span>
+        </div>
         <div
           className={`about__first-section__heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}
-          style={{ marginTop: "50px" }}
         >
-          Building <br /> what you ideate
+          <span className="typewriter-char build-better">w</span>
+          <span className="typewriter-char build-better">h</span>
+          <span className="typewriter-char build-better">a</span>
+          <span className="typewriter-char build-better">t</span>
+          <span className="typewriter-char build-better"> </span>
+          <span className="typewriter-char build-better">y</span>
+          <span className="typewriter-char build-better">o</span>
+          <span className="typewriter-char build-better">u</span>
+          <span className="typewriter-char build-better"> </span>
+          <span className="typewriter-char build-better">i</span>
+          <span className="typewriter-char build-better">d</span>
+          <span className="typewriter-char build-better">e</span>
+          <span className="typewriter-char build-better">a</span>
+          <span className="typewriter-char build-better">t</span>
+          <span className="typewriter-char build-better">e</span>
         </div>
-        <div className="about__first-section__bulb" style={{ marginTop: "0px" }} onClick={toggleDarkMode}>
+        <div className="about__first-section__bulb" style={{ marginTop: "0px" }} onClick={toggleDarkMode} id='st'>
           <svg
             style={{ maxWidth: "85vw" }}
             width="619"

@@ -33,9 +33,9 @@ const ServicesCloudSection = () => {
         <div className={`design-section__heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>
           Cloud Applications
         </div>
-        {/* <div className={`design-section__heading__description ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus pharetra netus mi eget elit eget quam leo.
-        </div> */}
+        <div className={`design-section__heading__description ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
+        Cloud design refers to the process of designing and building cloud-based systems, services, and applications.
+        </div>
         <div className="cloud-section__heading__img1">
           <svg viewBox="0 0 195 195" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
