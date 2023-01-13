@@ -22,7 +22,7 @@ const Menova = () => {
   }, [])
   return (
     <div className="menova-body">
-      {window.innerWidth > 960 ? <Navbar /> : <Navbar mobDark />}
+      {window.innerWidth > 960 ? <Navbar /> : <Navbar  />}
       <ProjInfoHero hero1={MenovaHero1} logo={MenovaLogo} hero2={MenovaHero2} name="Menova" desc="Feed your curiosity!" />
       <div className="menova-bgc project-details__data">
         <div className="project-details__data__product menova-text">THE PRODUCT</div>

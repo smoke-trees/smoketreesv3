@@ -190,7 +190,7 @@
   &__left {
     display: flex;
     flex-flow: row wrap;
-    width: 50%;
+    width: 40%;
     gap: 60px;
   }
 }
@@ -201,6 +201,14 @@
 
 .service-card:nth-child(even) {
   transform: translate(0, 40px);
+}
+
+@media screen and (max-width: 1750px) {
+  .fourth-section {
+    &__left {
+      width: 50%;
+    }
+  }
 }
 
 @media screen and (max-width: 1588px) {

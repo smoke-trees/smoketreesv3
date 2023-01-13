@@ -8,6 +8,7 @@
   top: 0;
   width: 100%;
   z-index: 100;
+  align-items: center;
 
   &__hamburger {
     display: none;
@@ -77,6 +78,10 @@
   }
 }
 
+// .null {
+//   display: none;
+// }
+
 .hamburger__open .navbar__hamburger__line1 {
   transform: rotate(-45deg) translate(-2.5px, 3px);
 }
@@ -136,9 +141,10 @@
       width: 100vw;
       z-index: -1;
       transition: all 0.3s ease;
-
+      justify-content: flex-start;
+      padding-top: 60px;
       &__open {
-        top: 100px !important;
+        top: 89px !important;
         z-index: 1000 !important;
         height: 100vh;
       }
@@ -147,6 +153,11 @@
         opacity: 0;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+
+        a {
+          font-size: 48px;
+          font-weight: 900;
+        }
         &__animate1 {
           animation: navLinkFade 0.3s ease forwards;
           animation-delay: 0.2s;
