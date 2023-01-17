@@ -1,8 +1,8 @@
 import gsap from "gsap"
 import React, { useEffect, useContext } from "react"
 import { DarkModeContext } from "../../context/darkModeContext"
-import { ChevronDown } from "../../assets/images"
-import Target from "../../components/targets/target"
+// import { ChevronDown } from "../../assets/images"
+// import Target from "../../components/targets/target"
 
 export function FirstSection({ isMobile }) {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext)

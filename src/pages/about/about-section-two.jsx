@@ -1,12 +1,12 @@
 import React, { useContext } from "react"
 import { DarkModeContext } from "../../context/darkModeContext"
 import "./about.scss"
-import AboutSection2img1 from "../../assets/images/about-section2-1.png"
-import AboutSection2img2 from "../../assets/images/about-section2-2.png"
-import AboutSection2img3 from "../../assets/images/about-section2-3.png"
-import { useEffect } from "react"
-import gsap from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
+// import AboutSection2img1 from "../../assets/images/about-section2-1.png"
+// import AboutSection2img2 from "../../assets/images/about-section2-2.png"
+// import AboutSection2img3 from "../../assets/images/about-section2-3.png"
+// import { useEffect } from "react"
+// import gsap from "gsap"
+// import ScrollTrigger from "gsap/ScrollTrigger"
 import AboutImage from "../../assets/aboutImage.png"
 const AboutSectionTwo = () => {
   const { darkMode } = useContext(DarkModeContext)
