@@ -35,7 +35,7 @@ export function Navbar ({mobDark, diffColor}) {
       </div>
       <div
         className={`navbar__links ${burgerOpen ? "navbar__links__open" : null}`}
-        style={{ backgroundColor: `${darkMode || mobDark ? "#090a09" : "whitesmoke"}`, display: `${isMobile? burgerOpen? '' : 'none': ''}` }}
+        style={{ backgroundColor: `${darkMode || mobDark ? "#090a09" : "whitesmoke"}`, display: `${isMobile? (burgerOpen? '' : 'none'): ''}` }}
       >
         <Target>
           <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate1" : null}`}>

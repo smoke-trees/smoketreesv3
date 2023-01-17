@@ -6,9 +6,11 @@
 }
 
 .about__first-section {
-  height: calc(100vh);
+  
+  height: calc(100vh - 89px);
   width: 85%;
   margin: auto;
+  margin-top: 89px;
   max-width: 1150px;
   display: flex;
   flex-direction: column;
