@@ -7,38 +7,38 @@ import "./services.scss"
 const ServicesSectionOne = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
 
-  const headingDelay = 0.3
-  const headingDuration = 0.01
-  const headingStagger = 0.05
+  // const headingDelay = 0.3
+  // const headingDuration = 0.01
+  // const headingStagger = 0.05
   useEffect(() => {
-    const buildBetterAnimation = gsap
-      .timeline({})
-      .fromTo(
-        ".build-better.typewriter-char",
-        {
-          autoAlpha: 0,
-          display: "",
-        },
-        {
-          opacity: 1,
-          autoAlpha: 1,
-          display: "inline",
-          delay: headingDelay,
-          duration: headingDuration,
-          stagger: headingStagger,
-        }
-      )
-      .fromTo(
-        ".build-better__underline",
-        {
-          opacity: 0,
-        },
-        { opacity: 1, duration: 0.5, ease: "power3.inout" }
-      )
-      .from(".explore__text, .explore__arrow", {
-        opacity: 0,
-        y: -20,
-      })
+    // const buildBetterAnimation = gsap
+    //   .timeline({})
+    //   .fromTo(
+    //     ".build-better.typewriter-char",
+    //     {
+    //       autoAlpha: 0,
+    //       display: "",
+    //     },
+    //     {
+    //       opacity: 1,
+    //       autoAlpha: 1,
+    //       display: "inline",
+    //       delay: headingDelay,
+    //       duration: headingDuration,
+    //       stagger: headingStagger,
+    //     }
+    //   )
+    //   .fromTo(
+    //     ".build-better__underline",
+    //     {
+    //       opacity: 0,
+    //     },
+    //     { opacity: 1, duration: 0.5, ease: "power3.inout" }
+    //   )
+    //   .from(".explore__text, .explore__arrow", {
+    //     opacity: 0,
+    //     y: -20,
+    //   })
 
       gsap.timeline().from("#st", {
         opacity: 0,

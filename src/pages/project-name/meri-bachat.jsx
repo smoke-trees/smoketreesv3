@@ -9,7 +9,7 @@ import Kidscur from "../../assets/images/kidscur.png"
 import Altilium from "../../assets/images/altilium.png"
 import Ombhu from "../../assets/images/ombhu.png"
 import Menova from "../../assets/images/menova.png"
-import MBLarge from "../../assets/images/meri-bachat-big.png"
+// import MBLarge from "../../assets/images/meri-bachat-big.png"
 import { DarkModeContext } from "../../context/darkModeContext"
 import { useContext } from "react"
 
