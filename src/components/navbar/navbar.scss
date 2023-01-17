@@ -2,8 +2,13 @@
 
 .navbar {
   display: flex;
-  padding: 50px 200px;
-  position: relative;
+  padding: 30px 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  align-items: center;
 
   &__hamburger {
     display: none;
@@ -48,7 +53,7 @@
     display: flex;
     gap: 44px;
     font-family: $font-family-1;
-    padding: 7px 5px;
+    padding: 10px 5px;
     font-style: normal;
     z-index: 1;
     font-weight: 400;
@@ -73,6 +78,10 @@
   }
 }
 
+// .null {
+//   display: none;
+// }
+
 .hamburger__open .navbar__hamburger__line1 {
   transform: rotate(-45deg) translate(-2.5px, 3px);
 }
@@ -94,7 +103,7 @@
 
 @media screen and (max-width: 1350px) {
   .navbar {
-    padding: 50px 90px;
+    padding: 30px 90px;
   }
 }
 
@@ -131,19 +140,24 @@
       align-items: center;
       width: 100vw;
       z-index: -1;
-      padding-bottom: 50px;
-      padding-top: 50px;
       transition: all 0.3s ease;
-
+      justify-content: flex-start;
+      padding-top: 60px;
       &__open {
-        top: 120px !important;
+        top: 89px !important;
         z-index: 1000 !important;
+        height: 100vh;
       }
 
       &__item {
         opacity: 0;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+
+        a {
+          font-size: 48px;
+          font-weight: 900;
+        }
         &__animate1 {
           animation: navLinkFade 0.3s ease forwards;
           animation-delay: 0.2s;

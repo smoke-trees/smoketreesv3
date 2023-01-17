@@ -10,7 +10,7 @@ export function ThirdSection({ isMobile }) {
 
   const headingDelay = 0
   const headingDuration = 0.01
-  const headingStagger = 0.1
+  const headingStagger = 0.05
 
   useEffect(() => {
     const animation = gsap.timeline().fromTo(

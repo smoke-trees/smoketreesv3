@@ -1,11 +1,14 @@
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import React, { useCallback, useEffect } from 'react'
+import React, { useCallback, useContext, useEffect } from 'react'
 import { ServiceAutomation, ServiceCloud, ServiceDevelopment, ServiceUiUx } from '../../assets/images'
 import { ServiceCard } from '../../components/service-card/ServiceCard'
 import Target from '../../components/targets/target'
+import { DarkModeContext } from '../../context/darkModeContext'
 
 export default function FourthSection({ isMobile }) {
+  const {darkMode} = useContext(DarkModeContext)
+
   const onMouseEnterCallBack = useCallback((e) => {
     gsap.to('#cursor', {
       borderColor: '#fff',
@@ -67,6 +70,7 @@ export default function FourthSection({ isMobile }) {
         className="fourth-section index-section index-section__fourth-section"
         onMouseEnter={onMouseEnterCallBack}
         onMouseLeave={onMouseLeaveCallBack}
+        style={{ backgroundColor: `${!darkMode ? "black" : "transparent"}`}}
       >
         <div className='fourth-section__right'>
           {/* <div className="fourth-section__icon">
@@ -104,16 +108,16 @@ export default function FourthSection({ isMobile }) {
 
         <div className={'fourth-section__left'}>
           <Target>
-            <ServiceCard image={ServiceUiUx} text={'UI/UX Design'} />
+            <ServiceCard image={ServiceUiUx} text={'UI/UX Design'} link='/services#design'/>
           </Target>
           <Target>
-            <ServiceCard color={'pink'} image={ServiceDevelopment} text={'Development'} />
+            <ServiceCard color={'pink'} image={ServiceDevelopment} text={'Development'} link='/services#development'/>
           </Target>
           <Target>
-            <ServiceCard color={'yellow'} image={ServiceCloud} text={'Cloud Applications'} />
+            <ServiceCard color={'yellow'} image={ServiceCloud} text={'Cloud Applications'} link='/services#cloud-application'/>
           </Target>
           <Target>
-            <ServiceCard color={'blue'} image={ServiceAutomation} text={'Automation and AI'} />
+            <ServiceCard color={'blue'} image={ServiceAutomation} text={'Automation and AI'} link='/services#automation-ai'/>
           </Target>
         </div>
       </div>

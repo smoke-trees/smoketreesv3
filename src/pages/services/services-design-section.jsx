@@ -37,9 +37,9 @@ const ServicesDesignSection = () => {
     <div className="design-section">
       <div className="design-section__heading__container">
         <div className={`design-section__heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Design</div>
-        {/* <div className={`design-section__heading__description ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus pharetra netus mi eget elit eget quam leo.
-        </div> */}
+        <div className={`design-section__heading__description ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
+          We help you create a great experience for your user. Making them comeback for more!
+        </div>
         <div className="design-section__heading__img1">
           <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="51" width="50" height="50" fill="url(#paint0_radial_302_17)" />

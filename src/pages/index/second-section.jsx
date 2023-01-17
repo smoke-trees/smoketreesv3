@@ -10,7 +10,7 @@ export function SecondSection({ isMobile }) {
 
   const headingDelay = 0
   const headingDuration = 0.01
-  const headingStagger = 0.02
+  const headingStagger = 0.05
   useEffect(() => {
     const SecondSectionTimeline = gsap
       .timeline({})

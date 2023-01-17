@@ -7,9 +7,11 @@ import "./index.scss"
 import { SecondSection } from "./second-section"
 import { ThirdSection } from "./third-section"
 import Footer from "../../components/footer/footer"
+import { FifthSection } from "./fifth-section"
+
 
 export function Index() {
-    const { darkMode } = useContext(DarkModeContext)
+  const { darkMode } = useContext(DarkModeContext)
   const [isMobile, setIsMobile] = useState(false)
   useEffect(() => {
     const a = () => {
@@ -22,9 +24,9 @@ export function Index() {
       window.removeEventListener("resize", a)
     }
   }, [])
-  React.useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [])
   return (
     <React.Fragment>
       <Navbar />
@@ -33,6 +35,7 @@ export function Index() {
         <SecondSection isMobile={isMobile} />
         <ThirdSection isMobile={isMobile} />
         <FourthSection isMobile={isMobile} />
+        <FifthSection />
       </div>
       <Footer />
     </React.Fragment>

@@ -28,9 +28,9 @@ const ServicesAutomationSection = () => {
         <div className={`design-section__heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>
           Automation and AI
         </div>
-        {/* <div className={`design-section__heading__description ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus pharetra netus mi eget elit eget quam leo.
-        </div> */}
+        <div className={`design-section__heading__description ${darkMode ? "dark-mode__color2" : "light-mode__color2"}`}>
+          Get the edge over market with AI
+        </div>
         <div className="automation-section__heading__img1">
           <svg viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
