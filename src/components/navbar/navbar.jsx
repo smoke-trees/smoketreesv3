@@ -13,7 +13,7 @@ export function Navbar ({mobDark, diffColor}) {
   const [burgerOpen, setBurgerOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   useEffect(() => {
-    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false)
+    window.innerWidth < 1070 ? setIsMobile(true) : setIsMobile(false)
   }, [])
 
   return (
