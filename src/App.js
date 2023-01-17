@@ -68,7 +68,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <div className='cursor' id='cursor' />
+      {/* <div className='cursor' id='cursor' /> */}
       <DarkModeProvider>
         <Routes>
           {routes.map(route => <Route exact {...route} />)}
