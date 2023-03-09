@@ -6,13 +6,18 @@ import Target from '../targets/target'
 import {Link} from 'react-router-dom'
 
 import './navbar.scss'
+import { useEffect } from 'react';
 
 export function Navbar ({mobDark, diffColor}) {
   const {darkMode} = useContext(DarkModeContext)
   const [burgerOpen, setBurgerOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false)
+  }, [])
 
   return (
-    <div className="navbar" style={{ backgroundColor: `${!darkMode ? "transparent" : "#090a09"}` }}>
+    <div className="navbar" style={{ backgroundColor: `${!darkMode ? "whitesmoke" : "#090a09"}` }}>
       <div className="navbar__logo">
         <Link to="/">
           <img
@@ -24,12 +29,13 @@ export function Navbar ({mobDark, diffColor}) {
         </Link>
       </div>
       <div className={`navbar__hamburger ${burgerOpen ? "hamburger__open" : null}`} onClick={() => setBurgerOpen(!burgerOpen)}>
-        <div className="navbar__hamburger__line1" style={{ backgroundColor: `${darkMode || mobDark ? "#fff" : "#000"}` }} />
-        <div className="navbar__hamburger__line2" style={{ backgroundColor: `${darkMode || mobDark ? "#fff" : "#000"}` }} />
+        {console.log(burgerOpen)}
+        <div className="navbar__hamburger__line1" style={{ backgroundColor: `${darkMode || mobDark ? "whitesmoke" : "#000"}` }} />
+        <div className="navbar__hamburger__line2" style={{ backgroundColor: `${darkMode || mobDark ? "whitesmoke" : "#000"}` }} />
       </div>
       <div
         className={`navbar__links ${burgerOpen ? "navbar__links__open" : null}`}
-        style={{ backgroundColor: `${darkMode || mobDark ? "#090a09" : `${burgerOpen ? `${diffColor ?? '#fff'}` : "transparent"}`}` }}
+        style={{ backgroundColor: `${darkMode || mobDark ? "#090a09" : "whitesmoke"}`, display: `${isMobile? burgerOpen? '' : 'none': ''}` }}
       >
         <Target>
           <div className={`navbar__links__item ${burgerOpen ? "navbar__links__item__animate1" : null}`}>

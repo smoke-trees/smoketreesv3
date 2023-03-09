@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Navbar } from "../../components"
 import { useParams } from "react-router-dom"
 import MenovaHero1 from "../../assets/images/menova-hero1.png"
@@ -6,11 +6,23 @@ import MenovaLogo from "../../assets/images/menova-logo.png"
 import MenovaHero2 from "../../assets/images/menova-hero2.png"
 import MenovaDiv1 from "../../assets/images/menova-div1-laptop.png"
 import MenovaDiv2 from "../../assets/images/menova-div2-laptop.png"
+import Footer from "../../components/footer/footer"
+import { Link } from "react-router-dom"
+import Kidscur from "../../assets/images/kidscur.png"
+import Altilium from "../../assets/images/altilium.png"
+import Ombhu from "../../assets/images/ombhu.png"
+import MBLarge from "../../assets/images/meri-bachat-big.png"
+import { DarkModeContext } from "../../context/darkModeContext"
+import { useContext } from "react"
 
 const Menova = () => {
+  const { darkMode } = useContext(DarkModeContext)
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className="menova-body">
-      {window.innerWidth > 960 ? <Navbar /> : <Navbar mobDark />}
+      {window.innerWidth > 960 ? <Navbar /> : <Navbar  />}
       <ProjInfoHero hero1={MenovaHero1} logo={MenovaLogo} hero2={MenovaHero2} name="Menova" desc="Feed your curiosity!" />
       <div className="menova-bgc project-details__data">
         <div className="project-details__data__product menova-text">THE PRODUCT</div>
@@ -78,12 +90,36 @@ const Menova = () => {
           </div>
           <div>
             <div className="menova-data-div2__text-cont__desc dark-mode__color2">
-              With courses from famous celebrities, teaching their artform in a well designed course format, learn what truly
-              excites you.
+              Each Menova Lab is experience-driven and is created with an intent to facilitate immersive learning, yet keeping it entertaining. This is provided through various themes, subjects, and a unique easy-to-follow, design-led approach taught by experts and connoisseurs.
             </div>
           </div>
         </div>
       </div>
+      <div className="more-projects__container">
+          <div className="more-projects__div1">
+            <Link to="/project/kidscur">
+            <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Kidscur</div>
+              <img src={Kidscur} alt="" style={{ width: "100%" }} />
+            </Link>
+            <Link to="/project/altilium">
+              <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Altilium ERP</div>
+              <img src={Altilium} alt="" style={{ width: "100%" }} />
+            </Link>
+          </div>
+          <div className="more-projects__div2">
+            <Link to="/project/ombhu">
+            <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>Ombhu</div>
+              <img src={Ombhu} alt="" style={{ width: "100%" }} />
+            </Link>
+          </div>
+        </div>
+        <div className="bottom-mb__container">
+          <Link to="/project/meri-bachat">
+          <div className={`more-projects__title ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>MeriBachat</div>
+            <img src={MBLarge} alt="" style={{ width: "100%" }} />
+          </Link>
+        </div>
+      <Footer />
     </div>
   )
 }

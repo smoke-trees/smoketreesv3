@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react"
+import { useCallback } from "react"
 
 const DarkModeContext = createContext()
 
@@ -8,17 +9,17 @@ function DarkModeProvider(props) {
     setDarkMode(!darkMode)
   }
   let wasDark = false
-  const prodDetsOff = () => {
+  const prodDetsOff = useCallback(() => {
     if (darkMode) {
       wasDark = true
       setDarkMode(false)
     }
-  }
-  const prodDetsUnMnt = () => {
+  },[])
+  const prodDetsUnMnt = useCallback(() => {
     if (wasDark) {
       setDarkMode(true)
     }
-  }
+  },[])
   return (
     <div>
       <DarkModeContext.Provider value={{ darkMode, toggleDarkMode, prodDetsOff, prodDetsUnMnt }}>
