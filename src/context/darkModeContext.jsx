@@ -5,21 +5,22 @@ const DarkModeContext = createContext()
 
 function DarkModeProvider(props) {
   const [darkMode, setDarkMode] = useState(false)
+  const [wasDark, setWasDark ] =  useState(false)
   const toggleDarkMode = () => {
     setDarkMode(!darkMode)
   }
-  let wasDark = false
+  
   const prodDetsOff = useCallback(() => {
     if (darkMode) {
-      wasDark = true
+      setWasDark(true)
       setDarkMode(false)
     }
-  },[])
+  },[darkMode])
   const prodDetsUnMnt = useCallback(() => {
     if (wasDark) {
       setDarkMode(true)
     }
-  },[])
+  },[wasDark])
   return (
     <div>
       <DarkModeContext.Provider value={{ darkMode, toggleDarkMode, prodDetsOff, prodDetsUnMnt }}>

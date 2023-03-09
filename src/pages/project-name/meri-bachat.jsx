@@ -9,7 +9,7 @@ import Kidscur from "../../assets/images/kidscur.png"
 import Altilium from "../../assets/images/altilium.png"
 import Ombhu from "../../assets/images/ombhu.png"
 import Menova from "../../assets/images/menova.png"
-import MBLarge from "../../assets/images/meri-bachat-big.png"
+// import MBLarge from "../../assets/images/meri-bachat-big.png"
 import { DarkModeContext } from "../../context/darkModeContext"
 import { useContext } from "react"
 
@@ -88,9 +88,7 @@ const MeriBachat = () => {
           </div>
           <div>
             <div className="mb-data-div2__text-cont__desc light-mode__color1">
-              MeriBachat is the leading platform for buying gift cards and coupons. With over 350 brands to choose from, avail
-              discounts all year round with 0% convenience fees and compare prices and features of various products at a single
-              platform.
+              Gain cashback from well known platforms like Flipkart, Myntra, 1MG, HomeCentre, Udemy etc.
             </div>
           </div>
         </div>

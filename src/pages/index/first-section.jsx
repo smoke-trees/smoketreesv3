@@ -177,7 +177,7 @@ export function FirstSection({ isMobile }) {
         className="build-better-container"
         style={{ position: "relative", display: "flex", flexFlow: "column wrap" }}
       >
-        <div className={`heading-black heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`}>
+        <div className={`heading-black heading ${darkMode ? "dark-mode__color1" : "light-mode__color1"}`} style={{lineHeight: '100%'}}>
           <span className="typewriter-char build-better">B</span>
           <span className="typewriter-char build-better">u</span>
           <span className="typewriter-char build-better">i</span>

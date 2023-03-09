@@ -11,7 +11,7 @@ const AboutSectionOne = () => {
   const headingDuration = 0.01
   const headingStagger = 0.05
   useEffect(() => {
-    const buildBetterAnimation = gsap
+    gsap
       .timeline({})
       .fromTo(
         ".build-better.typewriter-char",

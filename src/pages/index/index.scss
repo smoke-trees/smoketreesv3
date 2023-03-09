@@ -11,12 +11,14 @@
   transform-origin: 21.3% 39.79%;
 }
 .index-section {
-  height: calc(100vh);
+  padding-top: 89px;
+  height: calc(100vh + 89px);
   padding: 0 200px;
 }
 
 .index__first-section {
   display: flex;
+  padding-top: 89px;
   align-items: center;
   // justify-content: center;
   flex-flow: row wrap;
@@ -33,6 +35,7 @@
   font-style: normal;
   font-weight: 900;
   font-size: 132px;
+  line-height: 100%;
 }
 .heading-2 {
   font-size: 44px;
