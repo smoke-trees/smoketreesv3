@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import './footer.scss'
 import icon1 from '../../assets/instagram.svg'
 import icon2 from '../../assets/linkedin.svg'
 import icon3 from '../../assets/github1.svg'
 // import iconright from '../../assets/right-arrow.svg'
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
