@@ -103,7 +103,7 @@ class Footer extends React.Component {
               </ul>
             </div>
             <div className='footer__details__list__one' style={{ textAlign: 'right' }}>
-              46/1, NH 44, Garvebhavipalya, Krishna Reddy Industrial Area, Hosapalaya, Muneshwara Nagar, Bengaluru, Karnataka 560068
+              Smoketrees Digital LLP, B-Block Bhive, AKR Tech Park, Kudlu Gate, Bangalore. 560068
             </div>
           </div>
           <div className='footer__social'>
